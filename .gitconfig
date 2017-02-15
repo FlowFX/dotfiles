@@ -69,10 +69,6 @@
 	insteadOf = github:
 [url "https://github.com/"]
 	insteadOf = gitpub:
-[url "git@git.scytale.name:"]
-	insteadOf = scy:
-[url "scy@git.4null4.org:git/oqlt/"]
-	insteadOf = oqlt:
 [branch "master"]
 	mergeoptions = --no-ff
 [difftool "sourcetree"]
