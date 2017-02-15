@@ -1,0 +1,10 @@
+*.swp
+*.swo
+*~
+.DS_Store
+*.!sync
+config.codekit
+.sass-cache
+__pycache__
+.cache
+.idea
