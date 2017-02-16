@@ -81,7 +81,7 @@ alias nnp="nikola new_post"
 # todo.txt
 export TODOTXT_DEFAULT_ACTION=ls
 alias t="todo.sh"
-alias ted="vim ~/todo.txt
+alias ted="vim ~/todo.txt"
 
 # tox & pytest
 alias dt="tox"
