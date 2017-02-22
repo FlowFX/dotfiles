@@ -80,5 +80,5 @@
 	trustExitCode = true
 [push]
 	default = matching
-[commit]
-	template = /Users/flowfx/.stCommitMsg
+#[commit]
+	#template = /Users/flowfx/.stCommitMsg
