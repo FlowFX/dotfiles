@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/flowfx/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 export HOMEBREW_NO_ANALYTICS=1
 
 # Set name of the theme to load.
@@ -48,14 +48,15 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew cp git osx tmux tmuxinator virtualenvwrapper wp-cli)
+#plugins=(brew cp git osx tmux tmuxinator virtualenvwrapper wp-cli)
+#plugins=(cp git tmux virtualenvwrapper wp-cli)
 
 # User configuration
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/TeX/texbin:/Users/flowfx/.rvm/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/flowfx/.composer/vendor/bin"
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh_profile
+[[ -f ~/.zsh_profile ]] && source ~/.zsh_profile
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
