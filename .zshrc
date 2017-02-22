@@ -78,6 +78,7 @@ export EDITOR='vim'
 # Example aliases
 alias nbd="~/bin/nikola-build-and-deploy.sh"
 alias nnp="nikola new_post"
+alias g="git"
 
 # todo.txt
 export TODOTXT_DEFAULT_ACTION=ls
