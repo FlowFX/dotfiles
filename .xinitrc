@@ -1,7 +1,12 @@
 # load .Xresources
 [[ -f ~/.Xresources ]] && xrdb -merge -I/home/flowfx ~/.Xresources
+
+# load .Xmodmap
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+
 # set keyboard repeat delay and rate
 xset r rate 200 30
+
 # set right alt key as compose for é, í and ó
 setxkbmap -option compose:ralt
 
