@@ -5,15 +5,3 @@ URxvt.letterSpace: 0
 
 ! White text on black background
 URxvt.reverseVideo: on
-
-! Disable the scrollbar
-URxvt*scrollBar:  false
-
-! Only scroll once in a while
-URxvt*skipScroll:  true
-
-! Save lines in scrollback buffer
-URxvt*saveLines:   10000
-
-
-! cf. http://www.askapache.com/linux/rxvt-xresources/ for more options
