@@ -1,0 +1,5 @@
+" Easy escaping
+inoremap jj <ESC>
+
+set cursorline             " hightlight current line
+set showmatch              " show the matching part of the pair for [] {} and ()
