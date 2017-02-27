@@ -15,8 +15,15 @@ setxkbmap -option compose:ralt
 #xrandr --output eDP-1 --right-of HDMI-2
 #xrandr --output HDMI-2 --auto --panning 1920x1200 --output eDP-1 --auto --panning 2560x1600+1920+0 --right-of HDMI-2
 
-# Just turn off that HiDPI display
-xrandr --output eDP-1 --off
+# Configure monitor
+intern=eDP-1
+extern=HDMI-2
+
+if xrandr | grep "$extern disconnected"; then
+    xrandr --output "$extern" --off --output "$intern" --auto --dpi 227
+else
+    xrandr --output "$intern" --off --output "$extern" --auto
+fi
 
 # start i3wm
 exec i3
