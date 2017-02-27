@@ -1,0 +1,7 @@
+! Set font
+!URxvt.font: xft:Inconsolata:size=12
+URxvt.font: xft:Droid Sans Mono:size=12
+URxvt.letterSpace: 0
+
+! White text on black background
+URxvt.reverseVideo: on
