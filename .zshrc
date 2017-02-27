@@ -49,7 +49,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(brew cp git osx tmux tmuxinator virtualenvwrapper wp-cli)
-#plugins=(cp git tmux virtualenvwrapper wp-cli)
+plugins=(cp git tmux virtualenvwrapper wp-cli)
 
 # User configuration
 
