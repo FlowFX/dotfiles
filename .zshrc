@@ -64,33 +64,8 @@ export LANG=en_US.UTF-8
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias nbd="~/bin/nikola-build-and-deploy.sh"
-alias nnp="nikola new_post"
-alias g="git"
-
-# todo.txt
-export TODOTXT_DEFAULT_ACTION=ls
-alias t="todo.sh"
-alias ted="vim ~/todo.txt"
-
-# tox & pytest
-alias dt="tox"
-alias f8="flake8"
-alias pt="pytest"
-alias ptf="pytest functional_tests"
-
+# Include .bash_aliases
+[[ -f ~/.bash_aliases ]] && source ~/.bash_aliases
 
 # added by travis gem
 [ -f /Users/flowfx/.travis/travis.sh ] && source /Users/flowfx/.travis/travis.sh
