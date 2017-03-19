@@ -114,7 +114,7 @@ call togglebg#map("<F5>")
 "map <leader>n :NERDTreeToggle<CR>   " open and close NERDtree with Ctrl-N
 
 
-autocmd FileType python set
+autocmd FileType python,tex set
 	\ tabstop=4
 	\ softtabstop=4
 	\ shiftwidth=4
