@@ -64,8 +64,5 @@ export LANG=en_US.UTF-8
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
-# Include .bash_aliases
-[[ -f ~/.bash_aliases ]] && source ~/.bash_aliases
-
 # added by travis gem
 [ -f /Users/flowfx/.travis/travis.sh ] && source /Users/flowfx/.travis/travis.sh
