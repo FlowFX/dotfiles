@@ -53,7 +53,7 @@ plugins=(cp git tmux virtualenvwrapper wp-cli)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/TeX/texbin:/Users/flowfx/.rvm/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/flowfx/.composer/vendor/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/TeX/texbin:/Users/flowfx/.rvm/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/flowfx/.composer/vendor/bin"
 
 source $ZSH/oh-my-zsh.sh
 [[ -f ~/.zsh_profile ]] && source ~/.zsh_profile
@@ -65,4 +65,7 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 
 # added by travis gem
-[ -f /Users/flowfx/.travis/travis.sh ] && source /Users/flowfx/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+# import bash aliases
+[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
