@@ -13,6 +13,13 @@ alias dt="tox"
 alias f8="flake8"
 alias pt="pytest"
 alias ptf="pytest functional_tests"
+alias ptc="pytest --cov --cov-report html"
+
+# Django
+alias mrs="./manage.py runserver"
+alias msp="./manage.py shell_plus"
+alias mmm="./manage.py makemessages -l es -l en"
+alias mcm="./manage.py compilemessages -l es -l en"
 
 # pip
 alias pipup="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U"
