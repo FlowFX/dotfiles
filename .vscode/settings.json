@@ -2,6 +2,6 @@
     "editor.fontSize": 16,
     "editor.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New', monospace",
     "editor.cursorStyle": "block",
-    "python.linting.enabled": true,
-    "workbench.colorTheme": "Material Theme"
+    "workbench.colorTheme": "Material Theme",
+    "python.venvPath": "~/.virtualenvs"
 }
