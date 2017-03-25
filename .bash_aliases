@@ -13,3 +13,6 @@ alias dt="tox"
 alias f8="flake8"
 alias pt="pytest"
 alias ptf="pytest functional_tests"
+
+# pip
+alias pipup="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U"
