@@ -1,7 +1,10 @@
 {
-    "editor.fontSize": 16,
-    "editor.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New', monospace",
-    "editor.cursorStyle": "block",
-    "workbench.colorTheme": "Material Theme",
-    "python.venvPath": "~/.virtualenvs"
+  // Editor font
+  "editor.fontSize": 18,
+  "editor.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New', monospace",
+  "editor.cursorStyle": "block",
+  "workbench.colorTheme": "Material Theme",
+
+  // Python
+  "python.venvPath": "~/.virtualenvs"
 }
