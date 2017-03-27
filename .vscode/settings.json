@@ -3,5 +3,7 @@
     "editor.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New', monospace",
     "editor.cursorStyle": "block",
     "workbench.colorTheme": "Material Theme",
-    "python.venvPath": "~/.virtualenvs"
+    "python.venvPath": "/Users/flowfx/.virtualenvs",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true
 }
