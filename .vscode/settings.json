@@ -1,4 +1,5 @@
 {
+    // VIM
     "vim.incsearch": true,
     "vim.useSystemClipboard": false,
     "vim.useCtrlKeys": true,
@@ -9,19 +10,18 @@
             "after": ["<Esc>"]
         }
     ],
+    "vim.disableAnnoyingNeovimMessage": true,
     "editor.fontSize": 16,
     "editor.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New', monospace",
     "editor.cursorStyle": "block",
-    "workbench.colorTheme": "Solarized Light",
+    "workbench.colorTheme": "Material Theme",
+    "workbench.panel.location": "right",
     "window.zoomLevel": 0,
-    "vim.disableAnnoyingNeovimMessage": true,
-    // VIM
     // Python
-    "python.venvPath": "~/.virtualenvs/",
+    "python.venvPath": "~/.virtualenvs",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
     // When enabled, insert a final new line at the end of the file when saving it.
-    "files.insertFinalNewline": true,
-    "workbench.panel.location": "right"
+    "files.insertFinalNewline": true
 }

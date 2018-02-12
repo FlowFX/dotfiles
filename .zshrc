@@ -70,6 +70,9 @@ export LANG=en_US.UTF-8
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
+# Source bash aliases
+[[ -f ~/.bash_aliases ]] && source ~/.bash_aliases
+
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
