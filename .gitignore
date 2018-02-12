@@ -1,6 +1,6 @@
+# VIM
 .vim/bundle/*
 .vim/.netrwhist
-*.swp
 
 # VS Code
 workspaceStorage
