@@ -101,25 +101,21 @@ endif
 " toggle background with F5
 call togglebg#map("<F5>")
 
-""" NERDTree
-"let NERDTreeIgnore=['\.pyc$', '\~$']		" ignore files in NERDTree
-"map <leader>n :NERDTreeToggle<CR>   " open and close NERDtree with Ctrl-N
 
-
-autocmd FileType python,tex set
-	\ tabstop=4
-	\ softtabstop=4
-	\ shiftwidth=4
-	\ textwidth=119
-	\ expandtab
-	\ autoindent
-	\ fileformat=unix
-
-autocmd FileType html,scss,sass,css,js,php,yml set
-	\ tabstop=2
-	\ softtabstop=2
-	\ shiftwidth=2
-	\ expandtab
+"autocmd FileType python,tex set
+"	\ tabstop=4
+"	\ softtabstop=4
+"	\ shiftwidth=4
+"	\ textwidth=119
+"	\ expandtab
+"	\ autoindent
+"	\ fileformat=unix
+"
+"autocmd FileType html,scss,sass,css,js,php,yml set
+"	\ tabstop=2
+"	\ softtabstop=2
+"	\ shiftwidth=2
+"	\ expandtab
 
 " allow to easily edit crontab with crontab -e
 autocmd filetype crontab setlocal nobackup nowritebackup
