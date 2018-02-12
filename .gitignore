@@ -5,3 +5,7 @@
 # VS Code
 workspaceStorage
 extensions
+
+# Temp files
+*.bak
+*.tmp
