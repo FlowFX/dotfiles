@@ -1,6 +1,8 @@
-" Easy escaping
+" Global PyCharm configuration
+
+" Easy escaping in VIM mode
 inoremap jj <ESC>
 
-set cursorline             " hightlight current line
-set showmatch              " show the matching part of the pair for [] {} and ()
+set cursorline          " hightlight current line
+set showmatch           " show the matching part of the pair for [] {} and ()
 set scrolloff=5         " don't scroll all the way to the bottom
