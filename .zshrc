@@ -2,6 +2,10 @@
 export ZSH=$HOME/.oh-my-zsh
 export HOMEBREW_NO_ANALYTICS=1
 
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="robbyrussell_flowfx"
@@ -55,6 +59,7 @@ plugins=(cp git virtualenvwrapper)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/TeX/texbin:/Users/flowfx/.rvm/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/flowfx/.composer/vendor/bin"
+export MYPYPATH="/Users/flowfx/code/typeshed"
 
 source $ZSH/oh-my-zsh.sh
 [[ -f ~/.zsh_profile ]] && source ~/.zsh_profile
@@ -70,3 +75,11 @@ export EDITOR='vim'
 
 # import bash aliases
 [ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+
+
+# node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+

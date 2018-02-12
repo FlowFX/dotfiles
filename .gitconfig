@@ -13,6 +13,7 @@
 	singlekey = true
 [merge]
 	tool = vimdiff
+	conflictstyle = diff3
 [rebase]
 	autosquash = true
 [alias]
@@ -82,3 +83,7 @@
 	default = matching
 #[commit]
 	#template = /Users/flowfx/.stCommitMsg
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true

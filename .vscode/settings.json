@@ -1,9 +1,27 @@
 {
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": false,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ],
     "editor.fontSize": 16,
     "editor.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New', monospace",
     "editor.cursorStyle": "block",
-    "workbench.colorTheme": "Material Theme",
-    "python.venvPath": "/Users/flowfx/.virtualenvs",
+    "workbench.colorTheme": "Solarized Light",
+    "window.zoomLevel": 0,
+    "vim.disableAnnoyingNeovimMessage": true,
+    // VIM
+    // Python
+    "python.venvPath": "~/.virtualenvs/",
     "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    // When enabled, insert a final new line at the end of the file when saving it.
+    "files.insertFinalNewline": true,
+    "workbench.panel.location": "right"
 }
