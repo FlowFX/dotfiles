@@ -1,0 +1,18 @@
+# ADB Fastboot
+if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
+    export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
+fi
+
+# Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/code
+export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Pyenv-Virtualenvwrapper
+# https://github.com/pyenv/pyenv-virtualenvwrapper
+eval "$(pyenv init -)"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+
+# Secret extra configurations
+[[ -f ~/.profile ]] && source ~/.profile
