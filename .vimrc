@@ -7,34 +7,26 @@
 " * http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 
 
-set nocompatible				" required
-filetype off					" required
+" Required by Vundle
+" https://github.com/VundleVim/Vundle.vim
+set nocompatible
+filetype off
 
-" set the runtime path to include Vundle and initialize
+" Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
+" Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
 " Add all plugins here
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'wchargin/vim-latexsuite'
-Plugin 'freitass/todo.txt-vim'
-"Plugin 'vim-scripts/todo-txt.vim'
-"Plugin 'vim-scripts/indentpython.vim'
-"Plugin 'Valloric/YouCompleteMe'			" won't compile for me right now
-"Plugin 'scrooloose/syntastic'
+"Plugin 'wchargin/vim-latexsuite'
+"Plugin 'freitass/todo.txt-vim'
 "Plugin 'nvie/vim-flake8'
-"Plugin 'jnurmine/Zenburn'
-"Plugin 'scrooloose/nerdtree'				" proper file tree
-"Plugin 'jistr/vim-nerdtree-tabs'			" nerdtree and tabs
-"Plugin 'kien/ctrlp.vim'						" super searching
-"Plugin 'tpope/vim-fugitive'					" Git integration
-"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}		" status bar
-"Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-tmux-navigator'
 
 
 " All Plugins must be added before the following line
