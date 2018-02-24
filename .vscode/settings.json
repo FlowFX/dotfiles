@@ -1,5 +1,6 @@
 {
-    // VIM
+    "vim.easymotion": true,
+    "vim.sneak": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": false,
     "vim.useCtrlKeys": true,
@@ -10,18 +11,34 @@
             "after": ["<Esc>"]
         }
     ],
-    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","d"],
+            "after": ["d", "d"]
+        },
+        {
+            "before":["<C-n>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":nohl"
+                }
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys":{
+        "<C-a>": false,
+        "<C-f>": false
+    },
     "editor.fontSize": 16,
     "editor.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New', monospace",
     "editor.cursorStyle": "block",
-    "workbench.colorTheme": "Material Theme",
-    "workbench.panel.location": "right",
     "window.zoomLevel": 0,
-    // Python
     "python.venvPath": "~/.virtualenvs",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
-    // When enabled, insert a final new line at the end of the file when saving it.
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "workbench.colorTheme": "Solarized Light"
 }
