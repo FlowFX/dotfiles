@@ -1,3 +1,6 @@
+# pipsi
+export PATH=$HOME/.local/bin:$PATH
+
 # ADB Fastboot
 if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
     export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
