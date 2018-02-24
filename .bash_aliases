@@ -14,3 +14,6 @@ alias pipup="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip in
 
 # PyPI
 alias pypipublish="python setup.py sdist upload -r pypi"
+
+# Django
+alias msp="./manage.py shell_plus"
