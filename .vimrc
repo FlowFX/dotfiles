@@ -37,6 +37,7 @@ filetype plugin indent on		" required
 """ General settings """
 set encoding=utf-8
 let mapleader=","                  " define <leader> key to comma
+set ruler                          " show current line and column
 
 set tabstop=4
 set softtabstop=4
