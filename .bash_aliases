@@ -1,5 +1,7 @@
 # Aliases
 
+alias psgrep='ps aux | grep '
+
 # Git
 alias g="git"
 alias wip="git commit -am'WIP'"
@@ -17,3 +19,10 @@ alias pypipublish="python setup.py sdist upload -r pypi"
 
 # Django
 alias msp="./manage.py shell_plus"
+
+# git-annex
+alias aadd="git annex add"
+alias aget="git annex get"
+alias acopy="git annex copy"
+alias amove="git annex move"
+alias async="git annex sync"
