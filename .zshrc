@@ -63,6 +63,9 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  tmux
+  rails
+  ruby
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -93,3 +96,5 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# rbenv
+eval "$(rbenv init -)"
