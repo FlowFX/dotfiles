@@ -40,5 +40,6 @@
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
     "files.insertFinalNewline": true,
-    "workbench.colorTheme": "Solarized Light"
+    "workbench.colorTheme": "Solarized Light",
+    "latex-workshop.message.update.show": false
 }
