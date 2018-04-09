@@ -41,5 +41,7 @@
     "python.linting.mypyEnabled": true,
     "files.insertFinalNewline": true,
     "workbench.colorTheme": "Solarized Light",
-    "latex-workshop.message.update.show": false
+    "latex-workshop.message.update.show": false,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false
 }
