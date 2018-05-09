@@ -1,6 +1,9 @@
 # pipsi
 export PATH=$HOME/.local/bin:$PATH
 
+# heroku CHI
+export HEROKU_ORGANIZATION=chi-deutschland
+
 # ADB Fastboot
 if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
     export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
