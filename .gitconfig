@@ -30,6 +30,7 @@
 	co = checkout
 	cob = checkout -b
 	com = checkout master
+	cod = checkout development
 	cop = checkout -p
 	d = diff
 	db = default-branch checkout
