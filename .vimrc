@@ -27,6 +27,7 @@ Plugin 'editorconfig/editorconfig-vim'
 "Plugin 'freitass/todo.txt-vim'
 "Plugin 'nvie/vim-flake8'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'neomake/neomake'
 
 
 " All Plugins must be added before the following line
