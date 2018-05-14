@@ -30,3 +30,4 @@ alias async="git annex sync"
 # Rails
 alias beg="bundle exec guard"
 alias ber="bundle exec rspec"
+alias berp="bundle exec rails parallel:spec"
