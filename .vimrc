@@ -107,3 +107,6 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-;> :TmuxNavigatePrevious<cr>
 
+" Neomake
+call neomake#configure#automake('nw', 1000)
+let g:neomake_ruby_enabled_makers = []
