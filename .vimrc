@@ -5,6 +5,7 @@
 " * http://dougblack.io/words/a-good-vimrc.html
 " * http://www.fullstackpython.com/vim.html
 " * http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+" * http://color.smyck.org/
 
 
 " Required by Vundle
@@ -23,12 +24,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'editorconfig/editorconfig-vim'
-"Plugin 'wchargin/vim-latexsuite'
-"Plugin 'freitass/todo.txt-vim'
-"Plugin 'nvie/vim-flake8'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'neomake/neomake'
-
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
 
 " All Plugins must be added before the following line
 call vundle#end()				" required
@@ -89,7 +88,6 @@ let g:SimpylFold_docstring_preview=1
 
 " make code look pretty
 let python_highlight_all=1
-syntax on
 
 " toggle background with F5
 call togglebg#map("<F5>")
@@ -109,4 +107,12 @@ nnoremap <silent> <c-;> :TmuxNavigatePrevious<cr>
 
 " Neomake
 call neomake#configure#automake('nw', 1000)
-let g:neomake_ruby_enabled_makers = []
+let g:neomake_ruby_enabled_makers = ['rubocop', 'rubocop_rails']
+
+" Colorscheme
+syntax on
+if has('nvim')
+    colorscheme smyck " doesn't work under vim for whatever reason
+else
+    colorscheme solarized
+endif
