@@ -88,3 +88,7 @@
 	autosetuprebase = always
 [pull]
 	rebase = true
+[github]
+	user = flowfx
+[ghi]
+	token = !security find-internet-password -a flowfx -s github.com -l 'ghi token' -w
