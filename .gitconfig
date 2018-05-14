@@ -5,6 +5,7 @@
 [core]
 	excludesfile = /Users/flowfx/.gitignore_global
 	autocrlf = false
+    editor = 'nvim'
 [color]
 	ui = auto
 [diff]

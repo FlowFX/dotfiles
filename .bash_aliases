@@ -1,5 +1,5 @@
 # Aliases
-
+alias vim='nvim'
 alias psgrep='ps aux | grep '
 
 # Git

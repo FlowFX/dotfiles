@@ -85,7 +85,8 @@ export LANG=en_US.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='nvim'
+  export VISUAL='nvim'
+  export EDITOR="$VISUAL"
 fi
 
 # Source bash aliases
