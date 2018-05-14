@@ -13,4 +13,5 @@ extensions
 # Unimportant config files
 .config/*
 !.config/karabiner
+!.config/neomutt
 !.config/nvim
