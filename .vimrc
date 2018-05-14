@@ -91,37 +91,11 @@ let g:SimpylFold_docstring_preview=1
 let python_highlight_all=1
 syntax on
 
-""" select colorscheme
-if has('gui_running')
-	set background=light
-	colorscheme solarized
-else
-	"color koehler
-	"colorscheme Zenburn
-endif
-
 " toggle background with F5
 call togglebg#map("<F5>")
 
-
-"autocmd FileType python,tex set
-"	\ tabstop=4
-"	\ softtabstop=4
-"	\ shiftwidth=4
-"	\ textwidth=119
-"	\ expandtab
-"	\ autoindent
-"	\ fileformat=unix
-"
-"autocmd FileType html,scss,sass,css,js,php,yml set
-"	\ tabstop=2
-"	\ softtabstop=2
-"	\ shiftwidth=2
-"	\ expandtab
-
 " allow to easily edit crontab with crontab -e
 autocmd filetype crontab setlocal nobackup nowritebackup
-
 
 " tmux related configuration
 " cf. https://github.com/christoomey/vim-tmux-navigator
