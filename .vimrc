@@ -26,6 +26,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'neomake/neomake'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
@@ -105,6 +106,9 @@ nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-;> :TmuxNavigatePrevious<cr>
+
+" automatically reload file when changed outside of vim
+set autoread
 
 " Neomake
 call neomake#configure#automake('nw', 1000)
