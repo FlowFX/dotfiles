@@ -20,15 +20,22 @@ call vundle#begin()
 " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Add all plugins here
+""" Plugins
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'altercation/vim-colors-solarized'
+" Programming
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'neomake/neomake'
-Plugin 'tmux-plugins/vim-tmux-focus-events'
-Plugin 'tpope/vim-bundler'
+" Git
 Plugin 'tpope/vim-fugitive'
+" File system navigation
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Tmux
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+" Ruby and Rails
+Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rails'
 
 " All Plugins must be added before the following line
@@ -121,3 +128,6 @@ if has('nvim')
 else
     colorscheme solarized
 endif
+
+" Nerdtree
+map <C-n> :NERDTreeToggle<CR>
