@@ -29,6 +29,7 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 " IDE
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'junegunn/fzf.vim'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'neomake/neomake'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-fugitive'
