@@ -31,3 +31,10 @@ alias async="git annex sync"
 alias beg="bundle exec guard"
 alias ber="bundle exec rspec"
 alias berp="bundle exec rails parallel:spec"
+alias rc="rails console"
+alias rs="rails server"
+alias rt="rails test"
+
+# Rails database
+alias rdm='rails db:migrate'
+alias rds='rails db:seed'
