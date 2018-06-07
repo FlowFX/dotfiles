@@ -49,13 +49,13 @@ set encoding=utf-8
 let mapleader=","                  " define <leader> key to comma
 set ruler                          " show current line and column
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4                   " when using the >> or << commands, shift lines by 4 spaces
 set list listchars=tab:›·,trail:·,nbsp:·
 
 " Easy escaping
 inoremap jj <ESC>
+
+" Format code with F6
+map <F6> mzgg=G`z
 
 "set clipboard=unnamed              " access OS X system clipboard
 
