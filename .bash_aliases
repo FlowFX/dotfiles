@@ -2,6 +2,10 @@
 alias vim='nvim'
 alias psgrep='ps aux | grep '
 
+function findall() {
+  find . -name "*" -type f | xargs grep "$1"
+}
+
 # Git
 alias g="git"
 alias wip="git commit -am'WIP'"
