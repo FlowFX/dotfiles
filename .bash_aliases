@@ -8,6 +8,7 @@ function findall() {
 
 # Git
 alias g="git"
+alias gf="git flow"
 alias wip="git commit -am'WIP'"
 
 # todo.txt
