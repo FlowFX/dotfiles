@@ -38,6 +38,9 @@ Plugin 'tpope/vim-rails'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Status bar
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All Plugins must be added before the following line
 call vundle#end()				" required
@@ -129,6 +132,8 @@ if has('nvim')
 else
     colorscheme solarized
 endif
+
+let g:airline_theme='seagull'
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
