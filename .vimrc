@@ -140,5 +140,22 @@ endif
 
 let g:airline_theme='seagull'
 
-" Nerdtree
-map <C-n> :NERDTreeToggle<CR>
+
+
+"  ____  _             _                          __ _       
+" |  _ \| |_   _  __ _(_)_ __     ___ ___  _ __  / _(_) __ _ 
+" | |_) | | | | |/ _` | | '_ \   / __/ _ \| '_ \| |_| |/ _` |
+" |  __/| | |_| | (_| | | | | | | (_| (_) | | | |  _| | (_| |
+" |_|   |_|\__,_|\__, |_|_| |_|  \___\___/|_| |_|_| |_|\__, |
+"                |___/                                 |___/ 
+" Plugin-specific configuration options
+
+" NerdTree
+" https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
+map <C-n> :NERDTreeToggle<CR>    " toggle Nerdtree with CTRL-n
+autocmd bufenter * 
+    \ if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | 
+    \ q | endif                  " automaticall close a tab if only NerdTree remains
+let NERDTreeAutoDeleteBuffer = 1 " automatically delete the buffer of the file you just deleted with NerdTree
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
