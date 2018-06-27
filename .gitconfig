@@ -69,6 +69,7 @@
 	switch = !legit switch
 	resync = !legit resync
 	undo = !legit undo
+	up = pull --rebase --autostash
 [url "git@github.com:"]
 	insteadOf = github:
 [url "https://github.com/"]
