@@ -28,7 +28,6 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 " IDE
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'junegunn/fzf.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim'
 Plugin 'neomake/neomake'
@@ -42,6 +41,8 @@ Plugin 'tpope/vim-endwise'
 " Status bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+" fzf
+Plugin 'junegunn/fzf.vim'
 
 " All Plugins must be added before the following line
 call vundle#end()				" required
@@ -159,3 +160,14 @@ autocmd bufenter *
 let NERDTreeAutoDeleteBuffer = 1 " automatically delete the buffer of the file you just deleted with NerdTree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+
+" FZF
+" https://github.com/junegunn/fzf
+" https://github.com/junegunn/fzf.vim
+set rtp+=/usr/local/opt/fzf
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
+let g:fzf_layout = { 'down': '~40%' }
+nnoremap <leader>f :FZF<CR>
