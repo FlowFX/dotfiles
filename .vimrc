@@ -1,14 +1,24 @@
-" My personal vim configuration files. Again.
+" by flowfx
 "
 " Resources:
+" * https://github.com/Nervengift/dotfiles/blob/master/.vimrc
 " * https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 " * http://dougblack.io/words/a-good-vimrc.html
 " * http://www.fullstackpython.com/vim.html
 " * http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 " * http://color.smyck.org/
+"
+" Special thanks to Nervengift for the ASCII art!
 
 
-" Required by Vundle
+
+"  ____  _             _           
+" |  _ \| |_   _  __ _(_)_ __  ___ 
+" | |_) | | | | |/ _` | | '_ \/ __|
+" |  __/| | |_| | (_| | | | | \__ \
+" |_|   |_|\__,_|\__, |_|_| |_|___/
+"                |___/             
+" Plugins using Vundle
 " https://github.com/VundleVim/Vundle.vim
 set nocompatible
 filetype off
@@ -48,8 +58,14 @@ Plugin 'junegunn/fzf.vim'
 call vundle#end()				" required
 filetype plugin indent on		" required
 
+"   ____                           _ 
+"  / ___| ___ _ __   ___ _ __ __ _| |
+" | |  _ / _ \ '_ \ / _ \ '__/ _` | |
+" | |_| |  __/ | | |  __/ | | (_| | |
+"  \____|\___|_| |_|\___|_|  \__,_|_|
+" 
+" General options               
 
-""" General settings """
 set encoding=utf-8
 let mapleader=","                  " define <leader> key to comma
 set ruler                          " show current line and column
@@ -131,6 +147,12 @@ set autoread
 call neomake#configure#automake('nw', 1000)
 let g:neomake_ruby_enabled_makers = ['rubocop', 'rubocop_rails']
 
+"  _                _
+" | |    ___   ___ | | __
+" | |   / _ \ / _ \| |/ /
+" | |__| (_) | (_) |   <
+" |_____\___/ \___/|_|\_\
+" 
 " Colorscheme
 syntax on
 if has('nvim')
@@ -141,6 +163,21 @@ endif
 
 let g:airline_theme='seagull'
 
+
+
+
+"   ____                      _      _   _
+"  / ___|___  _ __ ___  _ __ | | ___| |_(_) ___  _ __
+" | |   / _ \| '_ ` _ \| '_ \| |/ _ \ __| |/ _ \| '_ \
+" | |__| (_) | | | | | | |_) | |  __/ |_| | (_) | | | |
+"  \____\___/|_| |_| |_| .__/|_|\___|\__|_|\___/|_| |_|
+"                      |_|
+" Completion popup configuration
+
+" Completion options (select longest + show menu even if a single match is found)
+set completeopt=longest,menuone
+" Allow smarter completion by infering the case
+set infercase
 
 
 "  ____  _             _                          __ _       
