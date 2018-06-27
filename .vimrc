@@ -119,6 +119,10 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-;> :TmuxNavigatePrevious<cr>
 
+" eliminate delay on ESC to enter normal mode?
+" https://www.johnhawthorn.com/2012/09/vi-escape-delays/
+set timeoutlen=1000 ttimeoutlen=0
+
 " automatically reload file when changed outside of vim
 set autoread
 
