@@ -30,12 +30,14 @@ call vundle#begin()
 " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-""" Plugins
-Plugin 'tmhedberg/SimpylFold'
+""" PLUGINS
 Plugin 'altercation/vim-colors-solarized'
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
+" NerdTree
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " IDE
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'kchmck/vim-coffee-script'
@@ -45,9 +47,8 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-endwise'
+Plugin 'tmhedberg/SimpylFold'
 " Status bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -80,7 +81,7 @@ map <F6> mzgg=G`z
 
 "set clipboard=unnamed              " access OS X system clipboard
 
-""" SEARCH
+""" SEARCH """
 set ignorecase          " ignore case in searches
 set smartcase           " respect case if search begins with a capital letter
 set incsearch           " search as characters are entered
@@ -126,7 +127,7 @@ call togglebg#map("<F5>")
 " allow to easily edit crontab with crontab -e
 autocmd filetype crontab setlocal nobackup nowritebackup
 
-" tmux related configuration
+""" TMUX """
 " cf. https://github.com/christoomey/vim-tmux-navigator
 let g:tmux_navigator_no_mappings = 1
 
@@ -136,14 +137,14 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-;> :TmuxNavigatePrevious<cr>
 
-" eliminate delay on ESC to enter normal mode?
+" eliminate delay on ESC to enter normal mode
 " https://www.johnhawthorn.com/2012/09/vi-escape-delays/
 set timeoutlen=1000 ttimeoutlen=0
 
 " automatically reload file when changed outside of vim
 set autoread
 
-" Neomake
+""" NEOMAKE """
 call neomake#configure#automake('nw', 1000)
 let g:neomake_ruby_enabled_makers = ['rubocop', 'rubocop_rails']
 
