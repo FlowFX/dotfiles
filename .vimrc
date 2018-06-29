@@ -81,6 +81,9 @@ map <F6> mzgg=G`z
 
 "set clipboard=unnamed              " access OS X system clipboard
 
+" tabs are evil
+:set tabstop=2 shiftwidth=2 expandtab
+
 """ SEARCH """
 set ignorecase          " ignore case in searches
 set smartcase           " respect case if search begins with a capital letter
