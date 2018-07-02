@@ -92,7 +92,6 @@ set hlsearch            " highlight matches
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR> " Vim will keep highlighted matches from searches until you either run a new one or manually stop highlighting the old search with :nohlsearch. I find myself running this all the time so I've mapped it to ,<space>.
 
-set guifont=Inconsolata:h15			" set font in MacVim
 set cursorline             " hightlight current line
 set showmatch              " show the matching part of the pair for [] {} and ()
 set number                 " show line numbers
@@ -150,6 +149,13 @@ set autoread
 """ NEOMAKE """
 call neomake#configure#automake('nw', 1000)
 let g:neomake_ruby_enabled_makers = ['rubocop', 'rubocop_rails']
+let g:neomake_javascript_enabled_makers = ['eslint']
+
+nmap <Leader><Space>o :lopen<CR>      " open location window
+nmap <Leader><Space>c :lclose<CR>     " close location window
+nmap <Leader><Space>, :ll<CR>         " go to current error/warning
+nmap <Leader><Space>n :lnext<CR>      " next error/warning
+nmap <Leader><Space>p :lprev<CR>      " previous error/warning
 
 "  _                _
 " | |    ___   ___ | | __
