@@ -1,3 +1,5 @@
+.dotfiles
+
 # VIM
 .vim/bundle/*
 .vim/.netrwhist
