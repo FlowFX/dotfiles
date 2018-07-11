@@ -21,7 +21,6 @@
 " Plugins using Vundle
 " https://github.com/VundleVim/Vundle.vim
 set nocompatible
-filetype off
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -79,8 +78,6 @@ inoremap jj <ESC>
 " Format code with F6
 map <F6> mzgg=G`z
 
-"set clipboard=unnamed              " access OS X system clipboard
-
 " tabs are evil
 :set tabstop=2 shiftwidth=2 expandtab
 
@@ -92,9 +89,9 @@ set hlsearch            " highlight matches
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR> " Vim will keep highlighted matches from searches until you either run a new one or manually stop highlighting the old search with :nohlsearch. I find myself running this all the time so I've mapped it to ,<space>.
 
-set cursorline             " hightlight current line
-set showmatch              " show the matching part of the pair for [] {} and ()
-set number                 " show line numbers
+set cursorline          " hightlight current line
+set showmatch           " show the matching part of the pair for [] {} and ()
+set number              " show line numbers
 set scrolloff=5         " don't scroll all the way to the bottom
 set ttyfast
 
@@ -120,15 +117,52 @@ nnoremap <space> za
 " See the docstrings for folded code
 let g:SimpylFold_docstring_preview=1
 
-" make code look pretty
-let python_highlight_all=1
-
 " toggle background with F5
 call togglebg#map("<F5>")
 
 " allow to easily edit crontab with crontab -e
 autocmd filetype crontab setlocal nobackup nowritebackup
 
+
+"  _                _
+" | |    ___   ___ | | __
+" | |   / _ \ / _ \| |/ /
+" | |__| (_) | (_) |   <
+" |_____\___/ \___/|_|\_\
+" 
+" Colorscheme
+syntax on
+if has('nvim')
+    colorscheme smyck " doesn't work under vim for whatever reason
+else
+    colorscheme solarized
+endif
+
+let g:airline_theme='seagull'
+
+
+"   ____                      _      _   _
+"  / ___|___  _ __ ___  _ __ | | ___| |_(_) ___  _ __
+" | |   / _ \| '_ ` _ \| '_ \| |/ _ \ __| |/ _ \| '_ \
+" | |__| (_) | | | | | | |_) | |  __/ |_| | (_) | | | |
+"  \____\___/|_| |_| |_| .__/|_|\___|\__|_|\___/|_| |_|
+"                      |_|
+" Completion popup configuration
+
+" Completion options (select longest + show menu even if a single match is found)
+set completeopt=longest,menuone
+" Allow smarter completion by infering the case
+set infercase
+
+
+"  ____  _             _                          __ _       
+" |  _ \| |_   _  __ _(_)_ __     ___ ___  _ __  / _(_) __ _ 
+" | |_) | | | | |/ _` | | '_ \   / __/ _ \| '_ \| |_| |/ _` |
+" |  __/| | |_| | (_| | | | | | | (_| (_) | | | |  _| | (_| |
+" |_|   |_|\__,_|\__, |_|_| |_|  \___\___/|_| |_|_| |_|\__, |
+"                |___/                                 |___/ 
+" Plugin-specific configuration options
+"
 """ TMUX """
 " cf. https://github.com/christoomey/vim-tmux-navigator
 let g:tmux_navigator_no_mappings = 1
@@ -157,48 +191,7 @@ nmap <Leader><Space>, :ll<CR>         " go to current error/warning
 nmap <Leader><Space>n :lnext<CR>      " next error/warning
 nmap <Leader><Space>p :lprev<CR>      " previous error/warning
 
-"  _                _
-" | |    ___   ___ | | __
-" | |   / _ \ / _ \| |/ /
-" | |__| (_) | (_) |   <
-" |_____\___/ \___/|_|\_\
-" 
-" Colorscheme
-syntax on
-if has('nvim')
-    colorscheme smyck " doesn't work under vim for whatever reason
-else
-    colorscheme solarized
-endif
-
-let g:airline_theme='seagull'
-
-
-
-
-"   ____                      _      _   _
-"  / ___|___  _ __ ___  _ __ | | ___| |_(_) ___  _ __
-" | |   / _ \| '_ ` _ \| '_ \| |/ _ \ __| |/ _ \| '_ \
-" | |__| (_) | | | | | | |_) | |  __/ |_| | (_) | | | |
-"  \____\___/|_| |_| |_| .__/|_|\___|\__|_|\___/|_| |_|
-"                      |_|
-" Completion popup configuration
-
-" Completion options (select longest + show menu even if a single match is found)
-set completeopt=longest,menuone
-" Allow smarter completion by infering the case
-set infercase
-
-
-"  ____  _             _                          __ _       
-" |  _ \| |_   _  __ _(_)_ __     ___ ___  _ __  / _(_) __ _ 
-" | |_) | | | | |/ _` | | '_ \   / __/ _ \| '_ \| |_| |/ _` |
-" |  __/| | |_| | (_| | | | | | | (_| (_) | | | |  _| | (_| |
-" |_|   |_|\__,_|\__, |_|_| |_|  \___\___/|_| |_|_| |_|\__, |
-"                |___/                                 |___/ 
-" Plugin-specific configuration options
-
-" NerdTree
+""" NERDTREE """
 " https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
 map <C-n> :NERDTreeToggle<CR>    " toggle Nerdtree with CTRL-n
 autocmd bufenter * 
@@ -208,7 +201,7 @@ let NERDTreeAutoDeleteBuffer = 1 " automatically delete the buffer of the file y
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-" FZF
+""" FZF """
 " https://github.com/junegunn/fzf
 " https://github.com/junegunn/fzf.vim
 set rtp+=/usr/local/opt/fzf
@@ -219,5 +212,5 @@ let g:fzf_action = {
 let g:fzf_layout = { 'down': '~40%' }
 nnoremap <leader>f :FZF<CR>
 
-" VIM-Rails
+""" VIM-RAILS """
 nnoremap <leader>t :Rails<CR>
