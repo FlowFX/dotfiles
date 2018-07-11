@@ -76,6 +76,8 @@
 	insteadOf = gitpub:
 [branch "master"]
 	mergeoptions = --no-ff
+[branch "development"]
+	mergeoptions = --no-ff
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
