@@ -218,3 +218,6 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 let g:fzf_layout = { 'down': '~40%' }
 nnoremap <leader>f :FZF<CR>
+
+" VIM-Rails
+nnoremap <leader>t :Rails<CR>
