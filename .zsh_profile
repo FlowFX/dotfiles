@@ -5,8 +5,8 @@ export PATH=$HOME/.local/bin:$PATH
 #export HEROKU_ORGANIZATION=chi-deutschland
 
 # ADB Fastboot
-if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
-    export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
+if [ -d "$HOME/bin/adb-fastboot/platform-tools" ] ; then
+    export PATH="$HOME/bin/adb-fastboot/platform-tools:$PATH"
 fi
 
 # Virtualenvwrapper
