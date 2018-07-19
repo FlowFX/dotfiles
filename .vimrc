@@ -184,6 +184,7 @@ set autoread
 call neomake#configure#automake('nw', 1000)
 let g:neomake_ruby_enabled_makers = ['rubocop', 'rubocop_rails']
 let g:neomake_javascript_enabled_makers = ['eslint']
+nnoremap <leader>r :silent !rubocop --auto-correct %<CR>
 
 nmap <Leader><Space>o :lopen<CR>      " open location window
 nmap <Leader><Space>c :lclose<CR>     " close location window
