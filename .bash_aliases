@@ -43,6 +43,7 @@ alias berp="bundle exec rails parallel:spec RAILS_ENV=test"
 alias rc="rails console"
 alias rs="rails server"
 alias rt="rails test"
+alias respring="spring stop && spring server &>/dev/null &"
 
 # Rails database
 alias rdm='rails db:migrate'
