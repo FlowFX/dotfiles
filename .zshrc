@@ -64,7 +64,6 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
   git
   tmux
-  rails
   ruby
   bundler
 )
@@ -100,3 +99,6 @@ fi
 
 # rbenv
 eval "$(rbenv init -)"
+
+# FZF
+export FZF_DEFAULT_COMMAND='rg --files'
