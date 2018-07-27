@@ -53,6 +53,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " fzf
 Plugin 'junegunn/fzf.vim'
+" Ack & the silver searcher
+Plugin 'mileszs/ack.vim'
 
 " All Plugins must be added before the following line
 call vundle#end()				" required
@@ -215,3 +217,11 @@ nnoremap <C-p> :<C-u>FZF<CR>
 
 """ VIM-RAILS """
 nnoremap <leader>t :Rails<CR>
+
+""" Ack & ag (The Silver Searcher) """
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+cnoreabbrev Ack Ack1
+nnoremap <Leader>a :Ack!<Space>
