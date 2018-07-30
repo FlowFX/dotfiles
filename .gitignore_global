@@ -15,3 +15,6 @@ __pycache__
 .DS_Store
 secrets.yml.key
 tags
+
+# Neomake
+.*@neomake*
