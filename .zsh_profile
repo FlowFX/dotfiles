@@ -9,5 +9,24 @@ if [ -d "$HOME/bin/adb-fastboot/platform-tools" ] ; then
     export PATH="$HOME/bin/adb-fastboot/platform-tools:$PATH"
 fi
 
+# Virtualenvwrapper
+if [ -d "$HOME/.virtualenvs" ] ; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/code
+    export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+# Pyenv-Virtualenvwrapper
+# https://github.com/pyenv/pyenv-virtualenvwrapper
+if [ -d "$HOME/.pyenv" ] ; then
+    eval "$(pyenv init -)"
+    export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+fi
+
+# LESS with colors
+export LESSOPEN="| src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+
 # Secret extra configurations
 [[ -f ~/.profile ]] && source ~/.profile
