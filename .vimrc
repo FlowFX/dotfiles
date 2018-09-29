@@ -7,6 +7,7 @@
 " * http://www.fullstackpython.com/vim.html
 " * http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 " * http://color.smyck.org/
+" * https://github.com/scy/dotfiles/tree/master/.vim
 "
 " Special thanks to Nervengift for the ASCII art!
 
@@ -82,6 +83,16 @@ map <F6> mzgg=G`z
 
 " tabs are evil
 :set tabstop=2 shiftwidth=2 expandtab
+
+" In the viminfo state file, store file marks and unlimited register contents.
+" Search, command line and input history size are defined via 'history'.
+" Also, put the viminfo file in ~/.vim, not directly in the home directory.
+set viminfo='100,h,f1,n~/.vim/viminfo
+set history=100
+
+" Don't litter .swp files all over the place, put them in ~/.vim/swp instead,
+" but fall back to "same directory" if that's not possible for some reason.
+set directory=~/.vim/swp,.
 
 """ SEARCH """
 set ignorecase          " ignore case in searches

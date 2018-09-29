@@ -3,6 +3,7 @@
 # VIM
 .vim/bundle/*
 .vim/.netrwhist
+.vim//viminfo
 
 # VS Code
 workspaceStorage
