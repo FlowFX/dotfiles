@@ -18,3 +18,6 @@ tags
 
 # Neomake
 .*@neomake*
+
+# VIM Sessions
+Session*.vim

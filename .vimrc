@@ -32,6 +32,8 @@ Plugin 'gmarik/Vundle.vim'
 
 """ PLUGINS
 Plugin 'altercation/vim-colors-solarized'
+" Session management
+Plugin 'tpope/vim-obsession'
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
