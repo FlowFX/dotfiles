@@ -129,6 +129,7 @@ nnoremap <C-H> <C-W><C-H>
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
+hi Folded ctermbg=238
 
 " Configure FastFold
 " https://github.com/Konfekt/FastFold
