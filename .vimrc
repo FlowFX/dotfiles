@@ -153,7 +153,7 @@ else
     colorscheme solarized
 endif
 
-let g:airline_theme='seagull'
+let g:airline_theme='solarized_flood'
 
 
 "   ____                      _      _   _
