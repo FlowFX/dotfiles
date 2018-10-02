@@ -58,6 +58,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/fzf.vim'
 " Ack & the silver searcher
 Plugin 'mileszs/ack.vim'
+" CTags
+Plugin 'majutsushi/tagbar'
+Plugin 'ludovicchabant/vim-gutentags'
 
 " All Plugins must be added before the following line
 call vundle#end()				" required
@@ -227,6 +230,9 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 let g:fzf_layout = { 'down': '~40%' }
 nnoremap <C-p> :<C-u>FZF<CR>
+
+""" CTags """
+map <C-m> :TagbarToggle<CR>
 
 """ VIM-RAILS """
 nnoremap <leader>t :Rails<CR>

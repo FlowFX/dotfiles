@@ -19,5 +19,7 @@ tags
 # Neomake
 .*@neomake*
 
-# VIM Sessions
+# VIM
 Session*.vim
+tags.lock
+tags.temp
