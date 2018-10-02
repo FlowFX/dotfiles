@@ -51,7 +51,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-endwise'
-Plugin 'tmhedberg/SimpylFold'
+Plugin 'Konfekt/FastFold'
 " Status bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -130,14 +130,27 @@ nnoremap <C-H> <C-W><C-H>
 set foldmethod=indent
 set foldlevel=99
 
+" Configure FastFold
+" https://github.com/Konfekt/FastFold
+let g:fastfold_savehook = 1
+let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
+let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
+
+let g:markdown_folding = 1
+let g:tex_fold_enabled = 1
+let g:vimsyn_folding = 'af'
+let g:xml_syntax_folding = 1
+let g:javaScript_fold = 1
+let g:sh_fold_enabled= 7
+let g:ruby_fold = 1
+let g:perl_fold = 1
+let g:perl_fold_blocks = 1
+let g:r_syntax_folding = 1
+let g:rust_fold = 1
+let g:php_folding = 1
+
 " Enable folding with the spacebar
 nnoremap <space> za
-
-" See the docstrings for folded code
-let g:SimpylFold_docstring_preview=1
-
-" toggle background with F5
-call togglebg#map("<F5>")
 
 " allow to easily edit crontab with crontab -e
 autocmd filetype crontab setlocal nobackup nowritebackup
@@ -158,6 +171,9 @@ else
 endif
 
 let g:airline_theme='solarized_flood'
+
+" toggle background with F5
+call togglebg#map("<F5>")
 
 
 "   ____                      _      _   _
