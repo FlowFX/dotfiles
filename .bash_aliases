@@ -15,6 +15,9 @@ alias g="git"
 alias gf="git flow"
 alias wip="git commit -am'WIP'"
 
+# Mutt
+alias m="neomutt"
+
 # todo.txt
 export TODOTXT_DEFAULT_ACTION=ls
 alias t="todo.sh"
