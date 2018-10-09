@@ -7,3 +7,7 @@ set folder = "imaps://imap.gmail.com:993/"
 set spoolfile = "+INBOX"
 set record="+[Gmail]/Sent Mail"
 set postponed="+[Gmail]/Drafts"
+
+
+# Fetch new mail from the server
+bind index G imap-fetch-mail
