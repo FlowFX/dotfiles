@@ -103,3 +103,7 @@ eval "$(rbenv init -)"
 
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files'
+
+# Make Ruby matchers work
+# https://github.com/robbyrussell/oh-my-zsh/issues/31#issuecomment-359728582
+unsetopt nomatch
