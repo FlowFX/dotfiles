@@ -230,7 +230,7 @@ nmap <Leader><Space>p :lprev<CR>      " previous error/warning
 
 """ NERDTREE """
 " https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
-map <C-n> :NERDTreeTabsToggle<CR>    " toggle Nerdtree with CTRL-n
+map <C-n> :NERDTreeToggle<CR>    " toggle Nerdtree with CTRL-n
 autocmd bufenter * 
     \ if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | 
     \ q | endif                  " automaticall close a tab if only NerdTree remains
