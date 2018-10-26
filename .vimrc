@@ -161,6 +161,9 @@ nnoremap <space> za
 " allow to easily edit crontab with crontab -e
 autocmd filetype crontab setlocal nobackup nowritebackup
 
+" Enable matchit
+runtime macros/matchit.vim
+
 
 "  _                _
 " | |    ___   ___ | | __
