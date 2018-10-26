@@ -47,11 +47,16 @@ Plugin 'mattn/emmet-vim'
 Plugin 'neomake/neomake'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-endwise'
 Plugin 'Konfekt/FastFold'
+" Ruby
+" https://thoughtbot-images.s3.amazonaws.com/upcase/navigating-ruby-files-in-vim-install-instructions.pdf
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
 " Status bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
