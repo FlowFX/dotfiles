@@ -258,6 +258,7 @@ let g:fzf_layout = { 'down': '~40%' }
 nnoremap <C-p> :<C-u>FZF<CR>
 
 """ CTags """
+set tags=./tags;/                                         " https://stackoverflow.com/a/741486
 map <C-m> :TagbarToggle<CR>                               " Toggle Tagbar with Ctrl+M
 au FileType gitcommit,gitrebase let g:gutentags_enabled=0 " Disable Gutentags on Git stuff
 
