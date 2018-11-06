@@ -43,9 +43,9 @@ alias async="git annex sync"
 alias beg="bundle exec guard"
 alias ber="bundle exec rspec"
 alias berp="bundle exec rails parallel:spec RAILS_ENV=test"
-alias rc="rails console"
-alias rs="rails server"
-alias rt="rails test"
+alias rc="bundle exec rails console"
+alias rs="bundle exec rails server"
+alias rt="bundle exec rails test"
 alias respring="spring stop && spring server &>/dev/null &"
 
 # Rails database
