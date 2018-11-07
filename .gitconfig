@@ -70,6 +70,7 @@
 	resync = !legit resync
 	undo = !legit undo
 	up = pull --rebase --autostash
+	ctags = !.git/hooks/ctags
 [url "git@github.com:"]
 	insteadOf = github:
 [url "https://github.com/"]
@@ -96,3 +97,5 @@
 	user = flowfx
 [ghi]
 	token = !security find-internet-password -a flowfx -s github.com -l 'ghi token' -w
+[init]
+	templatedir = ~/.git_template
