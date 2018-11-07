@@ -5,7 +5,7 @@
 [core]
 	excludesfile = /Users/flowfx/.gitignore_global
 	autocrlf = false
-    editor = 'nvim'
+	editor = 'nvim'
 [color]
 	ui = auto
 [diff]
@@ -56,10 +56,6 @@
 	rbo = rebase origin
 	s = status
 	sm = submodule
-	sd = !bash -c 'time git svn dcommit'
-	sf = svn fetch
-	sr = svn rebase
-	sfr = !git sf && git sr
 	st = stash
 	stp = stash pop
 	branches = !legit branches
@@ -87,8 +83,6 @@
 	trustExitCode = true
 [push]
 	default = simple
-#[commit]
-	#template = /Users/flowfx/.stCommitMsg
 [branch]
 	autosetuprebase = always
 [pull]
