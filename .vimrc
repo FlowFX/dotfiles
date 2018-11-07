@@ -67,7 +67,6 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
 " CTags
 Plugin 'majutsushi/tagbar'
-Plugin 'ludovicchabant/vim-gutentags'
 
 " All Plugins must be added before the following line
 call vundle#end()				" required
