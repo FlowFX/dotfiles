@@ -49,6 +49,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Konfekt/FastFold'
+" Tab completion
+Plugin 'Shougo/deoplete.nvim'
 " Ruby
 " https://thoughtbot-images.s3.amazonaws.com/upcase/navigating-ruby-files-in-vim-install-instructions.pdf
 Plugin 'kana/vim-textobj-user'
@@ -235,6 +237,11 @@ nmap <Leader><Space>c :lclose<CR>     " close location window
 nmap <Leader><Space>, :ll<CR>         " go to current error/warning
 nmap <Leader><Space>n :lnext<CR>      " next error/warning
 nmap <Leader><Space>p :lprev<CR>      " previous error/warning
+
+""" DEOPLETE """
+let g:deoplete#enable_at_startup = 1
+" Use tab to complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 """ NERDTREE """
 " https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
