@@ -67,8 +67,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/fzf.vim'
 " Ack & the silver searcher
 Plugin 'mileszs/ack.vim'
-" CTags
-Plugin 'majutsushi/tagbar'
 
 " All Plugins must be added before the following line
 call vundle#end()				" required
@@ -266,11 +264,9 @@ nnoremap <C-p> :<C-u>FZF<CR>
 
 """ CTags """
 set tags=./tags;/                                         " https://stackoverflow.com/a/741486
-map <C-m> :TagbarToggle<CR>                               " Toggle Tagbar with Ctrl+M
-au FileType gitcommit,gitrebase let g:gutentags_enabled=0 " Disable Gutentags on Git stuff
 
 """ VIM-RAILS """
-nnoremap <leader>t :Rails<CR>
+nnoremap <leader>t :Rails<CR>                         " Run tests
 
 """ Ack & ag (The Silver Searcher) """
 if executable('ag')
