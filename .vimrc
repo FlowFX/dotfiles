@@ -44,11 +44,12 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim'
-Plugin 'neomake/neomake'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Konfekt/FastFold'
+" Linting
+Plugin 'w0rp/ale'
 " Tab completion
 Plugin 'Shougo/deoplete.nvim'
 " Ruby
@@ -134,7 +135,6 @@ nnoremap <C-H> <C-W><C-H>
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
-hi Folded ctermbg=238
 
 " Configure FastFold
 " https://github.com/Konfekt/FastFold
@@ -224,22 +224,24 @@ set timeoutlen=1000 ttimeoutlen=0
 " automatically reload file when changed outside of vim
 set autoread
 
-""" NEOMAKE """
-call neomake#configure#automake('nw', 1000)
-let g:neomake_ruby_enabled_makers = ['rubocop', 'rubocop_rails']
-let g:neomake_javascript_enabled_makers = ['eslint']
-nnoremap <leader>r :silent !rubocop --auto-correct %<CR>
-
-nmap <Leader><Space>o :lopen<CR>      " open location window
-nmap <Leader><Space>c :lclose<CR>     " close location window
-nmap <Leader><Space>, :ll<CR>         " go to current error/warning
-nmap <Leader><Space>n :lnext<CR>      " next error/warning
-nmap <Leader><Space>p :lprev<CR>      " previous error/warning
-
 """ DEOPLETE """
 let g:deoplete#enable_at_startup = 1
 " Use tab to complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+""" ALE """
+" For JavaScript files, use `eslint` and only `eslint`
+let g:ale_linters = {
+  \ 'javascript': ['eslint'],
+  \ 'ruby': ['rubocop', 'rubocop_rails']
+  \ }
+" Mappings in the style of unimpaired-next
+nmap <silent> [W <Plug>(ale_first)
+nmap <silent> [w <Plug>(ale_previous)
+nmap <silent> ]w <Plug>(ale_next)
+nmap <silent> ]W <Plug>(ale_last)
+
+nnoremap <leader>r :silent !rubocop --auto-correct %<CR>    " run rubocop on ,r
 
 """ NERDTREE """
 " https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
