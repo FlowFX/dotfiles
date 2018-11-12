@@ -232,8 +232,10 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 """ ALE """
 " For JavaScript files, use `eslint` and only `eslint`
 let g:ale_linters = {
+  \ 'haml': ['haml-lint'],
   \ 'javascript': ['eslint'],
-  \ 'ruby': ['rubocop', 'rubocop_rails']
+  \ 'python': ['flake8'],
+  \ 'ruby': ['rubocop', 'rubocop_rails'],
   \ }
 " Mappings in the style of unimpaired-next
 nmap <silent> [W <Plug>(ale_first)
