@@ -2,7 +2,7 @@
 
 [general]
 accounts = mailbox, posteo, C3S, CHI
-pythonfile = ~/.offlineimap.py
+pythonfile = ~/.config/offlineimap/offlineimap.py
 ui = basic
 
 [Account mailbox]
