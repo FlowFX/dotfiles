@@ -12,9 +12,3 @@ extensions
 # Temp files
 *.bak
 *.tmp
-
-# Unimportant config files
-.config/*
-!.config/karabiner
-!.config/neomutt
-!.config/nvim

@@ -6,7 +6,13 @@ set spoolfile   = "+mailbox/INBOX"    # Set mailbox as default
 
 set header_cache = "~/.cache/muttheaders"
 
-mailboxes +mailbox/INBOX +posteo/INBOX +C3S/INBOX +CHI/INBOX
+mailboxes \
+  +mailbox \
+  +mailbox/INBOX \
+  +posteo \
+  +posteo/INBOX \
+  +C3S/INBOX \
+  +CHI/INBOX
 
 folder-hook mailbox/* source ~/.mutt/accounts/mailbox
 folder-hook posteo/*  source ~/.mutt/accounts/posteo
@@ -39,3 +45,12 @@ set mail_check_stats
 bind index,pager <down>   sidebar-next
 bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
+
+# Contacts ----------------------------------------
+set query_command= "khard email --parsable '%s'"      # Tab completion for address book
+bind editor <Tab> complete-query
+bind editor ^T    complete
+
+macro index,pager A \
+    "<pipe-message>khard add-email<return>" \
+    "add the sender email address to khard"
