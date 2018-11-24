@@ -1,3 +1,5 @@
+# ~/.offlineimaprc
+
 [general]
 accounts = mailbox, posteo, CHI
 pythonfile = ~/.offlineimap.py

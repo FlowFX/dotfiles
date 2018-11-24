@@ -1,4 +1,6 @@
 #! /usr/bin/env python2
+#
+# This works on MacOS only at the moment.
 
 import commands
 import re
