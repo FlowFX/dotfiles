@@ -14,10 +14,10 @@ mailboxes \
   +C3S/INBOX \
   +CHI/INBOX
 
-folder-hook mailbox/* source ~/.mutt/accounts/mailbox
-folder-hook posteo/*  source ~/.mutt/accounts/posteo
-folder-hook C3S/*     source ~/.mutt/accounts/C3S
-folder-hook CHI/*     source ~/.mutt/accounts/CHI
+folder-hook mailbox/* source ~/.config/neomutt/accounts/mailbox
+folder-hook posteo/*  source ~/.config/neomutt/accounts/posteo
+folder-hook C3S/*     source ~/.config/neomutt/accounts/C3S
+folder-hook CHI/*     source ~/.config/neomutt/accounts/CHI
 
 # Sync email
 macro index O "<shell-escape>offlineimap\r"           "run offlineimap to sync all mail"
