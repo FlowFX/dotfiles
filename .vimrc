@@ -279,3 +279,6 @@ endif
 
 cnoreabbrev Ack Ack1
 nnoremap <Leader>a :Ack!<Space>
+
+""" Sources
+source ~/.vim/abbreviations.vim
