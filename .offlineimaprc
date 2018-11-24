@@ -5,25 +5,29 @@ accounts = mailbox, posteo, CHI
 pythonfile = ~/.offlineimap.py
 ui = basic
 
-[Account CHI]
-localrepository = chi-local
-remoterepository = chi-remote
-
-[Repository chi-local]
-type = Maildir
-localfolders = ~/Mail/CHI
-
-[Repository chi-remote]
-type = Gmail
-remoteuser = f.posdziech@chi-deutschland.com
-remotepasseval = get_pass("f.posdziech@chi-deutschland.com", "imap.gmail.com")
-realdelete = no
-maxconnections = 3
-sslcacertfile = /usr/local/etc/openssl/cert.pem
+[Account mailbox]
+localrepository = mailbox-local
+remoterepository = mailbox-remote
 
 [Account posteo]
 localrepository = posteo-local
 remoterepository = posteo-remote
+
+[Account CHI]
+localrepository = chi-local
+remoterepository = chi-remote
+
+[Repository mailbox-local]
+type = Maildir
+localfolders = ~/Mail/mailbox
+
+[Repository mailbox-remote]
+type = IMAP
+remotehost = imap.mailbox.org
+remoteuser = flowfx@mailbox.org
+remotepasseval = get_pass("flowfx@mailbox.org", "imap.mailbox.org")
+ssl = yes
+sslcacertfile = /usr/local/etc/openssl/cert.pem
 
 [Repository posteo-local]
 type = Maildir
@@ -37,18 +41,14 @@ remotepasseval = get_pass("flowfx@posteo.de", "posteo.de")
 ssl = yes
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 
-[Account mailbox]
-localrepository = mailbox-local
-remoterepository = mailbox-remote
-
-[Repository mailbox-local]
+[Repository chi-local]
 type = Maildir
-localfolders = ~/Mail/mailbox
+localfolders = ~/Mail/CHI
 
-[Repository mailbox-remote]
-type = IMAP
-remotehost = imap.mailbox.org
-remoteuser = flowfx@mailbox.org
-remotepasseval = get_pass("flowfx@mailbox.org", "imap.mailbox.org")
-ssl = yes
+[Repository chi-remote]
+type = Gmail
+remoteuser = f.posdziech@chi-deutschland.com
+remotepasseval = get_pass("f.posdziech@chi-deutschland.com", "imap.gmail.com")
+realdelete = no
 sslcacertfile = /usr/local/etc/openssl/cert.pem
+
