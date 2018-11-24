@@ -1,0 +1,17 @@
+# f.posdziech@chi-deutschland.com
+
+set from      = "f.posdziech@chi-deutschland.com"
+set sendmail  = "msmtp -a chi"
+set mbox      = "+chi/All Mail"
+set postponed = "+chi/Drafts"
+unset record
+
+color status red default
+
+macro index D \
+    "<save-message>+chi/Trash<enter>" \
+    "move message to the trash"
+
+macro index S \
+    "<save-message>+chi/Spam<enter>"  \
+        "mark message as spam"

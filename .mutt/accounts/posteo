@@ -1,0 +1,12 @@
+# flowfx@posteo.de
+
+set from      = "hallo@flowfx.de"
+set sendmail  = "msmtp -a posteo"
+set mbox      = "+posteo/Archive"
+set postponed = "+posteo/Drafts"
+set record    = "+posteo/Sent" 
+
+color status yellow default
+
+macro index D "<save-message>+posteo/Trash<enter>" "move message to the trash"
+macro index S "<save-message>+posteo/Spam<enter>" "mark message as spam"

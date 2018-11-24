@@ -1,0 +1,12 @@
+# flowfx@mailbox.org
+
+set from      = "flowfx@mailbox.org"
+set sendmail  = "msmtp -a mailbox"
+set mbox      = "+mailbox/Archive"
+set postponed = "+mailbox/Drafts"
+set record    = "+mailbox/Sent" 
+
+color status green default
+
+macro index D "<save-message>+mailbox/Trash<enter>" "move message to the trash"
+macro index S "<save-message>+mailbox/Spam<enter>" "mark message as spam"

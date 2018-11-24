@@ -1,56 +1,32 @@
 set mbox_type   = Maildir
 set sendmail    = /usr/bin/msmtp
 
-set folder      = ~/Mail/chi
-set spoolfile   = "+INBOX"
-set mbox        = "+[Gmail]/All Mail"
-set postponed   = "+[Gmail]/Drafts"
-unset record
+set folder      = ~/Mail
+set spoolfile   = "+mailbox/INBOX"    # Set mailbox as default
 
-mailboxes +INBOX
+set header_cache = "~/.cache/muttheaders"
 
-macro index D \
-    "<save-message>+[Gmail]/Trash<enter>" \
-    "move message to the trash"
+mailboxes +mailbox/INBOX +posteo/INBOX +chi/INBOX
 
-macro index S \
-    "<save-message>+[Gmail]/Spam<enter>" \
-    "mark message as spam"
+folder-hook mailbox/* source ~/.mutt/accounts/mailbox
+folder-hook posteo/*  source ~/.mutt/accounts/posteo
+folder-hook chi/*     source ~/.mutt/accounts/chi
 
-# main options
-# cpied from https://pbrisbin.com/posts/mutt_gmail_offlineimap/
-set realname   = "Florian Posdziech"
-set from       = "f.posdziech@chi-deutschland.com"
-set mail_check = 0
-set envelope_from
 
-unset move           # gmail does that
-set delete           # don't ask, just do
-unset confirmappend  # don't ask, just do!
-set quit             # don't ask, just do!!
-unset mark_old       # read/new is good enough for me
+# Edit settings
 
-# sort/threading
-set sort     = threads
-set sort_aux = reverse-last-date-received
-set sort_re
+set edit_headers = yes               # Put headers in editor when composing
+set editor = "nvim +7 %s"            # Open Vim and move to line 7
+set fast_reply = yes                 # Don't ask for Subject/recipient when replying, or Subject when forwarding
+set forward_edit = yes               # Always allow to edit before forwarding
+set forward_format = "Fwd: %s"       # Jesus, mutt
+set include = yes                    # include body
+set reflow_text = yes                # All hail format=flowed
+set reflow_wrap = 78                 # If GOD would have wanted a larger number, SHE'd have given us larger screens
+set wrap = 120                       # Wrap incoming text at 120 chars
 
-# look and feel
-set pager_index_lines = 8
-set pager_context     = 5
-set pager_stop
-set menu_scroll
-set smart_wrap
-set tilde
-unset markers
+# Sidebar
 
-# composing 
-set fcc_attach
-unset mime_forward
-set forward_format = "Fwd: %s"
-set include
-set forward_quote
-
-ignore *                               # first, ignore all headers
-unignore from: to: cc: date: subject:  # then, show only these
-hdr_order from: to: cc: date: subject: # and in this order
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
