@@ -1,7 +1,7 @@
 # ~/.offlineimaprc
 
 [general]
-accounts = mailbox, posteo, CHI
+accounts = mailbox, posteo, C3S, CHI
 pythonfile = ~/.offlineimap.py
 ui = basic
 
@@ -13,9 +13,13 @@ remoterepository = mailbox-remote
 localrepository = posteo-local
 remoterepository = posteo-remote
 
+[Account C3S]
+localrepository = C3S-local
+remoterepository = C3S-remote
+
 [Account CHI]
-localrepository = chi-local
-remoterepository = chi-remote
+localrepository = CHI-local
+remoterepository = CHI-remote
 
 [Repository mailbox-local]
 type = Maildir
@@ -41,11 +45,24 @@ remotepasseval = get_pass("flowfx@posteo.de", "posteo.de")
 ssl = yes
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 
-[Repository chi-local]
+[Repository C3S-local]
+type = Maildir
+localfolders = ~/Mail/C3S
+
+[Repository C3S-remote]
+type = IMAP
+remotehost = imap.c3s.cc
+remoteuser = florian.posdziech@c-3-s.org
+remotepasseval = get_pass("florian.posdziech@c-3-s.org", "imap.c3s.cc")
+ssl = yes
+cert_fingerprint = 70D7041304B4B3B4D80478DA14C601296F29833CBFEC2501FD640E1568E339DE
+
+
+[Repository CHI-local]
 type = Maildir
 localfolders = ~/Mail/CHI
 
-[Repository chi-remote]
+[Repository CHI-remote]
 type = Gmail
 remoteuser = f.posdziech@chi-deutschland.com
 remotepasseval = get_pass("f.posdziech@chi-deutschland.com", "imap.gmail.com")

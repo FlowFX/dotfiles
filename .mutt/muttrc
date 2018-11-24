@@ -6,11 +6,12 @@ set spoolfile   = "+mailbox/INBOX"    # Set mailbox as default
 
 set header_cache = "~/.cache/muttheaders"
 
-mailboxes +mailbox/INBOX +posteo/INBOX +chi/INBOX
+mailboxes +mailbox/INBOX +posteo/INBOX +C3S/INBOX +CHI/INBOX
 
 folder-hook mailbox/* source ~/.mutt/accounts/mailbox
 folder-hook posteo/*  source ~/.mutt/accounts/posteo
-folder-hook chi/*     source ~/.mutt/accounts/chi
+folder-hook C3S/*     source ~/.mutt/accounts/C3S
+folder-hook CHI/*     source ~/.mutt/accounts/CHI
 
 # Sync email
 macro index O "<shell-escape>offlineimap\r"           "run offlineimap to sync all mail"

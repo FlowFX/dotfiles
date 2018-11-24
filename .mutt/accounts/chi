@@ -1,17 +1,17 @@
 # f.posdziech@chi-deutschland.com
 
 set from      = "f.posdziech@chi-deutschland.com"
-set sendmail  = "msmtp -a chi"
-set mbox      = "+chi/[Gmail]/All Mail"
-set postponed = "+chi/[Gmail]/Drafts"
+set sendmail  = "msmtp -a CHI"
+set mbox      = "+CHI/[Gmail]/All Mail"
+set postponed = "+CHI/[Gmail]/Drafts"
 unset record
 
 color status red default
 
 macro index D \
-    "<save-message>+chi/Trash<enter>" \
+    "<save-message>+CHI/Trash<enter>" \
     "move message to the trash"
 
 macro index S \
-    "<save-message>+chi/Spam<enter>"  \
+    "<save-message>+CHI/Spam<enter>"  \
         "mark message as spam"
