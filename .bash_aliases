@@ -18,11 +18,6 @@ alias wip="git commit -am'WIP'"
 # Mutt
 alias m="neomutt"
 
-# todo.txt
-export TODOTXT_DEFAULT_ACTION=ls
-alias t="todo.sh"
-alias ted="vim ~/todo.txt"
-
 # pip
 alias pipup="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U"
 
