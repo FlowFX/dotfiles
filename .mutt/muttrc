@@ -12,6 +12,9 @@ folder-hook mailbox/* source ~/.mutt/accounts/mailbox
 folder-hook posteo/*  source ~/.mutt/accounts/posteo
 folder-hook chi/*     source ~/.mutt/accounts/chi
 
+# Sync email
+macro index O "<shell-escape>offlineimap\r"           "run offlineimap to sync all mail"
+macro index o "<shell-escape>offlineimap -qf INBOX\r" "run offlineimap to sync inbox"
 
 # Edit settings
 
@@ -30,3 +33,8 @@ set wrap = 120                       # Wrap incoming text at 120 chars
 set sidebar_visible
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
+
+# Sidebar Navigation ---------------------------------
+bind index,pager <down>   sidebar-next
+bind index,pager <up>     sidebar-prev
+bind index,pager <right>  sidebar-open

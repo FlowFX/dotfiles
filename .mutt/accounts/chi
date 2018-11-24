@@ -2,8 +2,8 @@
 
 set from      = "f.posdziech@chi-deutschland.com"
 set sendmail  = "msmtp -a chi"
-set mbox      = "+chi/All Mail"
-set postponed = "+chi/Drafts"
+set mbox      = "+chi/[Gmail]/All Mail"
+set postponed = "+chi/[Gmail]/Drafts"
 unset record
 
 color status red default
