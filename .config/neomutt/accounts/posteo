@@ -9,4 +9,4 @@ set record    = "+posteo/Sent"
 color status yellow default
 
 macro index D "<save-message>+posteo/Trash<enter>" "move message to the trash"
-macro index S "<save-message>+posteo/Spam<enter>" "mark message as spam"
+macro index S "<save-message>+posteo/Junk<enter>" "mark message as spam"
