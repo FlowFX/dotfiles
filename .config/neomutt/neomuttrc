@@ -15,8 +15,8 @@ folder-hook CHI/*     source ~/.config/neomutt/accounts/CHI
 macro index,pager ,r ":source ~/.config/neomutt/neomuttrc<enter>"
 
 # Sync email
-macro index O "<shell-escape>offlineimap\r"             "run offlineimap to sync all mail"
-macro index o "<shell-escape>offlineimap -u quiet -q\r" "run offlineimap quick and quiet"
+macro index O "<shell-escape>offlineimap -u blinkenlights\r"             "run offlineimap to sync all mail"
+macro index o "<shell-escape>offlineimap -u basic -q\r" "run offlineimap quick and quiet"
 
 source ~/.config/neomutt/mailboxes
 
@@ -36,7 +36,7 @@ set query_command= "khard email --parsable '%s'"      # Tab completion for addre
 bind editor <Tab> complete-query
 bind editor ^T    complete
 
-macro index,pager A \
+macro index,pager ,a \
     "<pipe-message>khard add-email<return>" \
     "add the sender email address to khard"
 
