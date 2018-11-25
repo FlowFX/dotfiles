@@ -5,6 +5,15 @@ accounts = mailbox, posteo, C3S, CHI
 pythonfile = ~/.config/offlineimap/offlineimap.py
 ui = basic
 
+# Automatic mailbox generation for mutt
+[mbnames]
+enabled = yes
+filename = ~/.config/neomutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
+
 [Account mailbox]
 localrepository = mailbox-local
 remoterepository = mailbox-remote

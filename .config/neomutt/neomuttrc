@@ -6,14 +6,6 @@ set spoolfile   = "+mailbox/INBOX"    # Set mailbox as the default account
 
 set header_cache = "~/.cache/muttheaders"
 
-mailboxes \
-  +mailbox \
-  +mailbox/INBOX \
-  +posteo \
-  +posteo/INBOX \
-  +C3S/INBOX \
-  +CHI/INBOX
-
 folder-hook mailbox/* source ~/.config/neomutt/accounts/mailbox
 folder-hook posteo/*  source ~/.config/neomutt/accounts/posteo
 folder-hook C3S/*     source ~/.config/neomutt/accounts/C3S
@@ -23,8 +15,10 @@ folder-hook CHI/*     source ~/.config/neomutt/accounts/CHI
 macro index,pager ,r ":source ~/.config/neomutt/neomuttrc<enter>"
 
 # Sync email
-macro index O "<shell-escape>offlineimap\r"           "run offlineimap to sync all mail"
-macro index o "<shell-escape>offlineimap -u quiet -q -f INBOX\r" "run offlineimap to sync inboxes"
+macro index O "<shell-escape>offlineimap\r"             "run offlineimap to sync all mail"
+macro index o "<shell-escape>offlineimap -u quiet -q\r" "run offlineimap quick and quiet"
+
+source ~/.config/neomutt/mailboxes
 
 # Edit settings
 set edit_headers = yes               # Put headers in editor when composing
@@ -55,5 +49,5 @@ set pager_stop = yes # Do not progress to next mail
 set sort =threads # Threads!
 
 # Other configs
-source ~/.config/neomutt/sidebar
 source ~/.config/neomutt/colors
+source ~/.config/neomutt/sidebar
