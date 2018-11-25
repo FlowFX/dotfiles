@@ -8,6 +8,6 @@ set record    = "+posteo/Sent"
 
 color status color0 color3
 
-macro index A "<save-message>+posteo/Archive<enter>" "move message to the archive"
-macro index D "<save-message>+posteo/Trash<enter>"   "move message to the trash"
+macro index a "<save-message>+posteo/Archive<enter>" "move message to the archive"
+macro index d "<save-message>+posteo/Trash<enter>"   "move message to the trash"
 macro index S "<save-message>+posteo/Junk<enter>"    "mark message as spam"

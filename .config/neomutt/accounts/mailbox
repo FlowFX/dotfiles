@@ -8,6 +8,6 @@ set record    = "+mailbox/Sent"
 
 color status color0 color2
 
-macro index A "<save-message>+mailbox/Archive<enter>" "move message to the archive"
-macro index D "<save-message>+mailbox/Trash<enter>"   "move message to the trash"
+macro index a "<save-message>+mailbox/Archive<enter>" "move message to the archive"
+macro index d "<save-message>+mailbox/Trash<enter>"   "move message to the trash"
 macro index S "<save-message>+mailbox/Junk<enter>"    "mark message as spam"
