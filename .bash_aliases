@@ -17,6 +17,7 @@ alias wip="git commit -am'WIP'"
 
 # Mutt
 alias m="neomutt"
+alias om="offlineimap -q -u quiet && neomutt"
 
 # pip
 alias pipup="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U"
