@@ -1,0 +1,20 @@
+# SIDEBAR ================================
+set sidebar_visible                               # Show sidebar
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+# Navigation ----------------------------------
+bind index,pager <down>   sidebar-next
+bind index,pager <up>     sidebar-prev
+bind index,pager <right>  sidebar-open
+
+# Colors ---------------------------------
+# in descending order of priority
+color sidebar_indicator color9 color238 # Mailbox is open
+#color sidebar_highlight                 # Mailbox is highlighted
+#color sidebar_spoolfile                 # Mailbox is the spoolfile (receives incoming mail)
+#color sidebar_new                       # Mailbox contains new mail
+#color sidebar_flagged                   # Mailbox contains flagged mail
+color sidebar_ordinary color12 default   # Lowest priority
+
+color sidebar_divider color8 default    # VertSplit

@@ -1,0 +1,42 @@
+# COLORS ==================================================
+# Color 0-15 are defined by Smyck: http://color.smyck.org/
+color normal    color15 default
+color indicator color12 color238      # Selected items / Vim CursorLine
+color markers   color0  color7
+
+# Index --------------------------------------
+color index        color4  default "~A" # all messages: darker blue
+color index        color1  default "~D" # deleted messages: red
+color index_author color10 default "~A"
+
+# Quoted messages --------------------------------
+color quoted  color14 default
+color quoted1 color13 default
+color quoted2 color12 default
+color quoted3 color11 default
+color quoted4 color10 default
+
+# Message header ----------------------------------
+color hdrdefault color12  default
+color header     color10  default "^(From)"
+color header     color10  default "^(Subject)"
+
+# Others ---------------------------------
+#color normal      color20     color0
+#color error       color1      color0
+#color tilde       color20     color0
+#color message     color20     color0
+#color markers     color1      color0
+#color attachment  color8      color0
+#color search      color2      color0
+#color status      color19      color4
+#color indicator   color7      color19
+#color tree        color19     color0                  # arrow in threads
+
+#color index       color20     color0       "~A"       # all messages
+#color index       color1      color0       "~F"       # flagged messages
+#color index       color20     color0       "~v~(!~N)" # collapsed thread with no unread
+#color index       color4      color0       "~U"       # unread messages
+#color index       color4      color0       "~v~(~N)"  # collapsed thread with some unread
+#color index       color1      color0       "~v~(~F)"  # collapsed thread with some flagged
+#color index color0 color1 "~D" # deleted messages

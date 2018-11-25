@@ -1,8 +1,8 @@
 set mbox_type   = Maildir
-set sendmail    = /usr/bin/msmtp
+set sendmail    = msmtp
 
 set folder      = ~/Mail
-set spoolfile   = "+mailbox/INBOX"    # Set mailbox as default
+set spoolfile   = "+mailbox/INBOX"    # Set mailbox as the default account
 
 set header_cache = "~/.cache/muttheaders"
 
@@ -19,12 +19,14 @@ folder-hook posteo/*  source ~/.config/neomutt/accounts/posteo
 folder-hook C3S/*     source ~/.config/neomutt/accounts/C3S
 folder-hook CHI/*     source ~/.config/neomutt/accounts/CHI
 
+# Reload muttrc
+macro index,pager ,r ":source ~/.config/neomutt/neomuttrc<enter>"
+
 # Sync email
 macro index O "<shell-escape>offlineimap\r"           "run offlineimap to sync all mail"
-macro index o "<shell-escape>offlineimap -qf INBOX\r" "run offlineimap to sync inbox"
+macro index o "<shell-escape>offlineimap -u quiet -q -f INBOX\r" "run offlineimap to sync inboxes"
 
 # Edit settings
-
 set edit_headers = yes               # Put headers in editor when composing
 set editor = "nvim +7 %s"            # Open Vim and move to line 7
 set fast_reply = yes                 # Don't ask for Subject/recipient when replying, or Subject when forwarding
@@ -35,17 +37,6 @@ set reflow_text = yes                # All hail format=flowed
 set reflow_wrap = 78                 # If GOD would have wanted a larger number, SHE'd have given us larger screens
 set wrap = 120                       # Wrap incoming text at 120 chars
 
-# Sidebar
-
-set sidebar_visible
-set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
-set mail_check_stats
-
-# Sidebar Navigation ---------------------------------
-bind index,pager <down>   sidebar-next
-bind index,pager <up>     sidebar-prev
-bind index,pager <right>  sidebar-open
-
 # Contacts ----------------------------------------
 set query_command= "khard email --parsable '%s'"      # Tab completion for address book
 bind editor <Tab> complete-query
@@ -54,3 +45,15 @@ bind editor ^T    complete
 macro index,pager A \
     "<pipe-message>khard add-email<return>" \
     "add the sender email address to khard"
+
+# The Pager
+set pager_index_lines = 10
+set pager_context = 3
+set pager_stop = yes # Do not progress to next mail
+
+# The Index
+set sort =threads # Threads!
+
+# Other configs
+source ~/.config/neomutt/sidebar
+source ~/.config/neomutt/colors

@@ -5,6 +5,9 @@
 .vim/.netrwhist
 .vim/viminfo
 
+# Mutt & OfflineIMAP
+.config/neomutt/mailboxes
+
 # VS Code
 workspaceStorage
 extensions
