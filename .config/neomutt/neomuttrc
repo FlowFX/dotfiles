@@ -51,3 +51,11 @@ set sort =threads # Threads!
 # Other configs
 source ~/.config/neomutt/colors
 source ~/.config/neomutt/sidebar
+
+# Behavior
+set delete = yes # Just do it!
+set auto_tag = yes                   # Apply actions to all tagged mails, regardless of <tag-prefix>
+set beep = no                        # Seriously
+set beep_new = no                    # Seriously
+set confirmappend = no               # Do not ask before deleting/moving to existing mailbox
+set confirmcreate = yes              # But do ask before creating a mailbox

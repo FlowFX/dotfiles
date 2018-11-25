@@ -3,6 +3,25 @@ set sidebar_visible                               # Show sidebar
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
 
+set sidebar_width = 30
+
+set sidebar_new_mail_only
+set sidebar_short_path
+set sidebar_component_depth = 2
+set sidebar_sort_method = name
+
+mailboxes "+mailbox" "+posteo" "+C3S" "+CHI"
+sidebar_whitelist "+mailbox" "+posteo" "+C3S" "+CHI"
+sidebar_whitelist "+mailbox/INBOX" "+posteo/INBOX" "+C3S/INBOX" "+CHI/INBOX"
+
+# Shorten mailbox names
+# Delete everything up to the last / or . character
+set sidebar_delim_chars="/."
+# Indent folders whose names we've shortened
+set sidebar_folder_indent
+# Indent with two spaces
+set sidebar_indent_string="  "
+
 # Navigation ----------------------------------
 bind index,pager <down>   sidebar-next
 bind index,pager <up>     sidebar-prev
@@ -13,7 +32,7 @@ bind index,pager <right>  sidebar-open
 color sidebar_indicator color9 color238 # Mailbox is open
 #color sidebar_highlight                 # Mailbox is highlighted
 #color sidebar_spoolfile                 # Mailbox is the spoolfile (receives incoming mail)
-#color sidebar_new                       # Mailbox contains new mail
+#color sidebar_new color12 default                       # Mailbox contains new mail
 #color sidebar_flagged                   # Mailbox contains flagged mail
 color sidebar_ordinary color12 default   # Lowest priority
 

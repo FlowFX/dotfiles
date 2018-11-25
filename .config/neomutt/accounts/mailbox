@@ -9,4 +9,4 @@ set record    = "+mailbox/Sent"
 color status color13 default
 
 macro index D "<save-message>+mailbox/Trash<enter>" "move message to the trash"
-macro index S "<save-message>+mailbox/Junk<enter>" "mark message as spam"
+macro index S "<save-message>+mailbox/Junk<enter>"  "mark message as spam"
