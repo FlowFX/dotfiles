@@ -6,7 +6,7 @@ set mbox      = "+C3S/Archive"
 set postponed = "+C3S/Drafts"
 set record    = "+C3S/Sent" 
 
-color status blue default
+color status color0 color10
 
 macro index D "<save-message>+C3S/Trash<enter>" "move message to the trash"
 macro index S "<save-message>+C3S/Spam<enter>" "mark message as spam"

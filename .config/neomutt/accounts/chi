@@ -6,7 +6,7 @@ set mbox      = "+CHI/[Gmail]/All Mail"
 set postponed = "+CHI/[Gmail]/Drafts"
 unset record
 
-color status red default
+color status color0 color1
 
 macro index D "<save-message>+CHI/[Gmail].Trash<enter>" "move message to the trash"
 macro index S "<save-message>+CHI/[Gmail].Spam<enter>"  "mark message as spam"
