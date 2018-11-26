@@ -40,10 +40,11 @@ alias beg="bundle exec guard"
 alias ber="bundle exec rspec"
 alias berp="bundle exec rails parallel:spec RAILS_ENV=test"
 alias rc="bundle exec rails console"
+alias rce="bundle exec rails credentials:edit"
 alias rs="bundle exec rails server"
 alias rt="bundle exec rails test"
 alias respring="spring stop && spring server &>/dev/null &"
 
 # Rails database
-alias rdm='rails db:migrate'
-alias rds='rails db:seed'
+alias rdm='bundle exec rails db:migrate'
+alias rds='bundle exec rails db:seed'
