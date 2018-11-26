@@ -1,5 +1,8 @@
 .dotfiles
 
+# Private ENV variables
+.profile
+
 # VIM
 .vim/bundle/*
 .vim/.netrwhist
