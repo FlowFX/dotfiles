@@ -232,6 +232,8 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 """ ALE """
 " For JavaScript files, use `eslint` and only `eslint`
 let g:ale_linters = {
+  \ 'css': ['prettier'],
+  \ 'JSON': ['prettier'],
   \ 'haml': ['haml-lint'],
   \ 'javascript': ['eslint'],
   \ 'python': ['flake8'],
