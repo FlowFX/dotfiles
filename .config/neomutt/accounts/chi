@@ -4,6 +4,7 @@ set from      = "f.posdziech@chi-deutschland.com"
 set sendmail  = "msmtp -a CHI"
 set mbox      = "+CHI/[Gmail]/All Mail"
 set postponed = "+CHI/[Gmail]/Drafts"
+unset move   # Need to set it as default!!!
 unset record
 
 macro index d "<save-message>+CHI/[Gmail].Trash<enter>" "move message to the trash"

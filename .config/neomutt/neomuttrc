@@ -1,7 +1,9 @@
 set mbox_type   = Maildir
 set sendmail    = msmtp
 
-set header_cache = "~/.cache/muttheaders"
+set header_cache     = ~/.cache/mutt/headers # where to store headers
+set message_cachedir = ~/.cache/mutt/bodies  # where to store bodies
+set tmpdir           = ~/.tmp/mutt           # where to keep temp files
 
 # MACROS and BINDINGS -------------------------
 # Reload configuration file
@@ -11,8 +13,16 @@ macro index,pager ,r ":source $XDG_CONFIG_HOME/neomutt/neomuttrc<enter>"
 macro index O "<shell-escape>offlineimap -u blinkenlights\r"      "run offlineimap to sync all mail"
 macro index ,o "<shell-escape>offlineimap -u basic -q -f INBOX\r" "run offlineimap quick and quiet"
 
-# Don't just delete. REALLY delete!
-bind index D purge-message
+
+bind index D purge-message    # Don't just delete. REALLY delete!
+bind pager R  group-reply
+
+# View attachments properly. TODO: really?
+bind attach <return> view-mailcap
+
+
+bind compose p postpone-message # instead of pressing y to send I can press p to postpone the message
+bind index p recall-message # edit your drafts (postponed messages) locally
 
 # HOOKS --------------------------------------
 # Sync mailbox on exit. All other mailboxes are synced whenever I change mailboxes or directories.
@@ -38,11 +48,6 @@ macro index,pager ,a \
     "<pipe-message>khard add-email<return>" \
     "add the sender email address to khard"
 
-# The Pager
-set pager_index_lines = 10
-set pager_context = 3
-set pager_stop = yes # Do not progress to next mail
-
 # The Index
 set sort =threads # Threads!
 
@@ -51,11 +56,22 @@ source $XDG_CONFIG_HOME/neomutt/mutt.d/colors
 source $XDG_CONFIG_HOME/neomutt/mutt.d/sidebar
 
 # Behavior
-set delete = yes            # Just do it!
+set delete               # don't ask, just do
+set quit                 # don't ask, just do!!
+set confirmappend = no   # Do not ask before deleting/moving to existing mailbox
+set confirmcreate = yes  # But do ask before creating a mailbox
 set auto_tag = yes          # Apply actions to all tagged mails, regardless of <tag-prefix>
 set beep = no
 set beep_new = no
-set confirmappend = no      # Do not ask before deleting/moving to existing mailbox
-set confirmcreate = yes     # But do ask before creating a mailbox
+unset mark_old           # read/new is good enough for me
 
 source $XDG_CONFIG_HOME/neomutt/neomuttrc.local.$LOCAL_CONFIG
+
+
+# PAGER VIEW OPTIONS ---------------------------------
+set pager_index_lines = 10 # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
