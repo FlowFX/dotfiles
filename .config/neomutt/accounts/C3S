@@ -1,11 +1,11 @@
-# flowfx@mailbox.org
+# flowfx@c3s.cc
 
 set from      = "flowfx@c3s.cc"
 set sendmail  = "msmtp -a C3S"
 set mbox      = "+C3S/Archive"
 set postponed = "+C3S/Drafts"
 set record    = "+C3S/Sent" 
+set trash     = "+C3S/Trash"
 
-macro index a "<save-message>+C3S/Archive<enter>" "move message to the archive"
-macro index d "<save-message>+C3S/Trash<enter>"   "move message to the trash"
-macro index S "<save-message>+C3S/Spam<enter>"    "mark message as spam"
+macro index A "<save-message>+C3S/Archive<enter>" "Moved message to the archive"
+macro index S "<save-message>+C3S/Junk<enter>"    "Marked message as spam"
