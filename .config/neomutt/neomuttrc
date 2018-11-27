@@ -3,16 +3,20 @@ set sendmail    = msmtp
 
 set header_cache = "~/.cache/muttheaders"
 
-# MACROS -------------------------------------
+# MACROS and BINDINGS -------------------------
 # Reload configuration file
-macro index,pager ,r ":source ~/.config/neomutt/neomuttrc<enter>"
+macro index,pager ,r ":source $XDG_CONFIG_HOME/neomutt/neomuttrc<enter>"
 
 # Sync email
 macro index O "<shell-escape>offlineimap -u blinkenlights\r"      "run offlineimap to sync all mail"
 macro index ,o "<shell-escape>offlineimap -u basic -q -f INBOX\r" "run offlineimap quick and quiet"
 
+# Don't just delete. REALLY delete!
+bind index D purge-message
 
-#source ~/.config/neomutt/mailboxes
+# HOOKS --------------------------------------
+# Sync mailbox on exit. All other mailboxes are synced whenever I change mailboxes or directories.
+shutdown-hook 'exec sync-mailbox'
 
 # Edit settings
 set edit_headers = yes               # Put headers in editor when composing
@@ -43,16 +47,15 @@ set pager_stop = yes # Do not progress to next mail
 set sort =threads # Threads!
 
 # Other configs
-source ~/.config/neomutt/colors
-source ~/.config/neomutt/sidebar
+source $XDG_CONFIG_HOME/neomutt/mutt.d/colors
+source $XDG_CONFIG_HOME/neomutt/mutt.d/sidebar
 
 # Behavior
-set delete = yes # Just do it!
-set auto_tag = yes                   # Apply actions to all tagged mails, regardless of <tag-prefix>
-set beep = no                        # Seriously
-set beep_new = no                    # Seriously
-set confirmappend = no               # Do not ask before deleting/moving to existing mailbox
-set confirmcreate = yes              # But do ask before creating a mailbox
+set delete = yes            # Just do it!
+set auto_tag = yes          # Apply actions to all tagged mails, regardless of <tag-prefix>
+set beep = no
+set beep_new = no
+set confirmappend = no      # Do not ask before deleting/moving to existing mailbox
+set confirmcreate = yes     # But do ask before creating a mailbox
 
-
-source ~/.config/neomutt/neomuttrc.local.$LOCAL_CONFIG
+source $XDG_CONFIG_HOME/neomutt/neomuttrc.local.$LOCAL_CONFIG

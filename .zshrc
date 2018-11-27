@@ -107,3 +107,6 @@ export FZF_DEFAULT_COMMAND='rg --files'
 # Make Ruby matchers work
 # https://github.com/robbyrussell/oh-my-zsh/issues/31#issuecomment-359728582
 unsetopt nomatch
+
+# Be Unix compliant. Or something like it.
+export XDG_CONFIG_HOME='~/.config'
