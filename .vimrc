@@ -48,6 +48,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Konfekt/FastFold'
+" Snippets
+"Plugin 'SirVer/ultisnips'
+"Plugin 'honza/vim-snippets'
 " Linting
 Plugin 'w0rp/ale'
 " Tab completion
@@ -273,6 +276,10 @@ set tags=./tags;/                                         " https://stackoverflo
 
 """ VIM-RAILS """
 nnoremap <leader>t :Rails<CR>                         " Run tests
+
+"" UltiSnips
+"let g:UltiSnipsEditSplit=vertical" " Let :UltiSnipsEdit split the window
+
 
 """ Ack & ag (The Silver Searcher) """
 if executable('ag')
