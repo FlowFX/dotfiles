@@ -18,3 +18,4 @@ extensions
 # Temp files
 *.bak
 *.tmp
+*.pyc

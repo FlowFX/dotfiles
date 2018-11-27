@@ -76,9 +76,4 @@ type = Gmail
 remoteuser = f.posdziech@chi-deutschland.com
 remotepasseval = get_pass("f.posdziech@chi-deutschland.com", "imap.gmail.com")
 realdelete = no
-#nametrans = lambda foldername: re.sub ('^\[gmail\]', 'bak',
-                               #re.sub ('sent_mail', 'sent',
-                               #re.sub ('starred', 'flagged',
-                               #re.sub (' ', '_', foldername.lower()))))
-folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
 sslcacertfile = /usr/local/etc/openssl/cert.pem

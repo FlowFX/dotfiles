@@ -1,24 +1,18 @@
 set mbox_type   = Maildir
 set sendmail    = msmtp
 
-set folder      = ~/Mail
-set spoolfile   = "+mailbox/INBOX"    # Set mailbox as the default account
-
 set header_cache = "~/.cache/muttheaders"
 
-folder-hook mailbox/* source ~/.config/neomutt/accounts/mailbox
-folder-hook posteo/*  source ~/.config/neomutt/accounts/posteo
-folder-hook C3S/*     source ~/.config/neomutt/accounts/C3S
-folder-hook CHI/*     source ~/.config/neomutt/accounts/CHI
-
-# Reload muttrc
+# MACROS -------------------------------------
+# Reload configuration file
 macro index,pager ,r ":source ~/.config/neomutt/neomuttrc<enter>"
 
 # Sync email
-macro index O "<shell-escape>offlineimap -u blinkenlights\r"             "run offlineimap to sync all mail"
-macro index o "<shell-escape>offlineimap -u basic -q\r" "run offlineimap quick and quiet"
+macro index O "<shell-escape>offlineimap -u blinkenlights\r"      "run offlineimap to sync all mail"
+macro index ,o "<shell-escape>offlineimap -u basic -q -f INBOX\r" "run offlineimap quick and quiet"
 
-source ~/.config/neomutt/mailboxes
+
+#source ~/.config/neomutt/mailboxes
 
 # Edit settings
 set edit_headers = yes               # Put headers in editor when composing
@@ -59,3 +53,6 @@ set beep = no                        # Seriously
 set beep_new = no                    # Seriously
 set confirmappend = no               # Do not ask before deleting/moving to existing mailbox
 set confirmcreate = yes              # But do ask before creating a mailbox
+
+
+source ~/.config/neomutt/neomuttrc.local.$LOCAL_CONFIG
