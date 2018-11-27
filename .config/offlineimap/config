@@ -17,18 +17,22 @@ footer = "\n"
 [Account mailbox]
 localrepository = mailbox-local
 remoterepository = mailbox-remote
+status_backend = sqlite
 
 [Account posteo]
 localrepository = posteo-local
 remoterepository = posteo-remote
+status_backend = sqlite
 
 [Account C3S]
 localrepository = C3S-local
 remoterepository = C3S-remote
+status_backend = sqlite
 
 [Account CHI]
 localrepository = CHI-local
 remoterepository = CHI-remote
+status_backend = sqlite
 
 [Repository mailbox-local]
 type = Maildir
