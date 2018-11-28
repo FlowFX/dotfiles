@@ -109,4 +109,4 @@ export FZF_DEFAULT_COMMAND='rg --files'
 unsetopt nomatch
 
 # Be Unix compliant. Or something like it.
-export XDG_CONFIG_HOME='~/.config'
+export XDG_CONFIG_HOME=$HOME/.config

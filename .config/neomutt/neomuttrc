@@ -26,6 +26,7 @@ bind index p recall-message # edit your drafts (postponed messages) locally
 
 # HOOKS --------------------------------------
 # Sync mailbox on exit. All other mailboxes are synced whenever I change mailboxes or directories.
+startup-hook 'exec sync-mailbox'
 shutdown-hook 'exec sync-mailbox'
 
 # Edit settings
@@ -75,3 +76,4 @@ set pager_stop             # don't go to next message automatically
 set menu_scroll            # scroll in menus
 set tilde                  # show tildes like in vim
 unset markers              # no ugly plus signs
+

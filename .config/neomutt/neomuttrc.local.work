@@ -5,21 +5,26 @@ set spoolfile   = "+INBOX"    # Set mailbox as the default account
 
 set from      = "f.posdziech@chi-deutschland.com"
 set sendmail  = "msmtp -a CHI"
-set mbox      = "+[Gmail]/All Mail"
-set postponed = "+[Gmail]/Drafts"
+set mbox      = "+[Gmail].All Mail"
+set postponed = "+[Gmail].Drafts"
+set trash     = "+[Gmail].Trash"
+
+macro index A "<delete-message>" "Moved message to All Mail"
+macro index S "<save-message>+[Gmail].Spam<enter>"    "Marked message as spam"
 
 unset record
 
-mailboxes "+INBOX" \
-  "+CHICARGO No-Reply" \
+mailboxes "+CHICARGO No-Reply" "+INBOX" "+Services" "+Services.Airbrake" "+Services.Atlassian" "+Services.ElevIO" "+Services.Fontawesome" "+Services.Heroku" "+Services.Jetbrains" "+Services.Papertrail" "+Services.Postmark" "+Services.Scout" "+Services.Twilio" "+[Gmail].All Mail" "+[Gmail].Drafts" "+[Gmail].Sent Mail" "+[Gmail].Spam" "+[Gmail].Starred" "+[Gmail].Trash"
+
+set sidebar_new_mail_only
+sidebar_whitelist "+INBOX" \
   "+[Gmail].Drafts" \
   "+[Gmail].Sent Mail" \
-  "+[Gmail].Spam" \
-  "+[Gmail].Starred" \
-  "+[Gmail].Trash"
+  "+[Gmail].Starred"
 
 # MACROS --------------------------
-macro index ,o "<shell-escape>offlineimap -a CHI -q -f INBOX\r" "Run offlineimap quick and quiet only for work email"
+macro index O "<shell-escape>offlineimap -a CHI -u blinkenlights\r"  "run offlineimap to sync all mail"
+macro index ,o "<shell-escape>offlineimap -a CHI -q -f INBOX\r"      "Run offlineimap quick and quiet only for work email"
 
 # SIDEBAR ----------------------------------
 #
