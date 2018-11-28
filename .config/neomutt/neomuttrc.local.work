@@ -1,0 +1,29 @@
+color status color0 color1
+
+set folder      = ~/Mail/CHI
+set spoolfile   = "+INBOX"    # Set mailbox as the default account
+
+set from      = "f.posdziech@chi-deutschland.com"
+set sendmail  = "msmtp -a CHI"
+set mbox      = "+[Gmail]/All Mail"
+set postponed = "+[Gmail]/Drafts"
+
+unset record
+
+mailboxes "+INBOX" \
+  "+CHICARGO No-Reply" \
+  "+[Gmail].Drafts" \
+  "+[Gmail].Sent Mail" \
+  "+[Gmail].Spam" \
+  "+[Gmail].Starred" \
+  "+[Gmail].Trash"
+
+# MACROS --------------------------
+macro index ,o "<shell-escape>offlineimap -a CHI -q -f INBOX\r" "Run offlineimap quick and quiet only for work email"
+
+# SIDEBAR ----------------------------------
+#
+# Shorten mailbox names
+set sidebar_short_path
+set sidebar_delim_chars="/."
+set sidebar_component_depth = 1

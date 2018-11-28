@@ -1,0 +1,8 @@
+color status color0 color2
+
+set folder      = ~/Mail
+set spoolfile   = "+mailbox/INBOX"    # Set mailbox as the default account
+
+folder-hook mailbox/* source ~/.config/neomutt/accounts/mailbox
+folder-hook posteo/*  source ~/.config/neomutt/accounts/posteo
+folder-hook C3S/*     source ~/.config/neomutt/accounts/C3S
