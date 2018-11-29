@@ -8,11 +8,10 @@ set sendmail  = "msmtp -a CHI"
 set mbox      = "+[Gmail].All Mail"
 set postponed = "+[Gmail].Drafts"
 set trash     = "+[Gmail].Trash"
-
-macro index A "<delete-message>" "Moved message to All Mail"
-macro index S "<save-message>+[Gmail].Spam<enter>"    "Marked message as spam"
-
 unset record
+
+macro index A "<save-message>+[Gmail].All Mail<enter>" "Moved message to the archive"
+macro index S "<save-message>+[Gmail].Spam<enter>"    "Marked message as spam"
 
 mailboxes "+CHICARGO No-Reply" "+INBOX" "+Services" "+Services.Airbrake" "+Services.Atlassian" "+Services.ElevIO" "+Services.Fontawesome" "+Services.Heroku" "+Services.Jetbrains" "+Services.Papertrail" "+Services.Postmark" "+Services.Scout" "+Services.Twilio" "+[Gmail].All Mail" "+[Gmail].Drafts" "+[Gmail].Sent Mail" "+[Gmail].Spam" "+[Gmail].Starred" "+[Gmail].Trash"
 
