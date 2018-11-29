@@ -38,7 +38,7 @@ alias async="git annex sync"
 # Rails
 alias beg="bundle exec guard"
 alias ber="bundle exec rspec"
-alias berp="bundle exec rails parallel:spec RAILS_ENV=test"
+alias berp="bundle exec rails parallel:spec"
 alias rc="bundle exec rails console"
 alias rce="bundle exec rails credentials:edit"
 alias rs="bundle exec rails server"
