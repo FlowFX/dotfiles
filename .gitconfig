@@ -67,6 +67,17 @@
 	undo = !legit undo
 	up = pull --rebase --autostash
 	ctags = !.git/hooks/ctags
+  # Delete all local branches but master and the current one, only if they are fully merged with master.
+  # https://stackoverflow.com/a/41465769
+  bd-useless = "!f(){\
+      git branch | grep -v "master" | grep -v ^* | xargs git branch -d;\
+  }; f"
+  # Delete all local branches but master and the current one.
+  bd-useless-force = "!f(){\
+      git branch | grep -v "master" | grep -v ^* | xargs git branch -D;\
+  }; f"
+  # Clean up deleted remote branches
+  rpo = remote prune origin
 [url "git@github.com:"]
 	insteadOf = github:
 [url "https://github.com/"]
