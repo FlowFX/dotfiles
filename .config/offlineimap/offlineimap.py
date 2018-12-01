@@ -1,19 +1,17 @@
-#! /usr/bin/env python2
+#! /usr/bin/env python3
 #
-# This works on MacOS only at the moment.
+# This works on MacOS at the moment.
 
 import commands
-import re
 
 
 def get_pass(account=None, server=None):
     params = {
-        'security': '/usr/bin/security',
-        'command':  'find-generic-password',
-        'account':  account,
-        'server':   server
+        'keyring': 'keyring',
+        'command': 'get',
+        'account': account,
+        'server':  server
     }
 
-    command = "%(security)s %(command)s -g -a %(account)s -s %(server)s" % params
-    outtext = commands.getoutput(command)
-    return re.match(r'password: "(.*)"', outtext).group(1)
+    command = "%(keyring)s %(command)s %(server)s %(account)s" % params
+    return commands.getoutput(command)
