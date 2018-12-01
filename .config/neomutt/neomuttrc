@@ -17,6 +17,17 @@ macro index ,o "<shell-escape>offlineimap -u basic -q -f INBOX\r" "run offlineim
 bind index D purge-message    # Don't just delete. REALLY delete!
 bind pager R  group-reply
 
+# unbind x so there will be no chance to exit mutt incidentally
+bind index x noop
+
+# don't use g
+bind index,pager g noop
+
+# use gg and G vim-style
+bind index gg first-entry
+bind index G  last-entry
+
+
 # View attachments properly. TODO: really?
 bind attach <return> view-mailcap
 
