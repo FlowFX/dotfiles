@@ -7,5 +7,5 @@ set postponed = "+posteo/Drafts"
 set record    = "+posteo/Sent" 
 set trash     = "+posteo/Trash"
 
-macro index A "<save-message>+posteo/Archive<enter>" "Moved message to the archive"
-macro index S "<save-message>+posteo/Junk<enter>"    "Marked message as spam"
+macro index,pager A "<save-message>+posteo/Archive<enter>" "Moved message to the archive"
+macro index,pager S "<save-message>+posteo/Junk<enter>"    "Marked message as spam"
