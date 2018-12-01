@@ -3,21 +3,21 @@
 # Inspired by http://stevelosh.com/blog/2012/10/the-homely-mutt/#attachments
 
 # MS Office documents
-application/msword; ~/.mutt/view_attachment.sh %s "-"
-application/vnd.ms-excel; ~/.config/neomutt/view_attachment.sh %s "-"
+application/msword; $XDG_CONFIG_HOME/neomutt/view_attachment.sh %s "-"
+application/vnd.ms-excel; $XDG_CONFIG_HOME/neomutt/view_attachment.sh %s "-"
 
 # Images
-image/jpg; ~/.mutt/view_attachment.sh %s jpg
-image/jpeg; ~/.mutt/view_attachment.sh %s jpg
-image/pjpeg; ~/.mutt/view_attachment.sh %s jpg
-image/png; ~/.mutt/view_attachment.sh %s png
-image/gif; ~/.mutt/view_attachment.sh %s gif
+image/jpg; $XDG_CONFIG_HOME/neomutt/view_attachment.sh %s jpg
+image/jpeg; $XDG_CONFIG_HOME/neomutt/view_attachment.sh %s jpg
+image/pjpeg; $XDG_CONFIG_HOME/neomutt/view_attachment.sh %s jpg
+image/png; $XDG_CONFIG_HOME/neomutt/view_attachment.sh %s png
+image/gif; $XDG_CONFIG_HOME/neomutt/view_attachment.sh %s gif
 
 # PDFs
-application/pdf; ~/.mutt/view_attachment.sh %s pdf
+application/pdf; $XDG_CONFIG_HOME/neomutt/view_attachment.sh %s pdf
 
 # HTML
-text/html; ~/.mutt/view_attachment.sh %s html
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
 
 # Unidentified files
-application/octet-stream; ~/.mutt/view_attachment.sh %s "-"
+application/octet-stream; $XDG_CONFIG_HOME/neomutt/view_attachment.sh %s "-"

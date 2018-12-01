@@ -88,3 +88,7 @@ set menu_scroll            # scroll in menus
 set tilde                  # show tildes like in vim
 unset markers              # no ugly plus signs
 
+
+# Deal with HTML emails
+auto_view text/html
+alternative_order text/plain text/enriched text/html
