@@ -1,7 +1,7 @@
 color status color0 color2
 
 set folder      = ~/Mail
-set spoolfile   = "+mailbox/INBOX"    # Set mailbox as the default account
+set spoolfile   = "+posteo/INBOX"    # Set mailbox as the default account
 
 #mailboxes 
 set sidebar_new_mail_only = yes
