@@ -3,7 +3,7 @@ color status color0 color2
 set folder      = ~/Mail
 set spoolfile   = "+posteo/INBOX"    # Set mailbox as the default account
 
-set signature="~/.config/neomutt/signature.personal"
+set signature="~/.config/neomutt/signatures/personal"
 
 #mailboxes 
 set sidebar_new_mail_only = yes
