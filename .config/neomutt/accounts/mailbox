@@ -1,6 +1,6 @@
 # flowfx@mailbox.org
 
-set from      = "flowfx@mailbox.org"
+set from      = "hallo@flowfx.de"
 set sendmail  = "msmtp -a mailbox"
 set mbox      = "+mailbox/Archive"
 set postponed = "+mailbox/Drafts"
