@@ -1,36 +1,40 @@
 color status color0 color1
 
-set folder      = ~/Mail/CHI
-set spoolfile   = "+INBOX"    # Set mailbox as the default account
-
-set from      = "f.posdziech@chi-deutschland.com"
-set sendmail  = "msmtp -a CHI"
-set mbox      = "+[Gmail].All Mail"
-set postponed = "+[Gmail].Drafts"
-set trash     = "+[Gmail].Trash"
-unset record
+set from = "f.posdziech@chi-deutschland.com"
 
 send-hook . set signature="~/.config/neomutt/signature.work"
 send-hook "~t @chi-deutschland.com" set signature=~/.config/neomutt/signature.work.internal
 
-macro index A "<save-message>+[Gmail].All Mail<enter>" "Moved message to the archive"
-macro index S "<save-message>+[Gmail].Spam<enter>"    "Marked message as spam"
+set hostname          = "gmail.com"
+set folder            = "imaps://imap.gmail.com"
+set imap_check_subscribed
+set imap_pass         = `keyring get imap.gmail.com f.posdziech@chi-deutschland.com`
+set imap_user         = "f.posdziech@chi-deutschland.com"
 
-mailboxes "+CHICARGO No-Reply" "+INBOX" "+Services" "+Services.Airbrake" "+Services.Atlassian" "+Services.ElevIO" "+Services.Fontawesome" "+Services.Heroku" "+Services.Jetbrains" "+Services.Papertrail" "+Services.Postmark" "+Services.Scout" "+Services.Twilio" "+[Gmail].All Mail" "+[Gmail].Drafts" "+[Gmail].Sent Mail" "+[Gmail].Spam" "+[Gmail].Starred" "+[Gmail].Trash"
+set spoolfile   = "+INBOX"    # Set mailbox as the default account
 
-set sidebar_new_mail_only
-sidebar_whitelist "+INBOX" \
-  "+[Gmail].Drafts" \
-  "+[Gmail].Sent Mail" \
-  "+[Gmail].Starred"
+set copy      = no
+set move      = no
 
-# MACROS --------------------------
-macro index O "<shell-escape>offlineimap -a CHI -u blinkenlights\r"  "run offlineimap to sync all mail"
-macro index ,o "<shell-escape>offlineimap -a CHI -q -f INBOX\r"      "Run offlineimap quick and quiet only for work email"
+set text_flowed = yes
+unset imap_passive
+unset record
 
-# SIDEBAR ----------------------------------
-#
-# Shorten mailbox names
-set sidebar_short_path
-set sidebar_delim_chars="/."
-set sidebar_component_depth = 1
+set sidebar_new_mail_only = yes
+sidebar_whitelist "+INBOX"
+
+set postponed         = "+[Gmail]/Drafts"
+set trash     = "+[Gmail]/Trash"
+
+set sendmail  = "msmtp -a CHI"
+
+macro index,pager A "<save-message>=[Gmail]/All <enter><enter>" "Archived"
+macro index,pager S "<save-message>=[Gmail]/Spam<enter><enter>"     "Marked message as spam"
+
+
+# Gmail-style keyboard shortcuts
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index gt "<change-folder>=[Gmail]/Trash<enter>" "Go to trash"

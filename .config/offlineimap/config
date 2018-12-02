@@ -1,7 +1,7 @@
 # ~/.offlineimaprc
 
 [general]
-accounts = mailbox, posteo, C3S, CHI
+accounts = mailbox, posteo, C3S
 pythonfile = ~/.config/offlineimap/offlineimap.py
 ui = basic
 
@@ -25,10 +25,6 @@ remoterepository = posteo-remote
 [Account C3S]
 localrepository = C3S-local
 remoterepository = C3S-remote
-
-[Account CHI]
-localrepository = CHI-local
-remoterepository = CHI-remote
 
 [Repository mailbox-local]
 type = Maildir
@@ -65,15 +61,3 @@ remoteuser = florian.posdziech@c-3-s.org
 remotepasseval = get_pass("florian.posdziech@c-3-s.org", "imap.c3s.cc")
 ssl = yes
 cert_fingerprint = 70D7041304B4B3B4D80478DA14C601296F29833CBFEC2501FD640E1568E339DE
-
-
-[Repository CHI-local]
-type = Maildir
-localfolders = ~/Mail/CHI
-
-[Repository CHI-remote]
-type = Gmail
-remoteuser = f.posdziech@chi-deutschland.com
-remotepasseval = get_pass("f.posdziech@chi-deutschland.com", "imap.gmail.com")
-realdelete = no
-sslcacertfile = /usr/local/etc/openssl/cert.pem
