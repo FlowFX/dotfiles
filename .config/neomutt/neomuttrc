@@ -21,6 +21,7 @@ bind pager R  group-reply
 bind index x noop
 
 # don't use g
+bind index,pager gg noop
 bind index,pager g noop
 
 # use gg and G vim-style
