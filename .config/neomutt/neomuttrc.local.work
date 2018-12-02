@@ -10,7 +10,8 @@ set postponed = "+[Gmail].Drafts"
 set trash     = "+[Gmail].Trash"
 unset record
 
-set signature="~/.config/neomutt/signature.work"
+send-hook . set signature="~/.config/neomutt/signature.work"
+send-hook "~t @chi-deutschland.com" set signature=~/.config/neomutt/signature.work.internal
 
 macro index A "<save-message>+[Gmail].All Mail<enter>" "Moved message to the archive"
 macro index S "<save-message>+[Gmail].Spam<enter>"    "Marked message as spam"
