@@ -1,36 +1,38 @@
+# Visually indicate which account I'm working with
 color status color0 color1
 
 set from = "f.posdziech@chi-deutschland.com"
+set sendmail  = "msmtp -a CHI"
 
-send-hook . set signature="~/.config/neomutt/signature.work"
-send-hook "~t @chi-deutschland.com" set signature=~/.config/neomutt/signature.work.internal
+# Use different signature for internal emails
+send-hook . set signature="~/.config/neomutt/signatures/work"
+send-hook "~t @chi-deutschland.com" set signature="~/.config/neomutt/signatures/work.internal"
 
+# Use Gmail directly via IMAP
 set hostname          = "gmail.com"
 set folder            = "imaps://imap.gmail.com"
 set imap_check_subscribed
 set imap_pass         = `keyring get imap.gmail.com f.posdziech@chi-deutschland.com`
 set imap_user         = "f.posdziech@chi-deutschland.com"
 
-set spoolfile   = "+INBOX"    # Set mailbox as the default account
+set spoolfile   = "+INBOX"
 
+# I believe these are Gmail-appropriate settings
 set copy      = no
 set move      = no
-
-set text_flowed = yes
 unset imap_passive
 unset record
-
-set sidebar_new_mail_only = yes
-sidebar_whitelist "+INBOX"
 
 set postponed         = "+[Gmail]/Drafts"
 set trash     = "+[Gmail]/Trash"
 
-set sendmail  = "msmtp -a CHI"
-
 macro index,pager A "<save-message>=[Gmail]/All <enter><enter>" "Archived"
 macro index,pager S "<save-message>=[Gmail]/Spam<enter><enter>"     "Marked message as spam"
 
+set text_flowed = yes
+
+set sidebar_new_mail_only = yes
+sidebar_whitelist "+INBOX"
 
 # Gmail-style keyboard shortcuts
 macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
