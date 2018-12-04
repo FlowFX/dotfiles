@@ -1,7 +1,7 @@
 color status color0 color2
 
-set folder      = ~/Mail
-set spoolfile   = "+posteo/INBOX"    # Set mailbox as the default account
+set folder      = ~/Mail/mailbox
+set spoolfile   = "+INBOX"    # Set mailbox as the default account
 
 set signature="~/.config/neomutt/signatures/personal"
 
@@ -9,42 +9,25 @@ set signature="~/.config/neomutt/signatures/personal"
 set sidebar_new_mail_only = yes
 
 folder-hook mailbox/* source ~/.config/neomutt/accounts/mailbox
-folder-hook posteo/*  source ~/.config/neomutt/accounts/posteo
 folder-hook C3S/*     source ~/.config/neomutt/accounts/C3S
 
 mailboxes "mailbox_org" \
-          "+mailbox/INBOX" \
-          "+mailbox/Archive" \
-          "+mailbox/Drafts" \
-          "+mailbox/Junk" \
-          "+mailbox/Sent" \
-          "+mailbox/Trash"
-sidebar_whitelist "mailbox_org" \
-                  "+mailbox/INBOX"
-
-mailboxes "posteo_de" \
-          "+posteo/Archive" \
-          "+posteo/Drafts" \
-          "+posteo/Flagged" \
-          "+posteo/INBOX" \
-          "+posteo/Freifunk Mainz" \
-          "+posteo/Junk" \
-          "+posteo/Operations" \
-          "+posteo/RaumZeitLabor" \
-          "+posteo/Ruby Guides" \
-          "+posteo/Sent" \
-          "+posteo/Trash"
-sidebar_whitelist "posteo_de" \
-                  "+posteo/INBOX"
+          "+INBOX"
+          #"+mailbox/Archive" \
+          #"+mailbox/Drafts" \
+          #"+mailbox/Junk" \
+          #"+mailbox/Sent" \
+          #"+mailbox/Trash"
+sidebar_whitelist "+INBOX"
 
 mailboxes "C3S" \
-          "+C3S/Archive" \
-          "+C3S/Deleted Messages" \
-          "+C3S/Drafts" \
-          "+C3S/Flagged" \
-          "+C3S/INBOX" \
-          "+C3S/Junk" \
-          "+C3S/Sent Messages"
+          "+../C3S/INBOX"
+          #"+C3S/Archive" \
+          #"+C3S/Deleted Messages" \
+          #"+C3S/Drafts" \
+          #"+C3S/Flagged" \
+          #"+C3S/Junk"
+          #"+C3S/Sent Messages"
 
-sidebar_whitelist "C3S" \
-          "+C3S/INBOX"
+#sidebar_whitelist "C3S" \
+#"~/Mail/C3S/INBOX"

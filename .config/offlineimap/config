@@ -1,7 +1,7 @@
 # ~/.offlineimaprc
 
 [general]
-accounts = mailbox, posteo, C3S
+accounts = mailbox, C3S
 pythonfile = ~/.config/offlineimap/offlineimap.py
 ui = basic
 
@@ -18,10 +18,6 @@ footer = "\n"
 localrepository = mailbox-local
 remoterepository = mailbox-remote
 
-[Account posteo]
-localrepository = posteo-local
-remoterepository = posteo-remote
-
 [Account C3S]
 localrepository = C3S-local
 remoterepository = C3S-remote
@@ -35,18 +31,6 @@ type = IMAP
 remotehost = imap.mailbox.org
 remoteuser = flowfx@mailbox.org
 remotepasseval = get_pass("flowfx@mailbox.org", "imap.mailbox.org")
-ssl = yes
-sslcacertfile = /usr/local/etc/openssl/cert.pem
-
-[Repository posteo-local]
-type = Maildir
-localfolders = ~/Mail/posteo
-
-[Repository posteo-remote]
-type = IMAP
-remotehost = posteo.de
-remoteuser = flowfx@posteo.de
-remotepasseval = get_pass("flowfx@posteo.de", "posteo.de")
 ssl = yes
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 
