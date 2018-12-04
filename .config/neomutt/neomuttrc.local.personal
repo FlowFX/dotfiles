@@ -1,33 +1,17 @@
 color status color0 color2
 
-set folder      = ~/Mail/mailbox
-set spoolfile   = "+INBOX"    # Set mailbox as the default account
+set folder      = ~/Mail
+set spoolfile   = "+mailbox/INBOX"    # Set mailbox as the default account
 
 set signature="~/.config/neomutt/signatures/personal"
 
-#mailboxes 
 set sidebar_new_mail_only = yes
 
 folder-hook mailbox/* source ~/.config/neomutt/accounts/mailbox
 folder-hook C3S/*     source ~/.config/neomutt/accounts/C3S
 
-mailboxes "mailbox_org" \
-          "+INBOX"
-          #"+mailbox/Archive" \
-          #"+mailbox/Drafts" \
-          #"+mailbox/Junk" \
-          #"+mailbox/Sent" \
-          #"+mailbox/Trash"
-sidebar_whitelist "+INBOX"
 
-mailboxes "C3S" \
-          "+../C3S/INBOX"
-          #"+C3S/Archive" \
-          #"+C3S/Deleted Messages" \
-          #"+C3S/Drafts" \
-          #"+C3S/Flagged" \
-          #"+C3S/Junk"
-          #"+C3S/Sent Messages"
+mailboxes "+C3S" "+mailbox"
+source "~/.config/neomutt/mailboxes"
 
-#sidebar_whitelist "C3S" \
-#"~/Mail/C3S/INBOX"
+sidebar_whitelist "+C3S" "+mailbox" "+mailbox/INBOX" "+C3S/INBOX"

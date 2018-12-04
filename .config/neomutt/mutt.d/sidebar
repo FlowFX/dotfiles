@@ -5,10 +5,10 @@ set mail_check_stats
 
 set sidebar_width = 30
 
-#set sidebar_new_mail_only
+set sidebar_new_mail_only
 set sidebar_short_path
 set sidebar_component_depth = 1
-set sidebar_sort_method = unsorted
+set sidebar_sort_method = path
 
 # Shorten mailbox names
 # Delete everything up to the last / or . character
@@ -25,10 +25,10 @@ bind index,pager L  sidebar-open
 
 # Colors ---------------------------------
 # in descending order of priority
-color sidebar_indicator color9 default # Mailbox is open
-color sidebar_highlight color9 color238 # Mailbox is highlighted
+color sidebar_indicator color2 black # Mailbox is open
+color sidebar_highlight color10 color238 # Mailbox is highlighted
 #color sidebar_spoolfile                 # Mailbox is the spoolfile (receives incoming mail)
-#color sidebar_new color12 default                       # Mailbox contains new mail
+color sidebar_new color11 default                       # Mailbox contains new mail
 #color sidebar_flagged                   # Mailbox contains flagged mail
 color sidebar_ordinary color12 default   # Lowest priority
 
