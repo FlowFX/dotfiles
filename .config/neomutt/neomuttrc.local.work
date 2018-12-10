@@ -20,7 +20,7 @@ set spoolfile   = "+INBOX"
 # I believe these are Gmail-appropriate settings
 set copy      = no
 set move      = no
-unset imap_passive
+#unset imap_passive
 unset record
 
 set postponed         = "+[Gmail]/Drafts"
