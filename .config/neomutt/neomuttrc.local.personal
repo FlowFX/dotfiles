@@ -12,6 +12,8 @@ folder-hook C3S/*     source ~/.config/neomutt/accounts/C3S
 
 
 mailboxes "+C3S" "+mailbox"
+mailboxes "/var/mail/flowfx"
 source "~/.config/neomutt/mailboxes"
+
 
 sidebar_whitelist "+C3S" "+mailbox" "+mailbox/INBOX" "+C3S/INBOX"
