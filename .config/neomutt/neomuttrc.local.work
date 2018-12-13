@@ -6,7 +6,7 @@ set sendmail  = "msmtp -a CHI"
 
 # Use different signature for internal emails
 send-hook . set signature="~/.config/neomutt/signatures/work"
-send-hook "~t @chi-deutschland.com" set signature="~/.config/neomutt/signatures/work.internal"
+send-hook "~t @chi-deutschland.com | ~t @cargowork.de" set signature="~/.config/neomutt/signatures/work.internal" # Use Gmail directly via IMAP
 
 # Use Gmail directly via IMAP
 set hostname          = "gmail.com"
