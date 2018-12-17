@@ -237,12 +237,12 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 """ ALE """
 " For JavaScript files, use `eslint` and only `eslint`
 let g:ale_linters = {
-  \ 'css': ['prettier'],
+  \ 'CSS': ['prettier'],
   \ 'JSON': ['prettier'],
-  \ 'haml': ['haml-lint'],
-  \ 'javascript': ['eslint'],
-  \ 'python': ['flake8'],
-  \ 'ruby': ['rubocop', 'rubocop_rails'],
+  \ 'Haml': ['haml-lint'],
+  \ 'JavaScript': ['eslint'],
+  \ 'Python': ['flake8'],
+  \ 'Ruby': ['rubocop', 'rubocop_rails'],
   \ }
 " Mappings in the style of unimpaired-next
 nmap <silent> [W <Plug>(ale_first)
@@ -250,7 +250,8 @@ nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
 
-nnoremap <leader>r :silent !rubocop --auto-correct %<CR>    " run rubocop on ,r
+nnoremap <leader>e :silent !eslint --fix %<CR>    " run eslint on this file
+nnoremap <leader>r :silent !rubocop --auto-correct %<CR>    " run rubocop on this file
 
 """ NERDTREE """
 " https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
