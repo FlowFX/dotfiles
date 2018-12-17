@@ -91,9 +91,8 @@ unset markers              # no ugly plus signs
 
 
 # Deal with HTML emails
-auto_view text/html
+auto_view text/html text/enriched
 alternative_order text/plain text/enriched text/html
-
 
 # URL Views
 macro pager \Cu "|urlview<enter>" "call urlview to open links"

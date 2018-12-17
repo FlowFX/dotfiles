@@ -17,6 +17,9 @@ image/gif; $XDG_CONFIG_HOME/neomutt/view_attachment.sh %s gif
 application/pdf; $XDG_CONFIG_HOME/neomutt/view_attachment.sh %s pdf
 
 # HTML
+# In the pager
+text/html; w3m -I %{charset} -T text/html;
+# In the attachment view
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
 
 # Unidentified files
