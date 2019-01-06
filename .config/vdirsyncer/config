@@ -16,4 +16,4 @@ type = "carddav"
 url = "https://dav.mailbox.org"
 username = "flowfx@mailbox.org"
 # Need to install the Python `keyring` package (https://github.com/jaraco/keyring/)
-password.fetch = ["command", "keyring", "get", "dav.mailbox.org", "flowfx@mailbox.org"]
+password.fetch = ["command", "/Users/flowfx/.pyenv/shims/keyring", "get", "dav.mailbox.org", "flowfx@mailbox.org"]
