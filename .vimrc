@@ -73,6 +73,8 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
 " LaTeX-Suite
 Plugin 'vim-latex/vim-latex'
+" Org-Mode
+Plugin 'jceb/vim-orgmode'
 
 " All Plugins must be added before the following line
 call vundle#end()				" required
