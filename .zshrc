@@ -110,3 +110,6 @@ unsetopt nomatch
 
 # Be Unix compliant. Or something like it.
 export XDG_CONFIG_HOME=$HOME/.config
+
+# added by travis gem
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
