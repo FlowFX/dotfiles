@@ -244,6 +244,7 @@ let g:ale_linters = {
   \ 'JavaScript': ['eslint'],
   \ 'Python': ['flake8'],
   \ 'Ruby': ['rubocop', 'rubocop_rails'],
+  \ 'YAML': ['prettier'],
   \ }
 " Mappings in the style of unimpaired-next
 nmap <silent> [W <Plug>(ale_first)
