@@ -90,6 +90,7 @@ filetype plugin indent on		" required
 
 set encoding=utf-8
 let mapleader=","                  " define <leader> key to comma
+let maplocalleader = "\\"          " define <localleader> key to backslash
 set ruler                          " show current line and column
 
 set list listchars=tab:›·,trail:·,nbsp:·
