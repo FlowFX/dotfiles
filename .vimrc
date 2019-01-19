@@ -71,8 +71,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/fzf.vim'
 " Ack & the silver searcher
 Plugin 'mileszs/ack.vim'
-" LaTeX-Suite
-Plugin 'vim-latex/vim-latex'
 
 " All Plugins must be added before the following line
 call vundle#end()				" required
@@ -293,9 +291,6 @@ endif
 
 cnoreabbrev Ack Ack1
 nnoremap <Leader>a :Ack!<Space>
-
-""" VIM LaTeX-Suite
-let g:tex_flavor='latex'
 
 """ Sources
 source ~/.vim/abbreviations.vim
