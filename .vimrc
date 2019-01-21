@@ -272,13 +272,14 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 let g:fzf_layout = { 'down': '~40%' }
-nnoremap <C-p> :<C-u>FZF<CR>
+
+" Better FZF https://statico.github.io/vim3.html
+nmap ; :Buffers<CR>
+nmap <Leader>t :Tags<CR>
+nmap <C-p> :Files<CR>
 
 """ CTags """
 set tags=./tags;/                                         " https://stackoverflow.com/a/741486
-
-""" VIM-RAILS """
-nnoremap <leader>t :Rails<CR>                         " Run tests
 
 "" UltiSnips
 "let g:UltiSnipsEditSplit=vertical" " Let :UltiSnipsEdit split the window
