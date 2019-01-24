@@ -190,9 +190,8 @@ let g:airline_theme='solarized_flood'
 call togglebg#map("<F5>")
 
 " Mark end of line
-set colorcolumn=120
 highlight ColorColumn ctermbg=8
-
+autocmd FileType python,ruby let &colorcolumn=&textwidth
 
 "   ____                      _      _   _
 "  / ___|___  _ __ ___  _ __ | | ___| |_(_) ___  _ __
