@@ -189,6 +189,10 @@ let g:airline_theme='solarized_flood'
 " toggle background with F5
 call togglebg#map("<F5>")
 
+" Mark end of line
+set colorcolumn=120
+highlight ColorColumn ctermbg=8
+
 
 "   ____                      _      _   _
 "  / ___|___  _ __ ___  _ __ | | ___| |_(_) ___  _ __
