@@ -258,6 +258,8 @@ nmap <silent> ]W <Plug>(ale_last)
 nnoremap <leader>e :silent !eslint --fix %<CR>    " run eslint on this file
 nnoremap <leader>r :silent !rubocop --auto-correct %<CR>    " run rubocop on this file
 
+map <leader>l :ALEToggle<CR>    " toggle ALE with ,l
+
 """ NERDTREE """
 " https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
 map <C-n> :NERDTreeToggle<CR>    " toggle Nerdtree with CTRL-n
