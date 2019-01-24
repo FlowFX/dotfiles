@@ -48,6 +48,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Konfekt/FastFold'
+Plugin 'qpkorr/vim-bufkill'
 " Snippets
 "Plugin 'SirVer/ultisnips'
 "Plugin 'honza/vim-snippets'
