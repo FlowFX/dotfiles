@@ -65,9 +65,6 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'vim-ruby/vim-ruby'
-" Status bar
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 " fzf
 Plugin 'junegunn/fzf.vim'
 " Ack & the silver searcher
@@ -184,7 +181,27 @@ else
     colorscheme solarized
 endif
 
-let g:airline_theme='solarized_flood'
+" Statusbar
+set laststatus=2 " enable statusbar all the time
+
+" Returns current Git branch
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
+set statusline=
+set statusline+=%{StatuslineGit()} " current Git branch
+set statusline+=\ %f               " current path
+set statusline+=\ %m               " modified flag
+set statusline+=%=
+set statusline+=\%p%%              " percentage inside file
+set statusline+=\ \ \ 
+set statusline+=\ %3c\             " current column
 
 " toggle background with F5
 call togglebg#map("<F5>")
