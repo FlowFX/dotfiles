@@ -49,6 +49,11 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Konfekt/FastFold'
 Plugin 'qpkorr/vim-bufkill'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+" Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 " Snippets
 "Plugin 'SirVer/ultisnips'
 "Plugin 'honza/vim-snippets'
