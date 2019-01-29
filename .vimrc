@@ -267,7 +267,7 @@ let g:ale_linters = {
   \ 'JSON': ['prettier'],
   \ 'Haml': ['haml-lint'],
   \ 'JavaScript': ['eslint'],
-  \ 'Python': ['flake8'],
+  \ 'Python': ['flake8', 'mypy', 'pylint'],
   \ 'Ruby': ['rubocop', 'rubocop_rails'],
   \ 'YAML': ['prettier'],
   \ }
