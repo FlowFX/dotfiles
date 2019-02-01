@@ -8,6 +8,7 @@
 " * http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 " * http://color.smyck.org/
 " * https://github.com/scy/dotfiles/tree/master/.vim
+" * https://thoughtbot-images.s3.amazonaws.com/upcase/navigating-ruby-files-in-vim-install-instructions.pdf
 "
 " Special thanks to Nervengift for the ASCII art!
 
@@ -19,65 +20,62 @@
 " |  __/| | |_| | (_| | | | | \__ \
 " |_|   |_|\__,_|\__, |_|_| |_|___/
 "                |___/             
-" Plugins using Vundle
-" https://github.com/VundleVim/Vundle.vim
-set nocompatible
+" Plugins using vim-plug
+" https://github.com/junegunn/vim-plug
 
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Automatic installation of vim-plug and plugins
+" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
 
-""" PLUGINS
-Plugin 'altercation/vim-colors-solarized'
+call plug#begin('~/.vim/bundle')
+
+" Colors
+Plug 'altercation/vim-colors-solarized'
 " Session management
-Plugin 'tpope/vim-obsession'
+Plug 'tpope/vim-obsession'
 " Tmux
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 " NerdTree
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 " IDE
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'Konfekt/FastFold'
-Plugin 'qpkorr/vim-bufkill'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Konfekt/FastFold'
+Plug 'qpkorr/vim-bufkill'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 " Markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-" Snippets
-"Plugin 'SirVer/ultisnips'
-"Plugin 'honza/vim-snippets'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 " Linting
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 " Tab completion
-Plugin 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim'
 " Ruby
-" https://thoughtbot-images.s3.amazonaws.com/upcase/navigating-ruby-files-in-vim-install-instructions.pdf
-Plugin 'kana/vim-textobj-user'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'vim-ruby/vim-ruby'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'vim-ruby/vim-ruby'
 " fzf
-Plugin 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
 " Ack & the silver searcher
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
-" All Plugins must be added before the following line
-call vundle#end()				" required
-filetype plugin indent on		" required
+call plug#end()
 
 "   ____                           _ 
 "  / ___| ___ _ __   ___ _ __ __ _| |
@@ -87,6 +85,7 @@ filetype plugin indent on		" required
 " 
 " General options               
 
+set nocompatible
 set encoding=utf-8
 let mapleader=","                  " define <leader> key to comma
 let maplocalleader = "\\"          " define <localleader> key to backslash
