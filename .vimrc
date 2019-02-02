@@ -23,7 +23,7 @@
 " Plugins using vim-plug
 " https://github.com/junegunn/vim-plug
 
-" Automatic installation of vim-plug and plugins
+" Automatic installation of vim-plug
 " https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -36,6 +36,7 @@ call plug#begin('~/.vim/bundle')
 
 " Colors
 Plug 'altercation/vim-colors-solarized'
+Plug 'junegunn/goyo.vim'
 " Session management
 Plug 'tpope/vim-obsession'
 " Tmux
