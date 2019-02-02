@@ -56,6 +56,7 @@ Plug 'Konfekt/FastFold'
 Plug 'qpkorr/vim-bufkill'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'junegunn/vim-slash'
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -321,6 +322,9 @@ endif
 
 cnoreabbrev Ack Ack1
 nnoremap <Leader>a :Ack!<Space>
+
+""" vim-slash
+noremap <plug>(slash-after) zz   " Places the current match at center of window
 
 """ Sources
 source ~/.vim/abbreviations.vim
