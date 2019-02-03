@@ -96,3 +96,7 @@ alternative_order text/plain text/enriched text/html
 
 # URL Views
 macro pager \Cu "|urlview<enter>" "call urlview to open links"
+
+# Deal with attachments
+bind attach s noop
+macro attach s "<save-entry><bol>~/Downloads/<eol>"   "Save attachment to Downloads folder
