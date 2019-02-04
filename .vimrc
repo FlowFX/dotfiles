@@ -57,6 +57,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-slash'
+Plug 'janko-m/vim-test'
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -337,3 +338,13 @@ source ~/.vim/abbreviations.vim
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+""" vim-test
+nmap <localleader>n :TestNearest<CR>
+nmap <localleader>f :TestFile<CR>
+nmap <localleader>s :TestSuite<CR>
+nmap <localleader>l :TestLast<CR>
+nmap <localleader>g :TestVisit<CR>
+
+" make test commands execute using dispatch.vim
+let test#strategy = "dispatch"
