@@ -58,6 +58,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-slash'
 Plug 'janko-m/vim-test'
+Plug 'mhinz/vim-signify'
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -348,3 +349,7 @@ nmap <localleader>g :TestVisit<CR>
 
 " make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
+
+""" VIM-Signify
+let g:signify_vcs_list = [ 'git' ]
+let g:signify_realtime = 1
