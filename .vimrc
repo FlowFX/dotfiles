@@ -68,6 +68,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
@@ -171,6 +172,9 @@ autocmd filetype crontab setlocal nobackup nowritebackup
 
 " Enable matchit
 runtime macros/matchit.vim
+
+" Quickly close quickfix window
+nmap <C-x> :cclose<CR>
 
 
 "  _                _
@@ -328,3 +332,8 @@ noremap <plug>(slash-after) zz   " Places the current match at center of window
 
 """ Sources
 source ~/.vim/abbreviations.vim
+
+""" VIM-RUBY
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
