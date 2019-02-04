@@ -316,7 +316,7 @@ nmap <Leader>t :Tags<CR>
 nmap <C-p> :Files<CR>
 
 """ CTags """
-set tags=./tags;/                                         " https://stackoverflow.com/a/741486
+set tags=./tags;/        " https://stackoverflow.com/a/741486
 
 "" UltiSnips
 "let g:UltiSnipsEditSplit=vertical" " Let :UltiSnipsEdit split the window
@@ -331,7 +331,7 @@ cnoreabbrev Ack Ack1
 nnoremap <Leader>a :Ack!<Space>
 
 """ vim-slash
-noremap <plug>(slash-after) zz   " Places the current match at center of window
+noremap <plug>(slash-after) zz  " Places the current match at center of window
 
 """ Sources
 source ~/.vim/abbreviations.vim
@@ -341,7 +341,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
-""" vim-test
+""" VIM-TEST
 nmap <localleader>n :TestNearest<CR>
 nmap <localleader>f :TestFile<CR>
 nmap <localleader>s :TestSuite<CR>
