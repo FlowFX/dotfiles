@@ -59,6 +59,7 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-slash'
 Plug 'janko-m/vim-test'
 Plug 'mhinz/vim-signify'
+Plug 'nathanaelkane/vim-indent-guides'
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -353,3 +354,8 @@ let test#strategy = "dispatch"
 """ VIM-Signify
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
+
+""" Indent Guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=red ctermbg=8
