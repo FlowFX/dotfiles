@@ -356,6 +356,11 @@ let test#strategy = "dispatch"
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
 
+" Remove irritating background colors
+hi DiffAdd    ctermbg=none ctermfg=2
+hi DiffDelete ctermbg=none ctermfg=1
+hi DiffChange ctermbg=none ctermfg=4
+
 """ Indent Guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 3
