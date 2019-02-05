@@ -67,6 +67,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'w0rp/ale'
 " Tab completion
 Plug 'Shougo/deoplete.nvim'
+Plug 'takkii/Bignyanco'
 " Ruby
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
