@@ -355,6 +355,7 @@ let test#strategy = "dispatch"
 """ VIM-Signify
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
+set signcolumn=yes
 
 " Remove irritating background colors
 hi DiffAdd    ctermbg=none ctermfg=2
