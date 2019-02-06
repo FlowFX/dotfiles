@@ -14,11 +14,11 @@ macro index O "<shell-escape>offlineimap -u blinkenlights\r"      "run offlineim
 macro index ,o "<shell-escape>offlineimap -u basic -q -f INBOX\r" "run offlineimap quick and quiet"
 
 
-bind index D purge-message    # Don't just delete. REALLY delete!
-bind pager R  group-reply
+bind index,pager D purge-message    # Don't just delete. REALLY delete!
+bind index,pager R  group-reply
 
 # unbind x so there will be no chance to exit mutt incidentally
-bind index x noop
+bind index,pager x noop
 
 # don't use g
 bind index g noop
