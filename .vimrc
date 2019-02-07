@@ -223,7 +223,7 @@ call togglebg#map("<F5>")
 " Mark end of line
 " https://github.com/vim/vim/blob/135059724f140ceac889c9f8136bd1bf5c41d49d/runtime/doc/options.txt#L1715-L1716
 set colorcolumn=+1
-highlight ColorColumn ctermbg=8
+highlight ColorColumn ctermbg=0
 
 "   ____                      _      _   _
 "  / ___|___  _ __ ___  _ __ | | ___| |_(_) ___  _ __
