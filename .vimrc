@@ -56,7 +56,6 @@ Plug 'Konfekt/FastFold'
 Plug 'qpkorr/vim-bufkill'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'janko-m/vim-test'
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
 " Markdown
@@ -338,12 +337,10 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
-""" VIM-TEST
-nmap <localleader>n :TestNearest<CR>
-nmap <localleader>f :TestFile<CR>
-nmap <localleader>s :TestSuite<CR>
-nmap <localleader>l :TestLast<CR>
-nmap <localleader>g :TestVisit<CR>
+""" VIM-RAILS
+" https://github.com/tpope/vim-rails
+nmap <CR> :Rails<CR>
+nmap <leader><CR> :.Rails<CR>
 
 " make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
