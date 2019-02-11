@@ -346,7 +346,7 @@ let test#strategy = "tslime"
 let test#ruby#use_spring_binstub = 1
 
 nmap <CR> :TestFile<CR>
-nmap <leader><CR> :TestNearest<CR>
+nmap <leader><CR> :TestLast<CR>
 
 """ VIM-Signify
 let g:signify_vcs_list = [ 'git' ]
