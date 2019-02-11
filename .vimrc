@@ -49,6 +49,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim'
+Plug 'janko/vim-test'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/nerdcommenter'
@@ -337,13 +338,12 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
-""" VIM-RAILS
-" https://github.com/tpope/vim-rails
-nmap <CR> :Rails<CR>
-nmap <leader><CR> :.Rails<CR>
-
+""" VIM-TEST
+" https://github.com/janko/vim-test
 " make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
+nmap <CR> :TestFile<CR>
+nmap <leader><CR> :TestNearest<CR>
 
 """ VIM-Signify
 let g:signify_vcs_list = [ 'git' ]
