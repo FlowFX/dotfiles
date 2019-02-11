@@ -49,6 +49,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim'
+Plug 'jgdavey/tslime.vim'
 Plug 'janko/vim-test'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
@@ -340,8 +341,10 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 """ VIM-TEST
 " https://github.com/janko/vim-test
-" make test commands execute using dispatch.vim
-let test#strategy = "dispatch"
+" make test commands execute using tslime.vim
+let test#strategy = "tslime"
+let test#ruby#use_spring_binstub = 1
+
 nmap <CR> :TestFile<CR>
 nmap <leader><CR> :TestNearest<CR>
 
