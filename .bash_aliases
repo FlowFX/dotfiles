@@ -36,7 +36,7 @@ alias amove="git annex move"
 alias async="git annex sync"
 
 # Ruby
-alias bis="bundle install --standalone"
+alias bis="bundle install --standalone --path .bundle"
 
 # Rails
 alias beg="bundle exec guard"
