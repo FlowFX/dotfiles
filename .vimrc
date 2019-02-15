@@ -360,6 +360,7 @@ let g:rails_projections = {
 " make test commands execute using tslime.vim
 let test#strategy = "tslime"
 let test#ruby#use_spring_binstub = 1
+let test#python#runner = "pytest"
 
 nmap <CR> :TestFile<CR>
 nmap <leader><CR> :TestLast<CR>
