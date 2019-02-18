@@ -301,6 +301,9 @@ let NERDTreeAutoDeleteBuffer = 1 " automatically delete the buffer of the file y
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
+" Ignore temp files
+:let g:NERDTreeIgnore=['__pycache__',]
+
 """ FZF """
 " https://github.com/junegunn/fzf
 " https://github.com/junegunn/fzf.vim
