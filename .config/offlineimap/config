@@ -17,7 +17,6 @@ footer = "\n"
 [Account mailbox]
 localrepository = mailbox-local
 remoterepository = mailbox-remote
-autorefresh = 1
 
 [Account C3S]
 localrepository = C3S-local
