@@ -10,8 +10,8 @@ set tmpdir           = ~/.tmp/mutt           # where to keep temp files
 macro index,pager ,r ":source $XDG_CONFIG_HOME/neomutt/neomuttrc<enter>"
 
 # Sync email
-macro index O "<shell-escape>offlineimap -u blinkenlights\r"      "run offlineimap to sync all mail"
-macro index ,o "<shell-escape>offlineimap -u basic -q -f INBOX\r" "run offlineimap quick and quiet"
+macro index O "<shell-escape>offlineimap -o -u blinkenlights\r"      "run offlineimap to sync all mail"
+macro index ,o "<shell-escape>offlineimap -o -u basic -q -f INBOX\r" "run offlineimap quick and quiet"
 
 
 bind index,pager D purge-message    # Don't just delete. REALLY delete!
