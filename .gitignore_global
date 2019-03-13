@@ -23,3 +23,6 @@ tags
 Session*.vim
 tags.lock
 tags.temp
+
+# Ruby
+.bundle
