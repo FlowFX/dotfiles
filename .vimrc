@@ -365,7 +365,8 @@ let test#strategy = "tslime"
 let test#ruby#use_spring_binstub = 1
 let test#python#runner = "pytest"
 
-nmap <CR> :TestNearest<CR>      " In Alternate File, this executes :TestLast
+" In Alternate File, :TestNearest executes :TestLast
+nmap <CR> :TestNearest<CR>
 nmap <leader><CR> :TestFile<CR>
 
 """ VIM-Signify
