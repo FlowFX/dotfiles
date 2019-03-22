@@ -1,7 +1,7 @@
 # ~/.offlineimaprc
 
 [general]
-accounts = mailbox, C3S
+accounts = mailbox
 pythonfile = ~/.config/offlineimap/offlineimap.py
 ui = basic
 
