@@ -5,6 +5,7 @@ alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # Aliases
 alias vim='nvim'
 alias psgrep='ps aux | grep '
+alias tx='tmuxinator'
 
 function findall() {
   find . -name "*" -type f | xargs grep "$1"
