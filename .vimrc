@@ -249,9 +249,12 @@ let g:ale_linters = {
   \ 'JSON': ['prettier'],
   \ 'Haml': ['haml-lint'],
   \ 'JavaScript': ['eslint'],
-  \ 'Python': ['flake8', 'mypy', 'pylint'],
+  \ 'Python': ['flake8', 'pylint'],
   \ 'Ruby': ['rubocop', 'rubocop_rails'],
   \ 'YAML': ['prettier'],
+  \ }
+let g:ale_fixers = {
+  \ 'Python': ['autopep8'],
   \ }
 " Mappings in the style of unimpaired-next
 nmap <silent> [W <Plug>(ale_first)
