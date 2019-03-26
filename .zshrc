@@ -101,6 +101,10 @@ fi
 # rbenv
 eval "$(rbenv init -)"
 
+# pipenv
+# Create .venv directory in project folder
+export PIPENV_VENV_IN_PROJECT=1
+
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files'
 
