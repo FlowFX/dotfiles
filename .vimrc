@@ -38,17 +38,16 @@ call plug#begin('~/.vim/bundle')
 Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/goyo.vim'
 " Session management
-Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-obsession', { 'on': 'Obsession' }
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 " NerdTree
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree',         { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 " IDE
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kchmck/vim-coffee-script'
-Plug 'mattn/emmet-vim'
 Plug 'jgdavey/tslime.vim'
 Plug 'janko/vim-test'
 Plug 'tpope/vim-fugitive'
@@ -80,6 +79,8 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'junegunn/fzf.vim'
 " Ack & the silver searcher
 Plug 'mileszs/ack.vim'
+" LaTeX
+Plug 'vim-latex/vim-latex', { 'for': ['latex', 'tex'] }
 
 call plug#end()
 
