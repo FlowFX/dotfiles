@@ -344,6 +344,7 @@ let test#python#runner = "pytest"
 " In Alternate File, :TestNearest executes :TestLast
 nmap <CR> :TestNearest<CR>
 nmap <leader><CR> :TestFile<CR>
+nmap <localleader>l :TestLast<CR>
 
 """ VIM-Signify
 let g:signify_vcs_list = [ 'git' ]
