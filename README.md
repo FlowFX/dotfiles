@@ -1,17 +1,34 @@
-Installation instructions for those configurations that need them.
+Installation instructions for a new machine. Tested on Ubuntu 18.10 on a Lenovo X61, March 2019.
 
-## Install VIM and Vundle
+## Install <strike>VIM and Vundle</strike>everything
 
-```bash
-git clone git@github.com:FlowFX/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-git submodule update --init --recursive
+```
+$ sudo apt install git curl zsh neovim tmux tmuxinator neomutt xcape
 ```
 
-Inside VIM:
-```vim
-:PluginInstall
+## Checkout dotfiles
+
+Cf. [The best way to store your dotfiles: A bare Git repository](https://www.atlassian.com/git/tutorials/dotfiles).
+
+```shell
+$ alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+$ git clone --bare git@github.com:FlowFX/dotfiles.git $HOME/.dotfiles
+
+$ alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+$ dot checkout
+
+$ dot config --local status.showUntrackedFiles no
 ```
 
-## iTerm2
-To use the configuration file under `.config/iTerms2`, go to Preferences >> General, select `Load preferences from a custom folder` and coose the `.config/iTerms2` directory. Optionally activate `Save changes to folder when iTerm2 quits`. All changes have to propagate via git.
+## Configure Zsh
+
+```
+$ chsh
+/usr/bin/zsh
+```
+
+## Install vim-plug
+[Install vim-plug](https://github.com/junegunn/vim-plug#neovim). If it's not already installed with the file in `.vim/autoload/`.
+
+
+
