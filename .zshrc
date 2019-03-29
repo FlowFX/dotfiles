@@ -98,8 +98,6 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# rbenv
-eval "$(rbenv init -)"
 
 # pipenv
 # Create .venv directory in project folder

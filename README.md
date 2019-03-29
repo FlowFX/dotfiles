@@ -31,6 +31,30 @@ $ chsh
 [Install vim-plug](https://github.com/junegunn/vim-plug#neovim). If it's not already installed with the file in `.vim/autoload/`.
 
 
+## Ruby environment
+
+```
+sudo apt install -y libssl-dev libreadline-dev zlib1g-dev
+```
+
+rbenv is a submodule of the dotfiles repository. 
+
+```
+$ git submodule update --init --recursive 
+$ $ ~/.rbenv/bin/rbenv init
+```
+
+### Install ruby-build
+
+the ruby-build directory is already ignored in .gitignore.
+
+```
+$ mkdir -p "$(rbenv root)"/plugins
+$ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+```
+
+
+
 
 # Resources
 - Remapping Caps-Lock: http://www.economyofeffort.com/2014/08/11/beyond-ctrl-remap-make-that-caps-lock-key-useful/
