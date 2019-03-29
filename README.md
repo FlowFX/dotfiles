@@ -32,3 +32,6 @@ $ chsh
 
 
 
+# Resources
+- Remapping Caps-Lock: http://www.economyofeffort.com/2014/08/11/beyond-ctrl-remap-make-that-caps-lock-key-useful/
+- Vim-plug: https://github.com/junegunn/vim-plug#neovim
