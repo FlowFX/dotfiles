@@ -27,5 +27,9 @@ fi
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=" -R "
 
+# Escape mapping
+setxkbmap -option "caps:ctrl_modifier"
+xcape -e "Caps_Lock=Escape"
+
 # Secret extra configurations
 [[ -f ~/.profile ]] && source ~/.profile
