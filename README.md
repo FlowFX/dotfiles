@@ -22,6 +22,10 @@ $ dot config --local status.showUntrackedFiles no
 
 ## Configure Zsh
 
+Install  Oh-My-Zsh
+
+https://github.com/robbyrussell/oh-my-zsh#via-curl
+
 ```
 $ chsh
 /usr/bin/zsh
