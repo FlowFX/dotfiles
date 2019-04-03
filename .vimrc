@@ -37,6 +37,7 @@ call plug#begin('~/.vim/bundle')
 " Colors
 Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/goyo.vim'
+Plug 'blueyed/vim-diminactive'
 " Session management
 Plug 'tpope/vim-obsession', { 'on': 'Obsession' }
 " Tmux
@@ -361,3 +362,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 3
 let g:indent_guides_guide_size = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=red ctermbg=0
+
+""" VIM-DimInactive
+" https://github.com/blueyed/vim-diminactive
+let g:diminactive_use_colorcolumn = 0   " changes background color
+let g:diminactive_use_syntax = 1        " disables syntax highlighting
