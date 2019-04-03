@@ -48,4 +48,4 @@ windows:
       panes:
         - mw
         - m
-  - cron: while offlineimap -q; do echo "next sync in 180 seconds" && sleep 180; done
+  - cron: while offlineimap -q; do echo ' --- ' && date && echo "next sync in 180 seconds" && sleep 180; done
