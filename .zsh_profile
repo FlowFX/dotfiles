@@ -9,6 +9,13 @@ if [ -d "$HOME/bin/adb-fastboot/platform-tools" ] ; then
     export PATH="$HOME/bin/adb-fastboot/platform-tools:$PATH"
 fi
 
+# Python
+if [ -d "$HOME/.virtualenvs" ] ; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/code
+    export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python
+fi
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
