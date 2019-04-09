@@ -348,6 +348,7 @@ nmap <leader><CR> :TestFile<CR>
 nmap <localleader>l :TestLast<CR>
 
 """ VIM-Signify
+" https://github.com/mhinz/vim-signify
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
 set signcolumn=yes
@@ -357,7 +358,8 @@ hi DiffAdd    ctermbg=none ctermfg=2
 hi DiffDelete ctermbg=none ctermfg=1
 hi DiffChange ctermbg=none ctermfg=4
 
-""" Indent Guides
+""" Vim Indent Guides
+" https://github.com/nathanaelkane/vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 3
 let g:indent_guides_guide_size = 1
