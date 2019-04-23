@@ -130,7 +130,7 @@ nnoremap <leader><space> :nohlsearch<CR> " Vim will keep highlighted matches fro
 
 set cursorline          " hightlight current line
 set showmatch           " show the matching part of the pair for [] {} and ()
-set number              " show line numbers
+set relativenumber      " show line distances
 set scrolloff=5         " don't scroll all the way to the bottom
 set ttyfast
 
