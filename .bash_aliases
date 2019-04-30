@@ -40,17 +40,14 @@ alias async="git annex sync"
 alias bis="bundle install --standalone --path .bundle"
 
 # Rails
-alias beg="bundle exec guard"
-alias ber="bundle exec rspec"
-alias berp="bundle exec rails parallel:spec"
-alias brs="bin/rails spec"
+alias rc="bin/rails console"
+alias rce="bin/rails credentials:edit"
+alias rs="bin/rails server"
+alias rt="bin/rails test"
 alias brps="bin/rails parallel:spec"
-alias rc="bundle exec rails console"
-alias rce="bundle exec rails credentials:edit"
-alias rs="bundle exec rails server"
-alias rt="bundle exec rails test"
 alias respring="spring stop && spring server &>/dev/null &"
 
 # Rails database
-alias rdm='bundle exec rails db:migrate'
-alias rds='bundle exec rails db:seed'
+alias rdm='bin/rails db:migrate'
+alias rdr='bin/rails db:rollback'
+alias rds='bin/rails db:seed'
