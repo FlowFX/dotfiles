@@ -3,7 +3,7 @@ Installation instructions for a new machine. Tested on Ubuntu 18.10 on a Lenovo 
 ## Install <strike>VIM and Vundle</strike>everything
 
 ```
-$ sudo apt install git curl zsh neovim tmux tmuxinator neomutt xcape
+$ sudo apt install git curl zsh neovim tmux tmuxinator neomutt offlineimap msmtp xcape
 ```
 
 ## Checkout dotfiles
@@ -57,6 +57,8 @@ $ mkdir -p "$(rbenv root)"/plugins
 $ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 ```
 
+### Install Yarn
+Required for Rails. https://yarnpkg.com/en/docs/install#debian-nightly
 
 
 
