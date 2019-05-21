@@ -48,5 +48,9 @@ windows:
       panes:
         - vim
         -
-  - server: bundle exec rails s
+  - server:
+      layout: main-horizontal
+      panes:
+        - rs
+        - bin/webpack-dev-server
   - logs: tail -f log/development.log
