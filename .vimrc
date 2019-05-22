@@ -64,9 +64,13 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 " Linting
 Plug 'w0rp/ale'
-" Tab completion
-Plug 'Shougo/deoplete.nvim'
-Plug 'takkii/Bignyanco'
+" Tab completion / Language Server
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+"Plug 'takkii/Bignyanco'
 " Ruby
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
@@ -242,6 +246,21 @@ set autoread
 let g:deoplete#enable_at_startup = 1
 " Use tab to complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+""" LanguageClient-neovim
+" required for operations modifying multiple buffers like rename.
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+    \ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
 
 """ ALE """
 " For JavaScript files, use `eslint` and only `eslint`
