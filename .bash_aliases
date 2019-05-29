@@ -44,7 +44,7 @@ alias rc="bin/rails console"
 alias rce="bin/rails credentials:edit"
 alias rs="bin/rails server"
 alias rt="bin/rails test"
-alias brps="bin/rails parallel:spec"
+alias berp="bin/rails parallel:spec"
 alias respring="spring stop && spring server &>/dev/null &"
 
 # Rails database
