@@ -36,10 +36,7 @@ call plug#begin('~/.vim/bundle')
 
 " Colors
 Plug 'altercation/vim-colors-solarized'
-Plug 'junegunn/goyo.vim'
 Plug 'blueyed/vim-diminactive'
-" Session management
-Plug 'tpope/vim-obsession', { 'on': 'Obsession' }
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -48,7 +45,7 @@ Plug 'scrooloose/nerdtree',         { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 " IDE
 Plug 'editorconfig/editorconfig-vim'
-Plug 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script', { 'for': ['coffee'] }
 Plug 'jgdavey/tslime.vim'
 Plug 'janko/vim-test'
 Plug 'tpope/vim-fugitive'
@@ -60,8 +57,9 @@ Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
 " Markdown
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular',       { 'for': ['markdown'] }
+Plug 'junegunn/goyo.vim',       { 'for': ['markdown'] }
+Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
 " Linting
 Plug 'w0rp/ale'
 " Tab completion / Language Server
@@ -70,22 +68,21 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-"Plug 'takkii/Bignyanco'
 " Ruby
 Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
-Plug 'vim-ruby/vim-ruby'
+Plug 'nelstrom/vim-textobj-rubyblock', { 'for': ['ruby', 'eruby', 'haml'] }
+Plug 'tpope/vim-bundler',              { 'for': ['ruby', 'eruby', 'haml'] }
+Plug 'tpope/vim-endwise',              { 'for': ['ruby', 'eruby', 'haml'] }
+Plug 'tpope/vim-rails',                { 'for': ['ruby', 'eruby', 'haml'] }
+Plug 'tpope/vim-rake',                 { 'for': ['ruby', 'eruby', 'haml'] }
+Plug 'vim-ruby/vim-ruby',              { 'for': ['ruby', 'eruby', 'haml'] }
 " fzf
 Plug 'junegunn/fzf.vim'
 " Ack & the silver searcher
 Plug 'mileszs/ack.vim'
 " LaTeX
-Plug 'vim-latex/vim-latex', { 'for': ['latex', 'tex'] }
+Plug 'vim-latex/vim-latex', { 'for': ['tex'] }
 
 call plug#end()
 
@@ -317,10 +314,6 @@ nmap <C-p> :Files<CR>
 
 """ CTags """
 set tags=./tags;/        " https://stackoverflow.com/a/741486
-
-"" UltiSnips
-"let g:UltiSnipsEditSplit=vertical" " Let :UltiSnipsEdit split the window
-
 
 """ Ack & ag (The Silver Searcher) """
 if executable('ag')
