@@ -66,6 +66,7 @@ plugins=(
   tmux
   ruby
   bundler
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
