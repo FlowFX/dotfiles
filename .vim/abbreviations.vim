@@ -5,3 +5,9 @@
 " here.
 iabbrev teh the
 iabbrev seperate separate
+
+" MathJax foo for use in ankdown flashcards
+" - https://github.com/benwr/ankdown/
+" - https://stackoverflow.com/a/3320321/6476946
+iabbrev \( \( \)<Left><Left><Left>
+iabbrev \[ \[ \]<Left><Left><Left>
