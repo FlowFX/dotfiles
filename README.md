@@ -6,6 +6,13 @@ Installation instructions for a new machine. Tested on Ubuntu 18.10 on a Lenovo 
 $ sudo apt install git curl zsh neovim tmux tmuxinator neomutt offlineimap msmtp xcape
 ```
 
+### On macOS
+Install everything from the Brewfile. (Does not include email-related packages, yet).
+
+```
+$ brew bundle
+```
+
 ## Checkout dotfiles
 
 Cf. [The best way to store your dotfiles: A bare Git repository](https://www.atlassian.com/git/tutorials/dotfiles).
