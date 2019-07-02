@@ -16,6 +16,9 @@ alias g="git"
 alias gf="git flow"
 alias wip="git commit -am'WIP'"
 
+# Heroku
+alias h="heroku"
+
 # Mutt
 alias m="LOCAL_CONFIG=personal neomutt"
 alias mw="LOCAL_CONFIG=work neomutt"
