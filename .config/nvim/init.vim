@@ -129,6 +129,12 @@ let g:ale_fixers = {
 \   'typescript': ['prettier'],
 \}
 
+" Mappings in the style of unimpaired-next
+nmap <silent> [W <Plug>(ale_first)
+nmap <silent> [w <Plug>(ale_previous)
+nmap <silent> ]w <Plug>(ale_next)
+nmap <silent> ]W <Plug>(ale_last)
+
 """ FZF
 " Better FZF https://statico.github.io/vim3.html
 nmap <C-p> :Files<CR>
