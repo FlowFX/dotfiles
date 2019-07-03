@@ -41,6 +41,9 @@ Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
+" vim.signify
+Plug 'mhinz/vim-signify'
+
 call plug#end()
 
 "   ____                           _
@@ -126,3 +129,10 @@ nmap ; :Buffers<CR>
 if (executable('ag'))
     let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 endif
+
+
+""" VIM-Signify
+" https://github.com/mhinz/vim-signify
+let g:signify_vcs_list = [ 'git' ]
+let g:signify_realtime = 1
+set signcolumn=yes
