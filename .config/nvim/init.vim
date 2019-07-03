@@ -48,6 +48,21 @@ Plug 'junegunn/fzf.vim'
 " vim-signify
 Plug 'mhinz/vim-signify'
 
+" NerdCommenter
+Plug 'scrooloose/nerdcommenter'
+
+" tpope awesomeness
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+" tpope ruby foo
+Plug 'tpope/vim-endwise', { 'for': ['ruby', 'eruby', 'haml'] }
+
+" vim-test and tslime
+Plug 'jgdavey/tslime.vim'
+Plug 'janko/vim-test'
+
 call plug#end()
 
 "   ____                           _
@@ -154,9 +169,31 @@ if (executable('ag'))
     let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 endif
 
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
 
 """ VIM-Signify
 " https://github.com/mhinz/vim-signify
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
 set signcolumn=yes
+
+" Remove irritating background colors
+hi DiffAdd    ctermbg=none ctermfg=2
+hi DiffDelete ctermbg=none ctermfg=1
+hi DiffChange ctermbg=none ctermfg=4
+
+""" VIM-TEST
+" https://github.com/janko/vim-test
+" make test commands execute using tslime.vim
+let test#strategy = "tslime"
+let test#ruby#use_spring_binstub = 1
+let test#python#runner = "pytest"
+
+" In Alternate File, :TestNearest executes :TestLast
+nmap <CR> :TestNearest<CR>
+nmap <leader><CR> :TestFile<CR>
+nmap <localleader>l :TestLast<CR>
