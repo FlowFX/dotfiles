@@ -37,6 +37,10 @@ Plug 'editorconfig/editorconfig-vim'
 " Async linting engine
 Plug 'w0rp/ale'
 
+" Async FuzzyFind
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 "   ____                           _
@@ -104,3 +108,13 @@ let g:ale_fixers = {
 \   'ruby': ['rubocop'],
 \   'typescript': ['prettier'],
 \}
+
+""" FZF
+" Better FZF https://statico.github.io/vim3.html
+nmap <C-p> :Files<CR>
+nmap ; :Buffers<CR>
+
+" make FZF respect gitignore if `ag` is installed
+if (executable('ag'))
+    let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+endif
