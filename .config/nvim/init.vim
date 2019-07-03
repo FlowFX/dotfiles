@@ -28,6 +28,12 @@ Plug 'tpope/vim-sensible'
 " tmux navigator
 Plug 'christoomey/vim-tmux-navigator'
 
+" NERDTree
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" .editorconfig
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 
 "   ____                           _ 
@@ -40,6 +46,9 @@ call plug#end()
 
 " Clear search highlighting
 nnoremap <leader><space> :nohlsearch<CR>
+
+" Easy escaping
+inoremap jj <ESC>
 
 " Source: lucasfcosta/dotfiles/blob/master/.config/nvim/init.vim
 set ttyfast                 " Faster redrawing
@@ -55,8 +64,9 @@ set cursorline              " Find the current line quickly.
 "                |___/                                 |___/ 
 " Plugin-specific configuration options
 
-" tmux-navigator tmux pane-aware custom key bindings
+""" TMUX NAVIGATOR
 " https://github.com/christoomey/vim-tmux-navigator#custom-key-bindings
+" tmux pane-aware custom key bindings
 let g:tmux_navigator_no_mappings = 1
 
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
@@ -64,3 +74,10 @@ nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-;> :TmuxNavigatePrevious<cr>
+
+""" NERDTREE
+" Toggle NERDTree with Ctrl-n
+map <silent> <C-n> :NERDTreeToggle<CR>
+
+" close NERDTree after a file is opened
+let g:NERDTreeQuitOnOpen=1
