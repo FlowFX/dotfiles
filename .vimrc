@@ -14,12 +14,12 @@
 
 
 
-"  ____  _             _           
-" |  _ \| |_   _  __ _(_)_ __  ___ 
+"  ____  _             _
+" |  _ \| |_   _  __ _(_)_ __  ___
 " | |_) | | | | |/ _` | | '_ \/ __|
 " |  __/| | |_| | (_| | | | | \__ \
 " |_|   |_|\__,_|\__, |_|_| |_|___/
-"                |___/             
+"                |___/
 " Plugins using vim-plug
 " https://github.com/junegunn/vim-plug
 
@@ -86,13 +86,13 @@ Plug 'vim-latex/vim-latex', { 'for': ['tex'] }
 
 call plug#end()
 
-"   ____                           _ 
+"   ____                           _
 "  / ___| ___ _ __   ___ _ __ __ _| |
 " | |  _ / _ \ '_ \ / _ \ '__/ _` | |
 " | |_| |  __/ | | |  __/ | | (_| | |
 "  \____|\___|_| |_|\___|_|  \__,_|_|
-" 
-" General options               
+"
+" General options
 
 set nocompatible
 set encoding=utf-8
@@ -136,7 +136,7 @@ set scrolloff=5         " don't scroll all the way to the bottom
 set ttyfast
 
 """ SPLIT LAYOUTS """
-" specify different areas of the screen where the splits should occur 
+" specify different areas of the screen where the splits should occur
 set splitbelow
 set splitright
 
@@ -161,7 +161,7 @@ nmap <C-x> :cclose<CR>
 " | |   / _ \ / _ \| |/ /
 " | |__| (_) | (_) |   <
 " |_____\___/ \___/|_|\_\
-" 
+"
 " Colorscheme
 syntax on
 if has('nvim')
@@ -189,7 +189,7 @@ set statusline+=\ %f               " current path
 set statusline+=\ %m               " modified flag
 set statusline+=%=
 set statusline+=\%p%%              " percentage inside file
-set statusline+=\ \ \ 
+set statusline+=\ \ \
 set statusline+=\ %3c\             " current column
 
 " toggle background with F5
@@ -214,12 +214,12 @@ set completeopt=longest,menuone
 set infercase
 
 
-"  ____  _             _                          __ _       
-" |  _ \| |_   _  __ _(_)_ __     ___ ___  _ __  / _(_) __ _ 
+"  ____  _             _                          __ _
+" |  _ \| |_   _  __ _(_)_ __     ___ ___  _ __  / _(_) __ _
 " | |_) | | | | |/ _` | | '_ \   / __/ _ \| '_ \| |_| |/ _` |
 " |  __/| | |_| | (_| | | | | | | (_| (_) | | | |  _| | (_| |
 " |_|   |_|\__,_|\__, |_|_| |_|  \___\___/|_| |_|_| |_|\__, |
-"                |___/                                 |___/ 
+"                |___/                                 |___/
 " Plugin-specific configuration options
 "
 """ TMUX """
@@ -287,8 +287,8 @@ map <leader>l :ALEToggle<CR>    " toggle ALE with ,l
 """ NERDTREE """
 " https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
 map <C-n> :NERDTreeToggle<CR>    " toggle Nerdtree with CTRL-n
-autocmd bufenter * 
-    \ if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | 
+autocmd bufenter *
+    \ if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") |
     \ q | endif                  " automaticall close a tab if only NerdTree remains
 let NERDTreeAutoDeleteBuffer = 1 " automatically delete the buffer of the file you just deleted with NerdTree
 let NERDTreeMinimalUI = 1
