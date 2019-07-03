@@ -93,10 +93,6 @@ let g:NERDTreeQuitOnOpen=1
 " fix files on save
 let g:ale_fix_on_save = 1
 
-" lint 200ms after changes are made both on insert mode and normal mode
-let g:ale_lint_on_text_changed = 'always'
-let g:ale_lint_delay = 200
-
 " use emojis for errors and warnings
 let g:ale_sign_error = '✗\ '
 let g:ale_sign_warning = '⚠\ '
