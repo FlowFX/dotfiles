@@ -265,6 +265,6 @@ let test#ruby#use_spring_binstub = 1
 let test#python#runner = "pytest"
 
 " In Alternate File, :TestNearest executes :TestLast
-nmap <CR> :TestNearest<CR>
+nmap <CR>         :TestNearest<CR>
 nmap <leader><CR> :TestFile<CR>
-nmap <localleader>l :TestLast<CR>
+nmap <leader>l    :TestLast<CR>
