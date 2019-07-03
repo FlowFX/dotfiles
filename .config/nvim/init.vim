@@ -63,6 +63,18 @@ set lazyredraw              " Only redraw when necessary
 set cursorline              " Find the current line quickly.
 
 
+"  _                _
+" | |    ___   ___ | | __
+" | |   / _ \ / _ \| |/ /
+" | |__| (_) | (_) |   <
+" |_____\___/ \___/|_|\_\
+"
+" Colorscheme
+if has('nvim')
+  colorscheme smyck " doesn't work under vim for whatever reason
+endif
+
+
 "  ____  _             _                          __ _
 " |  _ \| |_   _  __ _(_)_ __     ___ ___  _ __  / _(_) __ _
 " | |_) | | | | |/ _` | | '_ \   / __/ _ \| '_ \| |_| |/ _` |
