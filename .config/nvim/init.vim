@@ -65,6 +65,8 @@ set ttyfast                 " Faster redrawing
 set lazyredraw              " Only redraw when necessary
 set cursorline              " Find the current line quickly.
 
+set ruler                   " show current line and column
+set relativenumber
 
 "  _                _
 " | |    ___   ___ | | __
@@ -77,6 +79,13 @@ if has('nvim')
   colorscheme smyck " doesn't work under vim for whatever reason
 endif
 
+" Statusbar
+set laststatus=2 " enable statusbar all the time
+
+" Mark end of line
+" https://github.com/vim/vim/blob/135059724f140ceac889c9f8136bd1bf5c41d49d/runtime/doc/options.txt#L1715-L1716
+set colorcolumn=+1
+highlight ColorColumn ctermbg=0
 
 "  ____  _             _                          __ _
 " |  _ \| |_   _  __ _(_)_ __     ___ ___  _ __  / _(_) __ _
