@@ -1,5 +1,9 @@
 " .config/nvim/init.vim by FlowFX
 "
+" TODO:
+" - [ ] YouCompleteMe or Deoplete or anything for tab completion
+" - [ ] ctags support
+" - [ ] vim-test & tslime
 "
 "
 "  ____  _             _
