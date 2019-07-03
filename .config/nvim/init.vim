@@ -2,12 +2,12 @@
 "
 "
 "
-"  ____  _             _           
-" |  _ \| |_   _  __ _(_)_ __  ___ 
+"  ____  _             _
+" |  _ \| |_   _  __ _(_)_ __  ___
 " | |_) | | | | |/ _` | | '_ \/ __|
 " |  __/| | |_| | (_| | | | | \__ \
 " |_|   |_|\__,_|\__, |_|_| |_|___/
-"                |___/             
+"                |___/
 " Plugins using vim-plug
 " https://github.com/junegunn/vim-plug
 
@@ -34,15 +34,18 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " .editorconfig
 Plug 'editorconfig/editorconfig-vim'
 
+" Async linting engine
+Plug 'w0rp/ale'
+
 call plug#end()
 
-"   ____                           _ 
+"   ____                           _
 "  / ___| ___ _ __   ___ _ __ __ _| |
 " | |  _ / _ \ '_ \ / _ \ '__/ _` | |
 " | |_| |  __/ | | |  __/ | | (_| | |
 "  \____|\___|_| |_|\___|_|  \__,_|_|
-" 
-" General options               
+"
+" General options
 
 " Clear search highlighting
 nnoremap <leader><space> :nohlsearch<CR>
@@ -56,12 +59,12 @@ set lazyredraw              " Only redraw when necessary
 set cursorline              " Find the current line quickly.
 
 
-"  ____  _             _                          __ _       
-" |  _ \| |_   _  __ _(_)_ __     ___ ___  _ __  / _(_) __ _ 
+"  ____  _             _                          __ _
+" |  _ \| |_   _  __ _(_)_ __     ___ ___  _ __  / _(_) __ _
 " | |_) | | | | |/ _` | | '_ \   / __/ _ \| '_ \| |_| |/ _` |
 " |  __/| | |_| | (_| | | | | | | (_| (_) | | | |  _| | (_| |
 " |_|   |_|\__,_|\__, |_|_| |_|  \___\___/|_| |_|_| |_|\__, |
-"                |___/                                 |___/ 
+"                |___/                                 |___/
 " Plugin-specific configuration options
 
 """ TMUX NAVIGATOR
@@ -81,3 +84,23 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 
 " close NERDTree after a file is opened
 let g:NERDTreeQuitOnOpen=1
+
+""" ALE
+" fix files on save
+let g:ale_fix_on_save = 1
+
+" lint 200ms after changes are made both on insert mode and normal mode
+let g:ale_lint_on_text_changed = 'always'
+let g:ale_lint_delay = 200
+
+" use emojis for errors and warnings
+let g:ale_sign_error = '✗\ '
+let g:ale_sign_warning = '⚠\ '
+
+" fixer configurations (doubles as linter configuration)
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier'],
+\   'ruby': ['rubocop'],
+\   'typescript': ['prettier'],
+\}
