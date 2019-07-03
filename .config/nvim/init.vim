@@ -73,6 +73,12 @@ call plug#end()
 "
 " General options
 
+" Sensible search
+set ignorecase          " ignore case in searches
+set smartcase           " respect case if search begins with a capital letter
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+
 " Clear search highlighting
 nnoremap <leader><space> :nohlsearch<CR>
 
@@ -86,6 +92,61 @@ set cursorline              " Find the current line quickly.
 
 set ruler                   " show current line and column
 set relativenumber
+map <C-y> +y
+nnoremap <C-p> +P
+vnoremap <C-p> +P
+" dont use arrowkeys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" really, just dont
+inoremap <Up>    <NOP>
+inoremap <Down>  <NOP>
+inoremap <Left>  <NOP>
+inoremap <Right> <NOP>
+
+" copy and paste to/from vIM and the clipboard
+nnoremap <C-y> +y
+vnoremap <C-y> +y
+nnoremap <C-p> +P
+vnoremap <C-p> +P
+
+" access system clipboard
+set clipboard=unnamed
+
+" swapfiles location
+set backupdir=/tmp//
+set directory=/tmp//
+
+" tabs are evil
+set expandtab
+set shiftwidth=2
+set tabstop=2
+
+" Be smart when using tabs ;)
+" :help smarttab
+set smarttab
+
+" Copy the indentation from the previous line when starting a new line
+set autoindent
+
+" Smart indent
+" Automatically inserts one extra level of indentation in some cases, and works for C-like files
+set smartindent
+
+" In the viminfo state file, store file marks and unlimited register contents.
+" Search, command line and input history size are defined via 'history'. Also,
+" put the viminfo file in ~/.config/nvim/, not directly in the home directory.
+set viminfo='100,h,f1,n~/.config/nvim/viminfo
+set history=100
+
+" eliminate delay on ESC to enter normal mode
+" https://www.johnhawthorn.com/2012/09/vi-escape-delays/
+set timeoutlen=1000 ttimeoutlen=0
+
+
 
 "  _                _
 " | |    ___   ___ | | __
@@ -110,6 +171,16 @@ highlight ColorColumn ctermbg=0
 set invlist
 set list
 set listchars=tab:›·,trail:·,nbsp:·
+
+"   ____                      _      _   _
+"  / ___|___  _ __ ___  _ __ | | ___| |_(_) ___  _ __
+" | |   / _ \| '_ ` _ \| '_ \| |/ _ \ __| |/ _ \| '_ \
+" | |__| (_) | | | | | | |_) | |  __/ |_| | (_) | | | |
+"  \____\___/|_| |_| |_| .__/|_|\___|\__|_|\___/|_| |_|
+"                      |_|
+" Completion popup configuration
+
+""" TBD w/ YouCompleteMe or something like it. Deoplete?
 
 "  ____  _             _                          __ _
 " |  _ \| |_   _  __ _(_)_ __     ___ ___  _ __  / _(_) __ _
