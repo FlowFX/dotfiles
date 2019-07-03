@@ -45,7 +45,7 @@ Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
-" vim.signify
+" vim-signify
 Plug 'mhinz/vim-signify'
 
 call plug#end()
