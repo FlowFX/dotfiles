@@ -87,6 +87,11 @@ set laststatus=2 " enable statusbar all the time
 set colorcolumn=+1
 highlight ColorColumn ctermbg=0
 
+" toggle invisible characters
+set invlist
+set list
+set listchars=tab:›·,trail:·,nbsp:·
+
 "  ____  _             _                          __ _
 " |  _ \| |_   _  __ _(_)_ __     ___ ___  _ __  / _(_) __ _
 " | |_) | | | | |/ _` | | '_ \   / __/ _ \| '_ \| |_| |/ _` |
