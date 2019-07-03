@@ -3,7 +3,7 @@
 " TODO:
 " - [ ] YouCompleteMe or Deoplete or anything for tab completion
 " - [ ] ctags support
-" - [ ] vim-test & tslime
+" - [ ] ag/ack/grep hotkeys
 "
 "
 "  ____  _             _
