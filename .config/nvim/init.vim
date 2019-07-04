@@ -41,6 +41,9 @@ Plug 'editorconfig/editorconfig-vim'
 " Async linting engine
 Plug 'w0rp/ale'
 
+" semantic-based completion
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --ts-completer' }
+
 " Async FuzzyFind
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
@@ -229,6 +232,10 @@ nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
+
+""" YouCompleteMe
+" Needs to be configured.
+" https://github.com/lucasfcosta/dotfiles/blob/master/.config/nvim/init.vim#L87
 
 """ FZF
 " Better FZF https://statico.github.io/vim3.html
