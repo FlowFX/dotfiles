@@ -149,7 +149,8 @@ set history=100
 " https://www.johnhawthorn.com/2012/09/vi-escape-delays/
 set timeoutlen=1000 ttimeoutlen=0
 
-
+""" Sources
+source ~/.config/nvim/abbreviations.vim
 
 "  _                _
 " | |    ___   ___ | | __
