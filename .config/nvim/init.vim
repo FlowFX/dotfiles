@@ -142,6 +142,12 @@ set autoindent
 " Automatically inserts one extra level of indentation in some cases, and works for C-like files
 set smartindent
 
+" Omnicomplete lookup locations
+" .,w,b,u,t are defaults
+" i is includes
+" kspell searches the dictionary, but only if spell checking is enabled
+set complete=.,w,b,u,t,i,kspell
+
 " In the viminfo state file, store file marks and unlimited register contents.
 " Search, command line and input history size are defined via 'history'. Also,
 " put the viminfo file in ~/.config/nvim/, not directly in the home directory.
