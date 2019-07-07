@@ -59,8 +59,11 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-" tpope ruby foo
+
+" Ruby
 Plug 'tpope/vim-endwise', { 'for': ['ruby', 'eruby', 'haml'] }
+Plug 'tpope/vim-rails',   { 'for': ['ruby', 'eruby', 'haml'] }
+Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'eruby', 'haml'] }
 
 " vim-test and tslime
 Plug 'jgdavey/tslime.vim'
