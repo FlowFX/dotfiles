@@ -143,10 +143,10 @@ set autoindent
 set smartindent
 
 " Omnicomplete lookup locations
-" .,w,b,u,t are defaults
-" i is includes
+" .,w,b,u,t,i are defaults
+" i is removed by vim-sensible
 " kspell searches the dictionary, but only if spell checking is enabled
-set complete=.,w,b,u,t,i,kspell
+set complete+=kspell
 
 " In the viminfo state file, store file marks and unlimited register contents.
 " Search, command line and input history size are defined via 'history'. Also,
