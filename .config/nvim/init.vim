@@ -161,6 +161,9 @@ set history=100
 " https://www.johnhawthorn.com/2012/09/vi-escape-delays/
 set timeoutlen=1000 ttimeoutlen=0
 
+" Spell check and line wrap just for git commit messages
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
 """ Sources
 source ~/.config/nvim/abbreviations.vim
 

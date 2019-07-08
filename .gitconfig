@@ -106,3 +106,5 @@
 	templatedir = ~/.git_template
 [pager]
 	branch = false
+[commit]
+	template = /Users/flowfx/.gitmessage
