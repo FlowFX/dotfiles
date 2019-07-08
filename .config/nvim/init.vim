@@ -88,6 +88,10 @@ set smartcase           " respect case if search begins with a capital letter
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
+" define <leader> key to <space>
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 " Clear search highlighting
 nnoremap <leader><space> :nohlsearch<CR>
 
