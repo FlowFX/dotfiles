@@ -48,6 +48,9 @@ Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
+" Automatic generation of ctags
+Plug 'ludovicchabant/vim-gutentags'
+
 " vim-signify
 Plug 'mhinz/vim-signify'
 
