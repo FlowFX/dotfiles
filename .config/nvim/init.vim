@@ -52,8 +52,8 @@ Plug 'ludovicchabant/vim-gutentags'
 " vim-signify
 Plug 'mhinz/vim-signify'
 
-" NerdCommenter
-Plug 'scrooloose/nerdcommenter'
+" code comments
+Plug 'tpope/vim-commentary'
 
 " tpope awesomeness
 Plug 'tpope/vim-dispatch'
