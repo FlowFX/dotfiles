@@ -31,6 +31,7 @@ Plug 'tpope/vim-sensible'
 
 " tmux navigator
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " NERDTree
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -60,10 +61,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
+" custom text objects
+Plug 'kana/vim-textobj-user'
+
 " Ruby
-Plug 'tpope/vim-endwise', { 'for': ['ruby', 'eruby', 'haml'] }
-Plug 'tpope/vim-rails',   { 'for': ['ruby', 'eruby', 'haml'] }
-Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'eruby', 'haml'] }
+Plug 'tpope/vim-endwise',              { 'for': ['ruby', 'eruby', 'haml'] }
+Plug 'tpope/vim-rails',                { 'for': ['ruby', 'eruby', 'haml'] }
+Plug 'vim-ruby/vim-ruby',              { 'for': ['ruby', 'eruby', 'haml'] }
+Plug 'nelstrom/vim-textobj-rubyblock', { 'for': ['ruby', 'eruby', 'haml'] }
 
 " vim-test and tslime
 Plug 'jgdavey/tslime.vim'
