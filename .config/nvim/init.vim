@@ -46,6 +46,9 @@ Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
+" Ack & the silver searcher
+Plug 'mileszs/ack.vim'
+
 " Automatic generation of ctags
 Plug 'ludovicchabant/vim-gutentags'
 
@@ -269,6 +272,13 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 
+""" Ack & ag (The Silver Searcher) """
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+cnoreabbrev Ack Ack1
+nnoremap <Leader>a :Ack!<Space>
 
 """ VIM-Signify
 " https://github.com/mhinz/vim-signify
