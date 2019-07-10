@@ -106,6 +106,7 @@ set lazyredraw              " Only redraw when necessary
 set cursorline              " Find the current line quickly.
 
 set ruler                   " show current line and column
+set number                  " show current line number within relative number
 set relativenumber
 map <C-y> +y
 nnoremap <C-p> +P
