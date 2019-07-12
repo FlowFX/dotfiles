@@ -1,3 +1,34 @@
 [user]
   name = Florian Posdziech
   email = hallo@flowfx.de
+[alias]
+  a = add
+	ap = add -p
+	b = branch
+	c = commit
+	ca = commit -a
+	co = checkout
+	cob = checkout -b
+	com = checkout master
+	cod = checkout development
+	db = default-branch checkout
+	dbm = default-branch merge
+	dbr = default-branch rebase
+	f = fetch
+	find = !find . -not -path './.git/*'
+	l = log --pretty=format:'%C(yellow bold)commit %H%Creset %C(yellow)tree %T%Creset%nAuthor: %an <%ae>%nDate: %ad%n%n%w(76,4,4)%s%n%n%-b%n'
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	lp = log --pretty=format:'%C(yellow bold)commit %H%Creset %C(yellow)tree %T%Creset%nAuthor: %an <%ae>%nDate: %ad%n%n%w(76,4,4)%s%n%n%-b%n' -p
+	ls = log --pretty=format:'%C(yellow bold)commit %H%Creset %C(yellow)tree %T%Creset%nAuthor: %an <%ae>%nDate: %ad%n%n%w(76,4,4)%s%n%n%-b%n' --stat
+	oops = oops
+	p = push
+	pr = pull --rebase
+	rb = rebase
+	rbi = rebase -i
+	rbm = rebase master
+	rbo = rebase origin
+	s = status
+	st = stash
+	stp = stash pop
+	up = pull --rebase --autostash
+	ctags = !.git/hooks/ctags
