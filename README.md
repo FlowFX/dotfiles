@@ -1,7 +1,6 @@
-Rewrite of my dotfiles based on thoughtbot's dotfile stuff.
+Rewrite of my dotfiles based on thoughtbot's dotfile stuff. Old files can be found in [the legacy branch](https://github.com/FlowFX/dotfiles/tree/legacy).
 
-Old files can be found in the legacy branch.
-
+Current Status: Work In Progress.
 
 ## Installing a new Ubuntu machine
 
