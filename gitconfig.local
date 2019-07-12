@@ -1,8 +1,8 @@
 [user]
-  name = Florian Posdziech
-  email = hallo@flowfx.de
+ 	name = Florian Posdziech
+	email = hallo@flowfx.de
 [alias]
-  a = add
+	a = add
 	ap = add -p
 	b = branch
 	c = commit
