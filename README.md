@@ -2,17 +2,27 @@ Rewrite of my dotfiles based on thoughtbot's dotfile stuff. Old files can be fou
 
 Current Status: Work In Progress.
 
-## Installing a new Ubuntu machine
+# Installation on a new machine
 
-### base
+## base requirements
 
-```zsh
-$ sudo apt update && sudo apt upgrade
+### Ubuntu/Debian
+
+```shell
 $ sudo apt install git tmux zsh
 $ chsh -s $(which zsh)
 ```
 
-### dotfiles
+### macOS
+
+First, [Install Homebrew](https://brew.sh/).
+
+```shell
+$ brew install git tmux zsh
+$ chsh -s $(which zsh)
+```
+
+## dotfiles
 
 ```
 $ ssh-keygen -o -a 100 -t ed25519 -C "hallo@flowfx.de"
@@ -39,10 +49,10 @@ $ env RCRC=$HOME/dotfiles/rcrc rcup
 
 This provides configs for i3 and nvim.
 
-### i3
+## i3
 ```
 $ sudo apt install i3
 ```
 
-### Neovim
+## Neovim
 [Install Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) from [PPA](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu).
