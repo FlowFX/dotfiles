@@ -37,13 +37,24 @@ $ git clone https://github.com/thoughtbot/dotfiles/ ~/dotfiles
 $ git clone https://github.com/FlowFX/dotfiles ~/dotfiles-local
 ```
 
+### rcm
 [Install rcm](https://github.com/thoughtbot/rcm#installation)
 
-```zsh
+Ubuntu:
+```
 $ sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
 $ sudo apt-get update
 $ sudo apt-get install rcm
+```
 
+macOS:
+```
+$ brew tap thoughtbot/formulae
+$ brew install rcm
+```
+
+Symlink fotfiles:
+```
 $ env RCRC=$HOME/dotfiles/rcrc rcup
 ```
 
