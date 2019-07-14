@@ -1,4 +1,5 @@
-Rewrite of my dotfiles based on thoughtbot's dotfile stuff. Old files can be found in [the legacy branch](https://github.com/FlowFX/dotfiles/tree/legacy).
+Rewrite of my dotfiles based on thoughtbot's dotfile stuff. Old files can be
+found in [the legacy branch](https://github.com/FlowFX/dotfiles/tree/legacy).
 
 Current Status: Work In Progress.
 
@@ -9,7 +10,7 @@ Current Status: Work In Progress.
 ### Ubuntu/Debian
 
 ```shell
-$ sudo apt install git tmux zsh
+$ sudo apt install git tmux vim zsh
 $ chsh -s $(which zsh)
 ```
 
