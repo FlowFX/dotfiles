@@ -21,8 +21,11 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Easy escaping
 inoremap jj <ESC>
 
-" Misc
+" Show me where I am
 set cursorline
+
+" Auto-reload files if they change outside of Vim
+set autoread
 
 "  _                _
 " | |    ___   ___ | | __
