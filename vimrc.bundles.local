@@ -12,3 +12,11 @@ Plug 'tpope/vim-commentary'
 
 " NERDTree
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" Async FuzzyFind
+UnPlug 'ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
+" Ack & the silver searcher
+Plug 'mileszs/ack.vim'

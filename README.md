@@ -98,3 +98,7 @@ Let `rcup` overwrite Oh-My-Zsh's `.zshrc`. It is loaded from the
 `dotfiles-local/zsh/configs` folder.
 
 
+## More
+```
+brew install fzf the_silver_searcher
+```
