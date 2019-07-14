@@ -72,3 +72,10 @@ nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
+
+""" NERDTREE
+" Toggle NERDTree with Ctrl-n
+map <silent> <C-n> :NERDTreeToggle<CR>
+
+" close NERDTree after a file is opened
+let g:NERDTreeQuitOnOpen=1

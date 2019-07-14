@@ -9,3 +9,6 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 " I use commentary.vim
 UnPlug 'tComment'
 Plug 'tpope/vim-commentary'
+
+" NERDTree
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
