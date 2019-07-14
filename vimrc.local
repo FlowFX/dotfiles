@@ -102,3 +102,8 @@ endif
 
 cnoreabbrev Ack Ack1
 nnoremap <Leader>a :Ack!<Space>
+
+""" VIM-TEST
+nnoremap <silent> <CR>         :TestNearest<CR>
+nnoremap <silent> <leader><CR> :TestFile<CR>
+nnoremap <silent> <leader>l    :TestLast<CR>
