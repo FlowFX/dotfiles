@@ -1,3 +1,8 @@
 " I don't write Elixir or Go
 UnPlug 'vim-elixir'
 UnPlug 'vim-go'
+
+" tmux navigator
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+
