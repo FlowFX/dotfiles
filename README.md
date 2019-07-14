@@ -1,7 +1,7 @@
 Rewrite of my dotfiles based on thoughtbot's dotfile stuff. Old files can be
 found in [the legacy branch](https://github.com/FlowFX/dotfiles/tree/legacy).
 
-Current Status: Work In Progress.
+Current Status: Zsh, Vim, and tmux configurations are pretty far along. We'll see how much of the rest I'll miss.
 
 # Installation on a new machine
 
