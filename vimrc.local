@@ -104,6 +104,12 @@ cnoreabbrev Ack Ack1
 nnoremap <Leader>a :Ack!<Space>
 
 """ VIM-TEST
+" https://github.com/janko/vim-test
+" make test commands execute using tslime.vim
+let test#strategy = "tslime"
+let test#ruby#use_spring_binstub = 1
+
+" In Alternate File, :TestNearest executes :TestLast
 nnoremap <silent> <CR>         :TestNearest<CR>
 nnoremap <silent> <leader><CR> :TestFile<CR>
 nnoremap <silent> <leader>l    :TestLast<CR>
