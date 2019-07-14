@@ -90,3 +90,11 @@ setxkbmap eu
 ```
 
 This works with the AltGr key. (Alt is taken by i3)
+
+## Oh-My-Zsh
+[Install Oh-My-Zsh](https://ohmyz.sh/)
+
+Let `rcup` overwrite Oh-My-Zsh's `.zshrc`. It is loaded from the
+`dotfiles-local/zsh/configs` folder.
+
+
