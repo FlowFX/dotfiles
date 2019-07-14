@@ -18,8 +18,14 @@ $ chsh -s $(which zsh)
 First, [Install Homebrew](https://brew.sh/).
 
 ```shell
-$ brew install git tmux zsh
+$ brew install git tmux vim zsh
 $ chsh -s $(which zsh)
+```
+
+Before `chsh` works, you have to edit `/etc/shells` and add the line
+
+```
+/usr/local/bin/zsh
 ```
 
 ## dotfiles
