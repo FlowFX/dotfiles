@@ -1,4 +1,4 @@
-alias vim='nvim'
+# Unix
 alias psgrep='ps aux | grep '
 alias tx='tmuxinator'
 
