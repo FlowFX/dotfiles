@@ -23,3 +23,6 @@ Plug 'mileszs/ack.vim'
 
 " Run vim-test with tslime
 Plug 'jgdavey/tslime.vim'
+
+" vim-signify
+Plug 'mhinz/vim-signify'

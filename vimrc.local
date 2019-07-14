@@ -113,3 +113,13 @@ let test#ruby#use_spring_binstub = 1
 nnoremap <silent> <CR>         :TestNearest<CR>
 nnoremap <silent> <leader><CR> :TestFile<CR>
 nnoremap <silent> <leader>l    :TestLast<CR>
+
+""" VIM-SIGNIFY
+let g:signify_vcs_list = [ 'git' ]
+let g:signify_realtime = 1
+set signcolumn=yes
+
+" Remove irritating background colors
+hi DiffAdd    ctermbg=none ctermfg=2
+hi DiffDelete ctermbg=none ctermfg=1
+hi DiffChange ctermbg=none ctermfg=4
