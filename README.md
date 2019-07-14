@@ -92,6 +92,8 @@ Let `rcup` overwrite Oh-My-Zsh's `.zshrc`. It is loaded from the
 
 
 ## More
+
+For Vim
 ```
 brew install fzf the_silver_searcher
 ```
