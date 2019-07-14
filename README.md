@@ -72,13 +72,6 @@ This provides configs for i3 and nvim.
 $ sudo apt install i3
 ```
 
-## Neovim
-[Install Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) from [PPA](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu).
-
-```
-brew install neovim
-```
-
 ## EurKEY
 - layout: https://eurkey.steffen.bruentjen.eu/
 - Install on macOS: https://github.com/lbschenkel/EurKEY-Mac
