@@ -6,3 +6,6 @@ UnPlug 'vim-go'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
+" I use commentary.vim
+UnPlug 'tComment'
+Plug 'tpope/vim-commentary'
