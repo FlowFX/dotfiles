@@ -91,6 +91,23 @@ Let `rcup` overwrite Oh-My-Zsh's `.zshrc`. It is loaded from the
 `dotfiles-local/zsh/configs` folder.
 
 
+## asdf-vm
+
+```
+$ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.3
+```
+
+Everything's already loaded by the existing dotfiles.
+
+```
+$ asdf update
+$ asdf plugin-add ruby
+$ asdf plugin-add python
+$ asdf install ruby 2.6.2
+$ asdf install ruby 2.6.3
+$ asdf global ruby 2.6.3
+```
+
 ## More
 
 For Vim
