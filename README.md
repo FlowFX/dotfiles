@@ -1,7 +1,11 @@
-Rewrite of my dotfiles based on thoughtbot's dotfile stuff. Old files can be
-found in [the legacy branch](https://github.com/FlowFX/dotfiles/tree/legacy).
+My dotfiles, based on [thoughtbot's
+dotfiles](https://github.com/thoughtbot/dotfiles/) and
+[rcm](https://github.com/thoughtbot/rcm). My old files
+are archived in [the legacy
+branch](https://github.com/FlowFX/dotfiles/tree/legacy).
 
-Current Status: Zsh, Vim, and tmux configurations are pretty far along. We'll see how much of the rest I'll miss.
+Current Status: all of my machines, running macOS and Ubuntu, are using these
+configurations.
 
 # Installation on a new machine
 
