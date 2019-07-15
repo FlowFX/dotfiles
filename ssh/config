@@ -1,0 +1,9 @@
+# (Stolen from https://github.com/scy/dotfiles/blob/master/.ssh/config)
+# Load additional configs in ~/.ssh/config.d. These are host-specific configs.
+# Hosts that I want to keep private are in
+# files that are not added to Git, at least not to _this_ repository. Since
+# OpenSSH uses the _first_ value it finds,
+# host-specific things should come at the beginning, fallbacks towards the end
+# of the file.
+# `Include` is available since OpenSSH 7.3p1.
+Include config.d/*
