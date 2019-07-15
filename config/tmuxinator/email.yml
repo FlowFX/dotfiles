@@ -1,0 +1,14 @@
+# Mutt && offlineimap setup
+
+name: email
+root: ~
+
+startup_window: mutt
+
+windows:
+  - mutt:
+      layout: even-vertical
+      panes:
+        - mw
+        - m
+  - cron: while offlineimap -q; do echo ' --- ' && date && echo "next sync in 180 seconds" && sleep 180; done

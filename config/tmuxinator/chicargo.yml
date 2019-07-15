@@ -1,0 +1,19 @@
+# CHI work project
+
+name: chicargo
+root: ~/code/chicargo-web/
+
+startup_window: editor
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        -
+  - server:
+      layout: main-horizontal
+      panes:
+        - rs
+        - bin/webpack-dev-server
+  - logs: tail -f log/development.log

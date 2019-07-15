@@ -117,5 +117,5 @@ brew install fzf the_silver_searcher
 
 General
 ```
-brew install tree tig
+brew install tree tig tmuxinator
 ```
