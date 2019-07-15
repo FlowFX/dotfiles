@@ -10,7 +10,7 @@ Current Status: Zsh, Vim, and tmux configurations are pretty far along. We'll se
 ### Ubuntu/Debian
 
 ```shell
-$ sudo apt install git tmux vim zsh
+$ sudo apt install git tmux vim xcape zsh
 $ chsh -s $(which zsh)
 ```
 
