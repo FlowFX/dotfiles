@@ -121,5 +121,8 @@ brew install fzf the_silver_searcher
 
 General
 ```
-brew install tree tig tmuxinator
+brew install tree tig tmuxinator ctags hub markdown pandoc
+
+# audo foo
+brew install ffmpeg lame flac mplayer
 ```
