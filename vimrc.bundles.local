@@ -26,3 +26,6 @@ Plug 'jgdavey/tslime.vim'
 
 " vim-signify
 Plug 'mhinz/vim-signify'
+
+" Respect .editorconfig
+Plug 'editorconfig/editorconfig-vim'
