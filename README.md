@@ -89,6 +89,8 @@ setxkbmap eu
 This works with the AltGr key. (Alt is taken by i3)
 
 ## Oh-My-Zsh
+The thoughtbot configs don't play well with Oh-My-Zsh. Themes don't work anymore. But I want the `z` plugin.
+
 [Install Oh-My-Zsh](https://ohmyz.sh/)
 
 Let `rcup` overwrite Oh-My-Zsh's `.zshrc`. It is loaded from the
