@@ -30,3 +30,8 @@ set -g focus-events on
 # To quickly kill off windows and server
 bind-key k confirm kill-window
 bind-key K confirm kill-server
+
+# Give me my colored status bar back!
+set -g status-style bg='#99FFCC',fg='#333333'
+# And the session name.
+set -g status-left '#S '
