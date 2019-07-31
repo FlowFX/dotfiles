@@ -5,6 +5,13 @@ alias tx='tmuxinator'
 # Git
 alias wip="git commit -am'WIP'"
 
+# hub
+alias hs="hub sync"
+alias hpr="hub pull-request"
+alias hco="hub pr checkout"
+alias hbi="hub browse -- issues"
+alias hbp="hub browse -- pulls"
+
 # Ruby
 alias bis="bundle install --standalone --path .bundle"
 
