@@ -27,6 +27,9 @@ set cursorline
 " Auto-reload files if they change outside of Vim
 set autoread
 
+nnoremap <leader>n :tabnext<CR>
+nnoremap <leader>N :tabprevious<CR>
+
 "  _                _
 " | |    ___   ___ | | __
 " | |   / _ \ / _ \| |/ /
