@@ -30,6 +30,8 @@ set autoread
 nnoremap <leader>n :tabnext<CR>
 nnoremap <leader>N :tabprevious<CR>
 
+nnoremap <leader>s :smile<CR>
+
 "  _                _
 " | |    ___   ___ | | __
 " | |   / _ \ / _ \| |/ /
