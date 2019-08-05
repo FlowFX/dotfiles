@@ -35,3 +35,6 @@ bind-key K confirm kill-server
 set -g status-style bg='#99FFCC',fg='#333333'
 # And the session name.
 set -g status-left '#S '
+
+# Give me my mouse!
+set -g mouse on
