@@ -107,7 +107,7 @@ nmap ; :Buffers<CR>
 
 " make FZF respect gitignore if `ag` is installed
 if (executable('ag'))
-    let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+  let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 endif
 
 let g:fzf_action = {
