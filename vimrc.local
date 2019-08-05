@@ -9,6 +9,8 @@
 set number              " show current line number within relative number
 set relativenumber
 
+let maplocalleader = ','
+
 " Sensible search
 set ignorecase          " ignore case in searches
 set smartcase           " respect case if search begins with a capital letter
@@ -31,6 +33,9 @@ nnoremap <leader>n :tabnext<CR>
 nnoremap <leader>N :tabprevious<CR>
 
 nnoremap <leader>s :smile<CR>
+
+" Folding
+nnoremap <leader>a za
 
 "  _                _
 " | |    ___   ___ | | __
@@ -121,7 +126,7 @@ if executable('ag')
 endif
 
 cnoreabbrev Ack Ack1
-nnoremap <Leader>a :Ack!<Space>
+nnoremap <LocalLeader>a :Ack!<Space>
 
 """ VIM-TEST
 " https://github.com/janko/vim-test
