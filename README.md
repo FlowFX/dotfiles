@@ -119,11 +119,13 @@ $ asdf global ruby 2.6.3
 For Vim
 ```
 brew install fzf the_silver_searcher
+sudo apt install fzf silversearcher-ag
 ```
 
 General
 ```
 brew install tree tig tmuxinator ctags hub markdown pandoc
+sudo apt install tree tig tmuxinator exuberant-ctags hub markdown pandoc 
 
 # audo foo
 brew install ffmpeg lame flac mplayer
