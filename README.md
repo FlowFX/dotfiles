@@ -100,6 +100,7 @@ Let `rcup` overwrite Oh-My-Zsh's `.zshrc`. It is loaded from the
 ## asdf-vm
 
 ```
+$ sudo apt install install libssl-dev libreadline-dev zlib1g-dev
 $ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.3
 ```
 
