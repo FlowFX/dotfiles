@@ -14,7 +14,7 @@ configurations.
 ### Ubuntu/Debian
 
 ```shell
-$ sudo apt install git tmux vim xcape zsh
+$ sudo apt install curl git tmux vim xcape zsh
 $ chsh -s $(which zsh)
 ```
 
@@ -64,7 +64,7 @@ $ brew tap thoughtbot/formulae
 $ brew install rcm
 ```
 
-Symlink fotfiles:
+Symlink dotfiles:
 ```
 $ env RCRC=$HOME/dotfiles/rcrc rcup
 ```
