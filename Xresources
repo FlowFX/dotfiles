@@ -1,0 +1,3 @@
+! Make i3 work for the HiRes Dell XPS
+! https://lists.archlinux.org/pipermail/arch-general/2018-July/045392.html
+Xft.dpi: 220
