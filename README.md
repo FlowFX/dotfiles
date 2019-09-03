@@ -45,7 +45,7 @@ Clone and install thoughtbot's dotfiles
 
 ```
 $ git clone https://github.com/thoughtbot/dotfiles/ ~/dotfiles
-$ git clone https://github.com/FlowFX/dotfiles ~/dotfiles-local
+$ git clone git@github.com:FlowFX/dotfiles.git ~/dotfiles-local
 ```
 
 ### rcm
