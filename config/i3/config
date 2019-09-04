@@ -116,6 +116,14 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# move workspace to output
+bindsym $mod+t move workspace to output left
+bindsym $mod+Shift+t move workspace to output right
+
+# run xrandr for different setups
+bindsym $mod+m exec $HOME/.screenlayout/desk.sh
+bindsym $mod+Shift+m exec $HOME/.screenlayout/mobile.sh
+
 # lock screen
 bindsym $mod+Shift+i exec i3lock
 # reload the configuration file
