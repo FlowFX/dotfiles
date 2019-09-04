@@ -73,7 +73,7 @@ nnoremap <silent> <c-;> :TmuxNavigatePrevious<cr>
 
 """ ALE
 " Auto-fix files on save
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 " But also give me a handy for when I need it
 nmap <F8> <Plug>(ale_fix)
 
