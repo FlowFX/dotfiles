@@ -125,7 +125,7 @@ bindsym $mod+m exec $HOME/.screenlayout/desk.sh
 bindsym $mod+Shift+m exec $HOME/.screenlayout/mobile.sh
 
 # lock screen
-bindsym $mod+Shift+i exec i3lock
+bindsym $mod+Shift+i exec i3lock --color=000000
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -164,3 +164,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Startup
+exec setxkbmap eu
