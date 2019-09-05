@@ -126,6 +126,8 @@ bindsym $mod+Shift+m exec $HOME/.screenlayout/mobile.sh
 
 # lock screen
 bindsym $mod+Shift+i exec i3lock --color=000000
+# suspend
+bindsym $mod+Shift+s exec i3lock --color=000000 && systemctl suspend
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
