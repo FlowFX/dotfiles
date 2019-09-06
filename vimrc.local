@@ -90,6 +90,7 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
 \   'ruby': ['rubocop'],
+\   'markdown': [],
 \}
 
 " Mappings in the style of unimpaired-next
