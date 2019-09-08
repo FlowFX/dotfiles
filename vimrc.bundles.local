@@ -32,3 +32,13 @@ Plug 'editorconfig/editorconfig-vim'
 
 " GPG
 Plug 'jamessan/vim-gnupg'
+
+" ORG-Mode
+Plug 'jceb/vim-orgmode'
+Plug 'vim-scripts/utl.vim'
+Plug 'majutsushi/tagbar'
+Plug 'chrisbra/NrrwRgn'
+Plug 'mattn/calendar-vim'
+Plug 'tpope/vim-speeddating'
+Plug 'inkarkat/vim-SyntaxRange'
+
