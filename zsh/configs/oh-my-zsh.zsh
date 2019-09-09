@@ -6,6 +6,6 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-plugins=(z)
+plugins=(asdf git tmux tmuxinator z)
 
 source $ZSH/oh-my-zsh.sh
