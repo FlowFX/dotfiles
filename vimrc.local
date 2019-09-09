@@ -103,8 +103,8 @@ nmap <silent> ]W <Plug>(ale_last)
 " Toggle NERDTree with Ctrl-n
 map <silent> <C-n> :NERDTreeToggle<CR>
 
-" close NERDTree after a file is opened
-let g:NERDTreeQuitOnOpen=1
+" don't close NERDTree after a file is opened
+let g:NERDTreeQuitOnOpen=0
 
 """ FZF
 " Better FZF https://statico.github.io/vim3.html
