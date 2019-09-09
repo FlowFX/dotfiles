@@ -148,3 +148,6 @@ set signcolumn=yes
 hi DiffAdd    ctermbg=none ctermfg=2
 hi DiffDelete ctermbg=none ctermfg=1
 hi DiffChange ctermbg=none ctermfg=4
+
+""" VIM-TAGBAR
+nnoremap <leader>t :TagbarToggle<CR>
