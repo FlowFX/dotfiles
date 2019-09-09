@@ -4,7 +4,7 @@
 root = true
 
 # Max line length
-[*.{rb,py}]
+[*.{rb,py,slim}]
 max_line_length = 120
 
 # Tab indentation (no size specified)
