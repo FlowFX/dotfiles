@@ -33,3 +33,5 @@
 	stp = stash pop
 	up = pull --rebase --autostash
 	ctags = !.git/hooks/ctags
+[pager]
+  branch = false
