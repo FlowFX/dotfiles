@@ -38,3 +38,9 @@ set -g status-left '#S '
 
 # Give me my mouse!
 set -g mouse on
+
+# Ctrl-Space to zoom current pane
+bind-key -n C-Space resize-pane -Z
+
+# Hightlight zoomed windows
+setw -g window-status-current-format '#{?window_zoomed_flag,#[fg=red],}#F#I [#W] '
