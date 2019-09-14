@@ -1,0 +1,8 @@
+URxvt.saveLines: 10000
+URxvt.scrollBar: false
+URxvt.foreground: white
+URxvt.background: black
+URxvt.secondaryScroll: true
+URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=16
+URxvt.perl-ext-common: mark-urls
+URxvt.urlLauncher: firefox
