@@ -3,6 +3,7 @@ alias psgrep='ps aux | grep '
 alias tx='tmuxinator'
 
 # Git
+alias g="git"
 alias wip="git commit -am'WIP'"
 
 # hub
