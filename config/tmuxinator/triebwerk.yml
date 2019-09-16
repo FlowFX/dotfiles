@@ -1,7 +1,7 @@
 # CHI work project
 
-name: chicargo
-root: ~/code/chicargo-web/
+name: triebwerk
+root: ~/code/triebwerk/
 
 startup_window: editor
 
@@ -14,6 +14,6 @@ windows:
   - server:
       layout: main-horizontal
       panes:
-        - rs
-        - bin/webpack-dev-server
+        - bin/devserver
+        -
   - logs: tail -f log/development.log
