@@ -1,0 +1,8 @@
+name: rspec
+root: ~/code/triebwerk/
+
+startup_window: rspec
+
+windows:
+  - rspec:
+  - logs: tail -f log/development.log
