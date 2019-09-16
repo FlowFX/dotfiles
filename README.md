@@ -13,9 +13,19 @@ configurations.
 
 ### Ubuntu/Debian
 
+Install base packages.
 ```shell
-$ sudo apt install curl git tmux vim xcape zsh
-$ chsh -s $(which zsh)
+$ sudo apt install curl git tmux vim xcape zsh direnv
+```
+
+`direnv` is required for my current work project. And it's run on shell startup,
+so it's better if it's there already.
+
+Set default shell to `zsh`.
+
+```
+$ chsh -s $(which zsh)    # OR for Debian
+$ chsh --shell /bin/zsh flowfx
 ```
 
 ### macOS
@@ -100,7 +110,7 @@ Let `rcup` overwrite Oh-My-Zsh's `.zshrc`. It is loaded from the
 ## asdf-vm
 
 ```
-$ sudo apt install install libssl-dev libreadline-dev zlib1g-dev
+$ sudo apt install build-essential libssl-dev libreadline-dev zlib1g-dev
 $ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.3
 ```
 
