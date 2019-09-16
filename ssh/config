@@ -7,3 +7,6 @@
 # of the file.
 # `Include` is available since OpenSSH 7.3p1.
 Include config.d/*
+
+# https://wiki.archlinux.org/index.php/SSH_keys#SSH_agents
+AddKeysToAgent yes
