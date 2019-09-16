@@ -141,3 +141,19 @@ sudo apt install tree tig tmuxinator exuberant-ctags hub markdown pandoc
 # audo foo
 brew install ffmpeg lame flac mplayer
 ```
+
+PostgreSQL. Follow [this howto](https://itsfoss.com/install-postgresql-ubuntu/ Path to your oh-my-zsh installation), method 2.
+```
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+sudo apt update
+sudo apt install postgresql postgresql-contrib libpq-dev postgis
+
+sudo su postgres
+psql
+CREATE USER flowfx WITH PASSWORD 'password';
+ALTER USER flowfx WITH SUPERUSER;
+\q;
+
+sudo systemctl restart postgresql
+```
