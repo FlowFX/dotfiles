@@ -37,4 +37,4 @@ Plug 'majutsushi/tagbar'
 Plug 'jamessan/vim-gnupg'
 
 " Goyo - distraction free writing
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
