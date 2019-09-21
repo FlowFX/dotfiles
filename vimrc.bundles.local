@@ -36,3 +36,5 @@ Plug 'majutsushi/tagbar'
 " GPG
 Plug 'jamessan/vim-gnupg'
 
+" Goyo - distraction free writing
+Plug 'junegunn/goyo'
