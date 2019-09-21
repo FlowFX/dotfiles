@@ -30,15 +30,9 @@ Plug 'mhinz/vim-signify'
 " Respect .editorconfig
 Plug 'editorconfig/editorconfig-vim'
 
+" ctags
+Plug 'majutsushi/tagbar'
+
 " GPG
 Plug 'jamessan/vim-gnupg'
-
-" ORG-Mode
-Plug 'jceb/vim-orgmode'
-Plug 'vim-scripts/utl.vim'
-Plug 'majutsushi/tagbar'
-Plug 'chrisbra/NrrwRgn'
-Plug 'mattn/calendar-vim'
-Plug 'tpope/vim-speeddating'
-Plug 'inkarkat/vim-SyntaxRange'
 
