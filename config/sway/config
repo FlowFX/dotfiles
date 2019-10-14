@@ -23,14 +23,14 @@ set $menu dmenu_path | bemenu | xargs swaymsg exec--
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 # Internal 13" display
+# 2560x1440, 2048x1152 (1.25)
 output eDP-1 {
   position 0 0
-  scale 1.0
+  scale 1.25
 }
 
 # External 27" display
 output DP-5 {
-  position 1920 0
   scale 1.0
 }
 
