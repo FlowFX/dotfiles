@@ -8,7 +8,7 @@
 if [ -f /etc/os-release ]; then
   . /etc/os-release
 
-  if [[ "$OSTYPE" == "linux-gnu" && "$ID" == "debian" ]]; then
+  if [[ "$OSTYPE" == "linux-gnu" ]] && [[ "$ID" == "debian" ]]; then
     setxkbmap -option "caps:ctrl_modifier"
     xcape -e "Caps_Lock=Escape"
   fi
