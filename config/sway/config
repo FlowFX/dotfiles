@@ -48,7 +48,6 @@ output DP-5 {
 # Escape on single tap has to be configured elsewhere.
 input * {
   xkb_layout  eu
-  # xkb_options caps:escape
   xkb_options caps:ctrl_modifier
 }
 
