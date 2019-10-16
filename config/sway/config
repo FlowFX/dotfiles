@@ -99,6 +99,9 @@ input "1133:45078:Bluetooth_Mouse_M336\/M337\/M535_Mouse" {
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
+    # Lock screen
+    bindsym $mod+Shift+s exec swaylock -f -c 123456
+
 #
 ### Power states
 #
