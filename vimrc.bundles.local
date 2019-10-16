@@ -41,3 +41,7 @@ Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 
 " Vim-unimpaired
 Plug 'tpope/vim-unimpaired'
+
+" More Ruby goodness
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
