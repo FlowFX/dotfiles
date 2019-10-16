@@ -38,3 +38,6 @@ Plug 'jamessan/vim-gnupg'
 
 " Goyo - distraction free writing
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
+
+" Vim-unimpaired
+Plug 'tpope/vim-unimpaired'
