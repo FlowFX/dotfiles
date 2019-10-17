@@ -1,0 +1,2 @@
+# https://github.com/tpope/hookup
+hookup post-checkout "$@"
