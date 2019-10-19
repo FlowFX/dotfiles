@@ -2,6 +2,12 @@
 alias psgrep='ps aux | grep '
 alias tx='tmuxinator'
 
+# Todo
+alias t="todo"
+alias tn="todo new"
+alias te="todo edit"
+alias td="todo delete"
+
 # Git
 alias g="git"
 alias wip="git commit -am'WIP'"
