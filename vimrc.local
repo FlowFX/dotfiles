@@ -79,7 +79,7 @@ nmap <F8> <Plug>(ale_fix)
 
 " use emojis for errors and warnings
 let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '≫'
+let g:ale_sign_warning = '→'
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
@@ -133,7 +133,7 @@ nnoremap <LocalLeader>a :Ack!<Space>
 " https://github.com/janko/vim-test
 " make test commands execute using tslime.vim
 let test#strategy = "tslime"
-let test#ruby#use_spring_binstub = 1
+" let test#ruby#use_spring_binstub = 1
 
 " In Alternate File, :TestNearest executes :TestLast
 nnoremap <silent> <CR>         :TestNearest<CR>
@@ -151,3 +151,28 @@ hi DiffChange ctermbg=none ctermfg=4
 
 """ VIM-TAGBAR
 nnoremap <leader>t :TagbarToggle<CR>
+
+""" DEOPLETE
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
+
+""" SOLARGRAPH (Language Server)
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['~/.asdf/shims/solargraph', 'stdio'],
+    \ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" " Or map each action separately
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
