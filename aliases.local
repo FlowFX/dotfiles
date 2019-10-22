@@ -1,6 +1,7 @@
 # Unix
 alias psgrep='ps aux | grep '
 alias tx='tmuxinator'
+alias vim='nvim'
 
 # Todo
 alias t="todo"
