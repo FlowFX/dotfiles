@@ -102,6 +102,8 @@ input "1133:45078:Bluetooth_Mouse_M336\/M337\/M535_Mouse" {
     # Lock screen
     bindsym $mod+Shift+s exec 'swaylock -f -c 123456'
 
+    # Screen grab
+    bindsym Ctrl+Shift+4 exec 'grim -g "$(slurp)" screenshot-"$(date +%Y-%m-%d-%H%M%S)".png'
 #
 ### Power states
 #
