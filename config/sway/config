@@ -38,11 +38,12 @@ output DP-5 {
 # External 32" 4K display
 # 3840x2160
 output 'Unknown BenQ PD3200U L6K00842019' {
+  position 1536 -660
   scale 1.25
 }
 
 focus output DP-5
-focus output HDMI-A-2
+focus output DP-1
 
 # Example configuration:
 #
