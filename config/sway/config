@@ -31,7 +31,8 @@ output eDP-1 {
 
 # External 27" display
 # 2560x1440
-output DP-5 {
+output 'Dell Inc. DELL U2715H GH85D6C40UTS' {
+  position 1536 -500
   scale 1.0
 }
 
