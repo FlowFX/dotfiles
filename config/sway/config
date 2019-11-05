@@ -111,7 +111,7 @@ input "1133:45078:Bluetooth_Mouse_M336\/M337\/M535_Mouse" {
 ### Power states
 #
     # Suspend
-    bindsym $mod+Alt+s exec systemctl suspend
+    bindsym $mod+Alt+s exec systemctl suspend-then-hibernate
     bindsym $mod+Alt+h exec systemctl hibernate
 #
 # Moving around:
