@@ -30,6 +30,12 @@ output eDP-1 {
   scale 1.25
 }
 
+# Humongous TV screen in the office
+output 'Samsung Electric Company SAMSUNG 0x00000F00' {
+  position 0 -1080
+  scale 2.0
+}
+
 # External 27" display
 # 2560x1440
 output 'Dell Inc. DELL U2715H GH85D6C40UTS' {
