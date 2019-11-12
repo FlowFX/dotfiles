@@ -1,0 +1,5 @@
+# Pretty-print ;-separated CSV files
+
+function pretty_csv() {
+  column -t -s $';' | less -S -X -K
+}
