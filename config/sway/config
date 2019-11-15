@@ -27,7 +27,7 @@ output * bg #000000 solid_color
 # 1920x1080
 output eDP-1 {
   position 0 0
-  scale 1.25
+  scale 1.0
 }
 
 # Humongous TV screen in the office
@@ -39,14 +39,14 @@ output 'Samsung Electric Company SAMSUNG 0x00000F00' {
 # External 27" display
 # 2560x1440
 output 'Dell Inc. DELL U2715H GH85D6C40UTS' {
-  position 1536 -500
+  position 1920 -500
   scale 1.0
 }
 
 # External 32" 4K display
 # 3840x2160
 output 'Unknown BenQ PD3200U L6K00842019' {
-  position 1536 -660
+  position 1920 -660
   scale 1.25
 }
 
