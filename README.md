@@ -7,6 +7,8 @@ branch](https://github.com/FlowFX/dotfiles/tree/legacy).
 Current Status: all of my machines, running macOS and Ubuntu, are using these
 configurations.
 
+Future Status: Installation will be handled by an Ansible playbook.
+
 # Installation on a new machine
 
 ## base requirements
