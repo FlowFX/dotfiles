@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -125,9 +125,9 @@ bindsym $mod+m exec $HOME/.screenlayout/desk.sh
 bindsym $mod+Shift+m exec $HOME/.screenlayout/mobile.sh
 
 # lock screen
-bindsym $mod+Shift+i exec i3lock --color=000000
+bindsym $mod+Shift+s exec i3lock --color=CC6600
 # suspend
-bindsym $mod+Shift+s exec i3lock --color=000000 && systemctl suspend
+# bindsym $mod+Shift+s exec i3lock --color=CC6600 && systemctl suspend
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
