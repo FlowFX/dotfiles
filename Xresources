@@ -1,0 +1,49 @@
+! Smyck Color Scheme
+!
+! special
+*.foreground:   #f7f7f7
+*.background:   #1d1d1d
+*.cursorColor:  #f7f7f7 ! black *.color0:       #000000
+*.color8:       #4b4b4b
+
+! red
+*.color1:       #c75646
+*.color9:       #d6837c
+
+! green
+*.color2:       #7da900
+*.color10:      #c4f137
+
+! yellow
+*.color3:       #d0b03d
+*.color11:      #fee14d
+
+! blue
+*.color4:       #407d99
+*.color12:      #8dcff0
+
+! magenta
+*.color5:       #ba8acc
+*.color13:      #f79aff
+
+! cyan
+*.color6:       #207383
+*.color14:      #6ad9cf
+
+! white
+*.color7:       #a1a1a1
+*.color15:      #f7f7f7
+
+
+URxvt.saveLines: 10000
+URxvt.scrollBar: false
+/* URxvt.foreground: white */
+/* URxvt.background: black */
+URxvt.secondaryScroll: true
+URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=20
+URxvt.perl-ext-common: mark-urls
+URxvt.urlLauncher: firefox
+
+
+! Mouse Curser ?
+Xcursor.size:32

@@ -167,6 +167,3 @@ bar {
         status_command i3status
 }
 
-# Autostart foo
-exec setxkbmap eu
-exec xmodmap ~/.Xmodmap
