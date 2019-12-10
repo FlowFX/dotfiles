@@ -169,3 +169,4 @@ bar {
 
 # Autostart foo
 exec setxkbmap eu
+exec xmodmap ~/.Xmodmap
