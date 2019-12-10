@@ -1,0 +1,12 @@
+# CHI work project
+
+name: deploy
+root: ~/code/docker-stacks/
+
+windows:
+  - DANGER!:
+      layout: even-vertical
+      panes:
+        -
+        -
+        -
