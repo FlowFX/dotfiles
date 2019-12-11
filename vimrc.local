@@ -107,6 +107,24 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 " don't close NERDTree after a file is opened
 let g:NERDTreeQuitOnOpen=0
 
+" Save my Inconsolata (no unicode :( )
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = 'v'
+
+" NERDTREE-GIT-PLUGIN
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "*",
+    \ "Staged"    : "+",
+    \ "Untracked" : "_",
+    \ "Renamed"   : ">",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "x",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '_',
+    \ "Unknown"   : "?"
+    \ }
+
 """ FZF
 " Better FZF https://statico.github.io/vim3.html
 nmap <C-p> :Files<CR>

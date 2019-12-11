@@ -12,6 +12,7 @@ Plug 'tpope/vim-commentary'
 
 " NERDTree
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 
 " Async FuzzyFind
 UnPlug 'ctrlp.vim'
