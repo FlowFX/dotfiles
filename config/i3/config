@@ -120,10 +120,6 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+t move workspace to output left
 bindsym $mod+Shift+t move workspace to output right
 
-# run xrandr for different setups
-bindsym $mod+m exec $HOME/.screenlayout/desk.sh
-bindsym $mod+Shift+m exec $HOME/.screenlayout/mobile.sh
-
 # lock screen
 bindsym $mod+Shift+s exec i3lock --color=CC6600
 # suspend
