@@ -1,0 +1,20 @@
+[general]
+status_path = "~/.vdirsyncer/status/"
+
+[pair my_tasks]
+a = "mailbox_local"
+b = "mailbox_remote"
+collections = ["from a", "from b"]
+conflict_resolution = "b wins"
+
+[storage mailbox_local]
+type = "filesystem"
+fileext = ".ics"
+path = "~/.local/share/calendars/"
+
+[storage mailbox_remote]
+type = "caldav"
+url = "https://dav.mailbox.org/caldav/"
+
+username = "flowfx@mailbox.org"
+password.fetch = ["command", "pass", "Email/mailbox.org"]
