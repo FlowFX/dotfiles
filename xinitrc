@@ -13,4 +13,7 @@ fi
 
 # Turn off beep
 xset -b
+
+# Lock screen on suspend
+xss-lock -- i3lock --color=AA8800 &
 exec i3
