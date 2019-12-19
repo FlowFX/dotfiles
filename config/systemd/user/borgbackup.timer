@@ -1,0 +1,10 @@
+[Unit]
+Description=Run borgbackup.sh
+
+[Timer]
+OnBootSec=30m
+OnUnitActiveSec=90m
+AccuracySec=5m
+
+[Install]
+WantedBy=timers.target

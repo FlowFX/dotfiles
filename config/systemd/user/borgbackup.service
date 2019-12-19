@@ -1,0 +1,6 @@
+[Unit]
+Description=Run borgbackup.sh
+
+[Service]
+ExecStart=/home/flowfx/bin/borgbackup.sh
+Type=oneshot
