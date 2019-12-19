@@ -121,7 +121,9 @@ bindsym $mod+t move workspace to output left
 bindsym $mod+Shift+t move workspace to output right
 
 # lock screen
-bindsym $mod+Shift+s exec i3lock --color=CC6600
+# Antrazit: --color=1d1f22
+bindsym $mod+Shift+s exec i3lock -i dotfiles-local/ioki-logo_white.png --color=CC6600
+
 # suspend
 # bindsym $mod+Shift+s exec i3lock --color=CC6600 && systemctl suspend
 # reload the configuration file
