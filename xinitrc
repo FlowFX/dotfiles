@@ -15,5 +15,5 @@ fi
 xset -b
 
 # Lock screen on suspend
-xss-lock -- i3lock --color=AA8800 &
+xss-lock -- i3lock -i dotfiles-local/ioki-logo_white.png --color=1d1f22 &
 exec i3
