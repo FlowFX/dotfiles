@@ -6,6 +6,7 @@ a = "mailbox_local"
 b = "mailbox_remote"
 collections = ["from a", "from b"]
 conflict_resolution = "b wins"
+metadata = ["displayname"]
 
 [storage mailbox_local]
 type = "filesystem"
