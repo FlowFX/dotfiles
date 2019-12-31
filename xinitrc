@@ -14,6 +14,10 @@ fi
 # Turn off beep
 xset -b
 
+# Disable touchpad
+# Show current settings: xinput list-props 10
+xinput set-prop 10 166 0
+
 # Lock screen on suspend
 xss-lock -- i3lock -i dotfiles-local/ioki-logo_white.png --color=1d1f22 &
 exec i3
