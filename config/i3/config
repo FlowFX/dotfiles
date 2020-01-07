@@ -180,3 +180,4 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 9%- # decreas
 exec --no-startup-id nm-applet
 exec --no-startup-id syncthingtray
 exec --no-startup-id pasystray
+exec --no-startup-id blueman-applet
