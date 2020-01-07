@@ -14,5 +14,5 @@ localfolders = ~/Mail/mailbox
 type = IMAP
 remotehost = imap.mailbox.org
 remoteuser = flowfx@mailbox.org
-remotepasseval = get_pass()
+remotepasseval = get_pass("imap.mailbox.org")
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
