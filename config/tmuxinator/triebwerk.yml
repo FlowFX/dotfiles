@@ -10,10 +10,10 @@ windows:
       layout: main-vertical
       panes:
         - vim
-        -
   - server:
       layout: main-horizontal
       panes:
         - bin/devserver
         -
   - logs: tail -f log/development.log
+  - shell:
