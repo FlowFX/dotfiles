@@ -1,0 +1,18 @@
+[general]
+accounts = mailbox
+pythonfile = ~/.config/offlineimap/offlineimap.py
+
+[Account mailbox]
+localrepository = mailbox-local
+remoterepository = mailbox-remote
+
+[Repository mailbox-local]
+type = Maildir
+localfolders = ~/Mail/mailbox
+
+[Repository mailbox-remote]
+type = IMAP
+remotehost = imap.mailbox.org
+remoteuser = flowfx@mailbox.org
+remotepasseval = get_pass()
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
