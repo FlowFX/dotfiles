@@ -1,5 +1,6 @@
 [general]
-accounts = mailbox
+accounts = mailbox, ioki
+maxsyncaccounts = 1
 pythonfile = ~/.config/offlineimap/offlineimap.py
 
 [Account mailbox]
@@ -16,3 +17,20 @@ remotehost = imap.mailbox.org
 remoteuser = flowfx@mailbox.org
 remotepasseval = get_pass("imap.mailbox.org")
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda foldername: foldername not in ["Trash"]
+
+[Account ioki]
+localrepository = ioki-local
+remoterepository = ioki-remote
+
+[Repository ioki-local]
+type = Maildir
+localfolders = ~/Mail/ioki
+
+[Repository ioki-remote]
+type = IMAP
+remotehost = outlook.office365.com
+remoteuser = florian.posdziech@ioki.com
+remotepasseval = get_pass("outlook.office365.com")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda foldername: foldername in ["INBOX", "Archive", "Drafts", "Sent Items"]
