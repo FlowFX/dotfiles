@@ -4,7 +4,7 @@ Description=Synchronize vdirs
 [Timer]
 OnBootSec=5m
 OnUnitActiveSec=20m
-AccuracySec=5m
+AccuracySec=3m
 
 [Install]
 WantedBy=timers.target
