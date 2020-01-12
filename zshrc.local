@@ -2,3 +2,7 @@ eval "$(direnv hook zsh)"
 
 # added by pipsi (https://github.com/mitsuhiko/pipsi)
 export PATH="/home/flowfx/.local/bin:$PATH"
+
+# Created by `userpath` on 2020-01-12 17:50:09
+# added by pipx
+export PATH="$PATH:/Users/flowfx/.local/bin"
