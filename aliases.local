@@ -28,7 +28,7 @@ alias bis="bundle install --standalone --path .bundle"
 # Rails
 alias rc="bundle exec pry -r ./config/environment"
 alias rs="bundle exec rails server"
-alias rt="bundle exec rspec ./spec"
+alias rt="bundle exec rspec"
 alias berp="bin/rails parallel:spec"
 alias respring="spring stop && spring server &>/dev/null &"
 
