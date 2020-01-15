@@ -36,8 +36,11 @@ set -g status-style bg='#00994d',fg='#ffffff'
 # And the session name.
 set -g status-left '#S '
 
-# Give me my mouse!
+# Give me my mouse! And copy & paste.
+# See https://unix.stackexchange.com/a/349020
 set -g mouse on
+set-option -s set-clipboard off
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -se c -i"
 
 # Ctrl-Space to zoom current pane
 bind-key -n C-Space resize-pane -Z
