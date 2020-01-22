@@ -1,0 +1,4 @@
+color status color0 color12
+
+set folder = ~/Mail
+set spoolfile = "+mailbox/INBOX"    # Set mailbox as the default account

@@ -1,14 +1,11 @@
 # Mutt && offlineimap setup
 
 name: email
-root: ~
+root: ~/Desktop
 
-startup_window: mutt
+startup_window: personal
 
 windows:
-  - mutt:
-      layout: even-vertical
-      panes:
-        - mw
-        - m
-  - cron: while offlineimap -q; do echo ' --- ' && date && echo "next sync in 180 seconds" && sleep 180; done
+  - personal: LOCAL_CONFIG=personal neomutt
+  - work: LOCAL_CONFIG=work neomutt
+  - offlineimap: offlineimap

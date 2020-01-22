@@ -1,0 +1,9 @@
+set mbox_type = Maildir
+
+# MACROS and BINDINGS -------------------------
+# Reload configuration file
+macro index,pager ,r ":source $HOME/.config/neomutt/neomuttrc<enter>"
+
+source $HOME/.config/neomutt/colors
+
+source $HOME/.config/neomutt/accounts/$LOCAL_CONFIG

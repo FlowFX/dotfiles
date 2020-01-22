@@ -1,0 +1,4 @@
+color status color0 color5
+
+set folder = ~/Mail
+set spoolfile = "+ioki/INBOX"

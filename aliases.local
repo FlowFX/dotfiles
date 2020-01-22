@@ -3,6 +3,9 @@ alias psgrep='ps aux | grep '
 alias tx='tmuxinator'
 alias vim='nvim'
 
+# Email
+alias m="LOCAL_CONFIG=personal neomutt"
+
 # Todo
 alias t="todo"
 alias tn="todo new"

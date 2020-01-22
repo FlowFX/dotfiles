@@ -1,0 +1,10 @@
+# Reference: https://github.com/FlowFX/dotfiles/blob/legacy/.config/neomutt/mutt.d/colors
+
+color normal    color15 default        # default colors
+color indicator color12 color0         # highlighted message in index
+
+# Index
+color index color1 default "~D"        # Deleted messages
+
+# Message header
+color hdrdefault color10 default
