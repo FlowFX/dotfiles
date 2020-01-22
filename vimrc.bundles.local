@@ -57,3 +57,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " CSV
 Plug 'chrisbra/csv.vim'
+
+" Vim-indentlines - show line indentations
+Plug 'yggdroot/indentline'
