@@ -7,7 +7,7 @@ set signature = ~/.config/neomutt/accounts/personal.sig
 
 set spoolfile = "+mailbox/INBOX"
 
-alternates *@flowfx.de florian@posdziech.de
+alternates .+@flowfx.de florian@posdziech.de
 
 set mbox      = "+mailbox/Archive"
 set record    = "+mailbox/Sent"
