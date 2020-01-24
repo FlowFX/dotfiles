@@ -3,8 +3,12 @@
 color status color0 color5
 
 set folder = ~/Mail
-set spoolfile = "+ioki/INBOX"
 #set signature = ~/.config/neomutt/accounts/work.sig
+#
+set spoolfile = "+ioki/INBOX"
+
+set from   = "florian.posdziech@ioki.com"
+set sendmail = "/usr/bin/msmtp -a ioki"
 
 set mbox      = "+ioki/Archive"
 set record    = "+ioki/Sent\ Items"

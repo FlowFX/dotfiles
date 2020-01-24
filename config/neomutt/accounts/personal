@@ -7,6 +7,9 @@ set signature = ~/.config/neomutt/accounts/personal.sig
 
 set spoolfile = "+mailbox/INBOX"
 
+set from   = "hallo@flowfx.de"
+set sendmail = "/usr/bin/msmtp -a mailbox"
+
 alternates .+@flowfx.de florian@posdziech.de
 
 set mbox      = "+mailbox/Archive"
