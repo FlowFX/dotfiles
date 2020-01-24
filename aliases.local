@@ -15,6 +15,7 @@ alias td="todo delete"
 # Git
 alias g="git"
 alias wip="git commit -am'WIP'"
+alias stu="( cd ~/code && git standup -s )"
 
 # hub
 alias hs="hub sync"
