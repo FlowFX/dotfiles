@@ -7,4 +7,5 @@ set spoolfile = "+ioki/INBOX"
 #set signature = ~/.config/neomutt/accounts/work.sig
 
 set mbox      = "+ioki/Archive"
+set record    = "+ioki/Sent\ Items"
 set postponed = "+ioki/Drafts"

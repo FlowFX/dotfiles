@@ -10,6 +10,7 @@ set spoolfile = "+mailbox/INBOX"
 alternates *@flowfx.de florian@posdziech.de
 
 set mbox      = "+mailbox/Archive"
+set record    = "+mailbox/Sent"
 set postponed = "+mailbox/Drafts"
 
 
