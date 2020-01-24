@@ -1,7 +1,8 @@
 [general]
+ui = basic
 accounts = mailbox, ioki
-maxsyncaccounts = 1
 pythonfile = ~/.config/offlineimap/offlineimap.py
+fsync = False
 
 [Account mailbox]
 localrepository = mailbox-local
