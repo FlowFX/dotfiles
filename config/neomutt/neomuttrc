@@ -1,6 +1,29 @@
-set mbox_type = Maildir
+# Most settings are taken from the ever green The Homely Mutt
+# https://stevelosh.com/blog/2012/10/the-homely-mutt/
 
-set delete        # don't ask, just do
+# PATHS -----------------------------
+set header_cache = $HOME/.cache/neomutt/headers
+set mailcap_path = $HOME/.config/neomutt/mailcap
+
+# BASIC OPTIONS
+set mbox_type = Maildir
+set wait_key = no       # shut up, mutt
+set timeout = 3         # idle time before scanning
+set delete              # don't ask, just do
+unset confirmappend     # don't ask, just do!
+unset mark_old          # read/new is good enough
+unset beep              # be quiet!
+set pipe_decode         # strip headers and eval mimes when piping
+set thorough_search # strip headers and eval mimes before searching
+
+# SIDEBAR -----------------------
+set sidebar_visible = yes
+
+# HEADER OPTIONS --------------------------
+ignore *                               # ignore all headers
+unhdr_order *                          # some distros order things by default
+unignore from: to: cc: date: subject:  # show only these
+hdr_order from: to: cc: date: subject: # and in this order
 
 # INDEX ----------------------
 set sort =threads # Threads!

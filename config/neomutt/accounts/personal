@@ -1,4 +1,15 @@
+# vim:filetype=muttrc
+
 color status color0 color12
 
 set folder = ~/Mail
-set spoolfile = "+mailbox/INBOX"    # Set mailbox as the default account
+set signature = ~/.config/neomutt/accounts/personal.sig
+
+set spoolfile = "+mailbox/INBOX"
+
+alternates *@flowfx.de florian@posdziech.de
+
+set mbox      = "+mailbox/Archive"
+set postponed = "+mailbox/Drafts"
+
+

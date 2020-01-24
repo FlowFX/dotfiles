@@ -1,5 +1,10 @@
+# vim:filetype=muttrc
+
 color status color0 color5
-color status color0 color13
 
 set folder = ~/Mail
 set spoolfile = "+ioki/INBOX"
+#set signature = ~/.config/neomutt/accounts/work.sig
+
+set mbox      = "+ioki/Archive"
+set postponed = "+ioki/Drafts"
