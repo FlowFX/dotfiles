@@ -31,6 +31,11 @@ set sort =threads # Threads!
 # PAGER
 unset markers    # no ugly plus signs
 
+# MESSAGE
+set wrap = 78
+set fast_reply = yes    # skip asking for recipient and subject
+set include = yes       # include the message in my reply (default: ask-yes)
+
 ## Deal with HTML emails
 auto_view text/html text/enriched
 alternative_order text/plain text/enriched text/html
@@ -42,4 +47,7 @@ macro index,pager ,r ":source $HOME/.config/neomutt/neomuttrc<enter>"
 
 source $HOME/.config/neomutt/colors
 
+# ACCOUNTS
+# TODO: use msmtp OFFLINE! https://wiki.archlinux.org/index.php/MSMTP#Using_msmtp_offline
+set realname = "Florian Posdziech"
 source $HOME/.config/neomutt/accounts/$LOCAL_CONFIG

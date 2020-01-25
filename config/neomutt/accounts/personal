@@ -12,8 +12,10 @@ set sendmail = "/usr/bin/msmtp -a mailbox"
 
 alternates .+@flowfx.de florian@posdziech.de
 
+#https://wiki.archlinux.org/index.php/OfflineIMAP#Automatic_mailbox_generation_for_mutt
 set mbox      = "+mailbox/Archive"
 set record    = "+mailbox/Sent"
 set postponed = "+mailbox/Drafts"
 
-
+macro index,pager A "<save-message>+mailbox/Archive<enter>" "Moved message to the archive"
+macro index,pager S "<save-message>+mailbox/Junk<enter>"    "Marked message as spam"
