@@ -45,6 +45,7 @@ alternative_order text/plain text/enriched text/html
 # Reload configuration file
 macro index,pager ,r ":source $HOME/.config/neomutt/neomuttrc<enter>"
 
+source $HOME/.config/neomutt/bindings
 source $HOME/.config/neomutt/colors
 
 # ACCOUNTS
