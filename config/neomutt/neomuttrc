@@ -32,7 +32,7 @@ set sort =threads # Threads!
 unset markers    # no ugly plus signs
 
 # MESSAGE
-set wrap = 78
+set wrap = 120
 set fast_reply = yes    # skip asking for recipient and subject
 set include = yes       # include the message in my reply (default: ask-yes)
 

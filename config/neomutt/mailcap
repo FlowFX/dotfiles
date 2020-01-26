@@ -1,5 +1,5 @@
- .html
-# interactive: open in w3m from attachments menu to click links in emails
-text/html;                  w3m -I %{charset} -T text/html %s;
-# non-interactive: used in auto-view and reply
-text/html;                  w3m -dump -T text/html -I %{charset} -O utf-8 %s; copiousoutput;
+# HTML
+# In the pager
+text/html; w3m -I %{charset} -T text/html;
+# In the attachment view
+text/html; w3m -I %{charset} -T text/html; copiousoutput;

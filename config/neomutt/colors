@@ -6,5 +6,7 @@ color indicator color12 color0         # highlighted message in index
 # Index
 color index color1 default "~D"        # Deleted messages
 
-# Message header
-color hdrdefault color10 default
+# MESSAGES ============
+color hdrdefault color10 default       # Headers
+color body       color3  default (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9\+]+ # URLs
+
