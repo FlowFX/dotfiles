@@ -1,5 +1,22 @@
 # vim:filetype=muttrc
 
+# Move around with vim-like keybindings
+bind index,pager k previous-entry
+bind index,pager j next-entry
+bind index,pager g noop
+bind index,pager \Cu half-up
+bind index,pager \Cd half-down
+bind pager gg top
+bind index gg first-entry
+bind pager G bottom
+bind index G last-entry
+
+# Sync all mailboxes
+macro index,pager O "<shell-escape>offlineimap -q<enter>" "run offlineimap to sync all mail"
+
+# Open urls with urlscan
+macro pager \cu "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
 # Get addresses from khard
 set query_command = "khard email --parsable --search-in-source-files %s"
 bind editor <Tab> complete-query
