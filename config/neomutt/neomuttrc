@@ -1,5 +1,10 @@
-# Most settings are taken from the ever green The Homely Mutt
-# https://stevelosh.com/blog/2012/10/the-homely-mutt/
+# (Almost) all the resources you will ever need:
+#
+# NeuMutt Getting Started https://neomutt.org/guide/gettingstarted
+# The Homely Mutt https://stevelosh.com/blog/2012/10/the-homely-mutt/
+# A modern mutt setup
+# - Part 1 https://webgefrickel.de/blog/a-modern-mutt-setup
+# - Part 2 https://webgefrickel.de/blog/a-modern-mutt-setup-part-two
 
 # PATHS -----------------------------
 set header_cache = $HOME/.cache/neomutt/headers
@@ -28,18 +33,20 @@ hdr_order from: to: cc: date: subject: # and in this order
 # INDEX ----------------------
 set sort =threads # Threads!
 
-# PAGER
+# PAGER VIEW
 unset markers    # no ugly plus signs
 
-# MESSAGE
+# MESSAGE VIEW
 set wrap = 120
+
+# COMPOSE VIEW
 set fast_reply = yes    # skip asking for recipient and subject
 set include = yes       # include the message in my reply (default: ask-yes)
+set edit_headers        # show headers when composing
 
 ## Deal with HTML emails
 auto_view text/html text/enriched
 alternative_order text/plain text/enriched text/html
-
 
 # MACROS and BINDINGS -------------------------
 # Reload configuration file

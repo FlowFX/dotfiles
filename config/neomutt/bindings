@@ -11,6 +11,9 @@ bind index gg first-entry
 bind pager G bottom
 bind index G last-entry
 
+# Index and pager shortcuts
+bind index,pager R group-reply
+
 # Sync all mailboxes
 macro index,pager O "<shell-escape>offlineimap -q<enter>" "run offlineimap to sync all mail"
 
