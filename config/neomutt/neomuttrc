@@ -56,6 +56,10 @@ set index_format = "%Z %{%b %d} %-23.22L %s"
 set sort=threads # Threads!
 
 # PAGER VIEW
+set pager_index_lines = 10
+set pager_context = 3
+set pager_stop
+set menu_scroll
 unset markers     # no ugly plus signs
 set wrap = 120
 
