@@ -1,5 +1,5 @@
 Florian Posdziech
-External Job Title
+Junior Backend Developer
 
 ioki GmbH (P.O.)
 An der Welle 3

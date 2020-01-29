@@ -1,10 +1,15 @@
 # vim:filetype=muttrc
 
 color status color0 color5
+color indicator color5 color0          # highlighted message in index
+color sidebar_indicator color0 color5  # current mailbox
 
-set folder = ~/Mail
-#set signature = ~/.config/neomutt/accounts/work.sig
-#
+set signature = ~/.config/neomutt/accounts/work.sig
+
+# don't use signatur for internal emails
+send-hook *               set signature = ~/.config/neomutt/accounts/work.sig
+send-hook "~t @ioki.com"  unset signature
+
 set spoolfile = "+ioki/INBOX"
 
 set from   = "florian.posdziech@ioki.com"
@@ -13,3 +18,6 @@ set sendmail = "/usr/bin/msmtp -a ioki"
 set mbox      = "+ioki/Archive"
 set record    = "+ioki/Sent\ Items"
 set postponed = "+ioki/Drafts"
+
+macro index,pager A "<save-message>+ioki/Archive<enter>" "Moved message to the archive"
+macro index,pager O "<shell-escape>offlineimap -q -a ioki<enter>" "get new mail"

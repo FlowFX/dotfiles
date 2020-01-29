@@ -10,3 +10,8 @@ color index color1 default "~D"        # Deleted messages
 color hdrdefault color10 default       # Headers
 color body       color3  default (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9\+]+ # URLs
 
+# SIDEBAR ===============
+color sidebar_indicator default color4   # current mailbox
+color sidebar_highlight default color8   # selected mailbox
+color sidebar_new       color2  default
+color sidebar_divider   color8  default

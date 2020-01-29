@@ -1,12 +1,14 @@
 # (Almost) all the resources you will ever need:
 #
-# NeuMutt Getting Started https://neomutt.org/guide/gettingstarted
+# NeoMutt Getting Started https://neomutt.org/guide/gettingstarted
+# NeoMutt configuration reference https://neomutt.org/man/neomuttrc
 # The Homely Mutt https://stevelosh.com/blog/2012/10/the-homely-mutt/
 # A modern mutt setup
 # - Part 1 https://webgefrickel.de/blog/a-modern-mutt-setup
 # - Part 2 https://webgefrickel.de/blog/a-modern-mutt-setup-part-two
 
 # PATHS -----------------------------
+set folder = ~/Mail
 set header_cache = $HOME/.cache/neomutt/headers
 set mailcap_path = $HOME/.config/neomutt/mailcap
 
@@ -19,10 +21,27 @@ unset confirmappend     # don't ask, just do!
 unset mark_old          # read/new is good enough
 unset beep              # be quiet!
 set pipe_decode         # strip headers and eval mimes when piping
-set thorough_search # strip headers and eval mimes before searching
+set thorough_search     # strip headers and eval mimes before searching
+set sleep_time = 0      # make changing mailboxes FAST!
 
 # SIDEBAR -----------------------
-set sidebar_visible = yes
+set sidebar_visible
+set sidebar_format = "%B %* [%?N?%N/?%S]"
+set sidebar_new_mail_only
+
+set sidebar_short_path
+set sidebar_component_depth=1
+set sidebar_delim_chars = '/.'
+set sidebar_folder_indent = yes
+set sidebar_indent_string = '  '
+
+sidebar_whitelist +mailbox/INBOX +ioki/INBOX
+
+named-mailboxes "INBOX-mailbox" +mailbox/INBOX
+source $HOME/Documents/mailboxes/personal
+
+named-mailboxes "INBOX-ioki" +ioki/INBOX
+source $HOME/Documents/mailboxes/work
 
 # HEADER OPTIONS --------------------------
 ignore *                               # ignore all headers
@@ -31,12 +50,13 @@ unignore from: to: cc: date: subject:  # show only these
 hdr_order from: to: cc: date: subject: # and in this order
 
 # INDEX ----------------------
-set sort =threads # Threads!
+
+# Default: "%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s" 
+set index_format = "%Z %{%b %d} %-23.22L %s"
+set sort=threads # Threads!
 
 # PAGER VIEW
-unset markers    # no ugly plus signs
-
-# MESSAGE VIEW
+unset markers     # no ugly plus signs
 set wrap = 120
 
 # COMPOSE VIEW
@@ -55,7 +75,12 @@ macro index,pager ,r ":source $HOME/.config/neomutt/neomuttrc<enter>"
 source $HOME/.config/neomutt/bindings
 source $HOME/.config/neomutt/colors
 
+# HOOKS
+# when changing into other mailboxes, use different adresses etc.
+folder-hook mailbox/* source $HOME/.config/neomutt/accounts/personal
+folder-hook ioki/* source $HOME/.config/neomutt/accounts/work
+
 # ACCOUNTS
 # TODO: use msmtp OFFLINE! https://wiki.archlinux.org/index.php/MSMTP#Using_msmtp_offline
 set realname = "Florian Posdziech"
-source $HOME/.config/neomutt/accounts/$LOCAL_CONFIG
+source $HOME/.config/neomutt/accounts/personal

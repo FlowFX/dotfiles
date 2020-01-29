@@ -11,11 +11,18 @@ bind index gg first-entry
 bind pager G bottom
 bind index G last-entry
 
+# Sidebar Navigation
+bind index,pager J sidebar-next
+bind index,pager K sidebar-prev
+bind index,pager L sidebar-open
+
 # Index and pager shortcuts
 bind index,pager R group-reply
+# bind index <tab> sync-mailbox
+bind index <space> collapse-thread
 
 # Sync all mailboxes
-macro index,pager O "<shell-escape>offlineimap -q<enter>" "run offlineimap to sync all mail"
+# macro index,pager O "<shell-escape>offlineimap -q<enter>" "run offlineimap to sync all mail"
 
 # Open urls with urlscan
 macro pager \cu "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
@@ -30,3 +37,5 @@ macro index,pager a \
     "<pipe-message>khard add-email<return>" \
     "add the sender email address to khard"
 
+macro index,pager <F2>  "<change-folder> =mailbox/INBOX<enter>"  "go to mailbox INBOX"
+macro index,pager <F3>  "<change-folder> =ioki/INBOX<enter>"  "go to ioki inbox"
