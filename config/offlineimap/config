@@ -34,4 +34,4 @@ remotehost = outlook.office365.com
 remoteuser = florian.posdziech@ioki.com
 remotepasseval = get_pass("outlook.office365.com")
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
-folderfilter = lambda foldername: foldername in ["INBOX", "Archive", "Drafts", "Sent Items"]
+folderfilter = lambda foldername: foldername in ["INBOX", "Archive", "Drafts", "Sent Items", "AppSignal", "GitHub"]
