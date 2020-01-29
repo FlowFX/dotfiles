@@ -19,4 +19,4 @@ set postponed = "+mailbox/Drafts"
 
 macro index,pager A "<save-message>+mailbox/Archive<enter>" "Moved message to the archive"
 macro index,pager S "<save-message>+mailbox/Junk<enter>"    "Marked message as spam"
-macro index,pager O "<shell-escape>offlineimap -q -a mailbox<enter>" "get new mail"
+macro index,pager <F5> "<shell-escape>offlineimap -q -a mailbox<enter>" "get new mail"

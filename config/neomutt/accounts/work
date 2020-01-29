@@ -20,4 +20,4 @@ set record    = "+ioki/Sent\ Items"
 set postponed = "+ioki/Drafts"
 
 macro index,pager A "<save-message>+ioki/Archive<enter>" "Moved message to the archive"
-macro index,pager O "<shell-escape>offlineimap -q -a ioki<enter>" "get new mail"
+macro index,pager <F5> "<shell-escape>offlineimap -q -a ioki<enter>" "get new mail"
