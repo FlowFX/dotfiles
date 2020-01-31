@@ -3,3 +3,6 @@
 text/html; w3m -I %{charset} -T text/html;
 # In the attachment view
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
+
+# iCal
+text/calendar; ~/bin/icalview.py; copiousoutput;

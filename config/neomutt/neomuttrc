@@ -65,12 +65,13 @@ set wrap = 120
 
 # COMPOSE VIEW
 set fast_reply = yes    # skip asking for recipient and subject
+set reply_to = yes      # honor address in Reply-to: header
 set include = yes       # include the message in my reply (default: ask-yes)
 set edit_headers        # show headers when composing
 
-## Deal with HTML emails
-auto_view text/html text/enriched
-alternative_order text/plain text/enriched text/html
+# HTML EMAILS
+auto_view text/html text/calendar
+alternative_order text/calendar text/plain text/*
 
 # MACROS and BINDINGS -------------------------
 # Reload configuration file
