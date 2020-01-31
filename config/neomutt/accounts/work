@@ -10,6 +10,11 @@ set signature = ~/.config/neomutt/accounts/work.sig
 send-hook *               set signature = ~/.config/neomutt/accounts/work.sig
 send-hook "~t @ioki.com"  unset signature
 
+# Remove any unnecessary text from replies to GitHub discussions
+send-hook "~t @reply.github.com"  unset signature
+send-hook *                       set edit_headers
+send-hook "~t @reply.github.com"  unset edit_headers
+
 set spoolfile = "+ioki/INBOX"
 
 set from   = "florian.posdziech@ioki.com"
