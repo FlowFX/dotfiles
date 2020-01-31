@@ -3,9 +3,8 @@
 name: email
 root: ~/Desktop
 
-startup_window: personal
+startup_window: mutt
 
 windows:
-  - personal: LOCAL_CONFIG=personal neomutt
-  - work: LOCAL_CONFIG=work neomutt
-  - offlineimap: offlineimap
+  - mutt: neomutt
+  - offlineimap: offlineimap -q
