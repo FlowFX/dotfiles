@@ -5,6 +5,7 @@ color indicator color12 color0         # highlighted message in index
 
 # Index
 color index color1 default "~D"        # Deleted messages
+color index color11 default "~N"        # New messages
 
 # MESSAGES ============
 color hdrdefault color10 default       # Headers
