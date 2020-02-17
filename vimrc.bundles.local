@@ -60,3 +60,6 @@ Plug 'chrisbra/csv.vim'
 
 " Vim-indentlines - show line indentations
 Plug 'yggdroot/indentline'
+
+" Vim-Wiki
+Plug 'vimwiki/vimwiki'

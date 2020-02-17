@@ -175,3 +175,7 @@ nnoremap <leader>t :TagbarToggle<CR>
 if filereadable($HOME . "/.vim/cocrc")
   source ~/.vim/cocrc.local
 endif
+
+""" VIM-WIKI
+let g:vimwiki_list = [{'path': '~/Documents/wiki', 'syntax': 'markdown'}]
+au FileType vimwiki setlocal shiftwidth=4 tabstop=4
