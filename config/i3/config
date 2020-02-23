@@ -120,6 +120,12 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+t move workspace to output left
 bindsym $mod+Shift+t move workspace to output right
 
+# assign workspaces to screens
+workspace "1: vim" output primary
+workspace "2: firefox" output primary
+workspace 3 output primary
+workspace "9: rspec" output eDP-1
+
 # lock screen
 # Antrazit: --color=1d1f22
 bindsym $mod+Shift+s exec i3lock -i dotfiles-local/ioki-logo_white.png --color=1d1f22
