@@ -11,6 +11,25 @@
 
 set $mod Mod4
 
+# SMYCK COLORS http://color.smyck.org/
+set $terminal_bg #1d1d1d
+set $dark_black #000000
+set $dark_red #C75646
+set $dark_green #8EB33B
+set $dark_yellow #D0B03C
+set $dark_blue #4E90A7
+set $dark_magenta #C8A0D1
+set $dark_cyan #218693
+set $dark_white #B0B0B0
+set $light_black #5D5D5D
+set $light_red #E09690
+set $light_green #CDEE69
+set $light_yellow #FFE377
+set $light_blue #9CD9F0
+set $light_magenta #FBB1F9
+set $light_cyan #77DFD8
+set $light_white #F7F7F7
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 12
@@ -161,6 +180,16 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# SMYCK COLORS ========================================================
+# class                 border      backgr.       text         indicator child_border
+client.focused          $dark_cyan  $dark_cyan    $light_white $dark_yellow   #218693
+client.focused_inactive $light_red  $light_red    $light_white #484e50   #5f676a
+client.unfocused        $dark_black $dark_black   $dark_white  #292d2e   #222222
+client.urgent           $dark_red   $dark_red     $light_white #900000   #900000
+client.placeholder      $dark_black $light_green  $light_white #000000   #0c0c0c
+
+client.background       $light_white
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
