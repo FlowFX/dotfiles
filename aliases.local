@@ -21,7 +21,7 @@ alias gdm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # hub
 alias hs="hub sync"
-alias hpr="hub pull-request"
+alias hpr="hub pull-request -a FlowFX -l 'playing around'"
 alias hco="hub pr checkout"
 alias hbi="hub browse -- issues"
 alias hbp="hub browse -- pulls"
