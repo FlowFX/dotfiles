@@ -197,6 +197,18 @@ bar {
         status_command i3status
         tray_output primary
         strip_workspace_numbers no
+  colors {
+    background $terminal_bg
+    statusline $light_white
+    separator  $light_yellow
+
+    # workspace        border       background   text
+    focused_workspace  $light_cyan  $dark_cyan   $light_white
+    active_workspace   #333333 #5f676a #ffffff
+    inactive_workspace #333333 #222222 #888888
+    urgent_workspace   #2f343a #900000 #ffffff
+    binding_mode       #2f343a #900000 #ffffff
+  }
 }
 
 # MEDIA KEYS
