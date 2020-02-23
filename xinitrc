@@ -13,6 +13,8 @@ fi
 
 # Turn off beep
 xset -b
+# Disable screen saver
+xset s off
 
 # Disable touchpad
 # Show current settings: xinput list-props 10
