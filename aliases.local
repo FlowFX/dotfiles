@@ -16,6 +16,8 @@ alias td="todo delete"
 alias g="git"
 alias wip="git commit -am'WIP'"
 alias stu="( cd ~/code && git standup -s )"
+# https://stevenharman.net/git-clean-delete-already-merged-branches
+alias gdm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # hub
 alias hs="hub sync"
