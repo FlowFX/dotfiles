@@ -183,7 +183,7 @@ bindsym $mod+r mode "resize"
 
 # SMYCK COLORS ========================================================
 # class                 border      backgr.       text         indicator child_border
-client.focused          $dark_cyan  $dark_cyan    $light_white $dark_yellow   #218693
+client.focused          $dark_blue  $dark_blue    $light_white $dark_yellow   #218693
 client.focused_inactive $light_red  $light_red    $light_white #484e50   #5f676a
 client.unfocused        $dark_black $dark_black   $dark_white  #292d2e   #222222
 client.urgent           $dark_red   $dark_red     $light_white #900000   #900000
@@ -203,7 +203,7 @@ bar {
     separator  $light_yellow
 
     # workspace        border       background   text
-    focused_workspace  $light_cyan  $dark_cyan   $light_white
+    focused_workspace  $light_blue  $dark_blue   $light_white
     active_workspace   #333333 #5f676a #ffffff
     inactive_workspace #333333 #222222 #888888
     urgent_workspace   #2f343a #900000 #ffffff
