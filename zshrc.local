@@ -6,7 +6,3 @@ export PATH="/home/flowfx/.local/bin:$PATH"
 # Created by `userpath` on 2020-01-12 17:50:09
 # added by pipx
 export PATH="$PATH:/Users/flowfx/.local/bin"
-
-# broot companion function
-# https://dystroy.org/broot/documentation/installation/
-source $HOME/.config/broot/launcher/bash/br
