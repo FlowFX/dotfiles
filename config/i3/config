@@ -227,8 +227,7 @@ bindsym Ctrl+Shift+4 exec maim -s ~/Desktop/screenshot-$(date +%F-%H%M%S).png
 # Select region and copy to clipboard
 bindsym Ctrl+Shift+5 exec maim -s | xclip -selection clipboard -t image/png
 
-exec --no-startup-id nm-applet
-exec --no-startup-id syncthingtray
+exec --no-startup-id nm-applet # Arch
+exec --no-startup-id nm-tray   # Debian
 exec --no-startup-id pasystray
 exec --no-startup-id blueman-applet
-exec --no-startup-id seafile-applet
