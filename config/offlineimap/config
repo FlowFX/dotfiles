@@ -15,7 +15,7 @@ localfolders = ~/Mail/mailbox
 [Repository mailbox-remote]
 type = IMAP
 remotehost = imap.mailbox.org
-remoteuser = flowfx@mailbox.org
+remoteuser = hallo@flowfx.de
 remotepasseval = get_pass("imap.mailbox.org")
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 folderfilter = lambda foldername: foldername not in ["Trash"]
