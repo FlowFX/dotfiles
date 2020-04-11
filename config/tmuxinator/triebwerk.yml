@@ -1,19 +1,17 @@
 # CHI work project
 
 name: triebwerk
-root: ~/code/triebwerk/
+root: ~/work/triebwerk/
 
 startup_window: editor
 
 windows:
-  - editor:
-      layout: main-vertical
-      panes:
-        - vim
+  - editor: vim
+  - editor2: vim
   - server:
       layout: main-horizontal
       panes:
         - bin/devserver
         -
-  - logs: tail -f log/development.log
   - shell:
+  - logs: tail -f log/development.log

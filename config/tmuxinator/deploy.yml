@@ -1,7 +1,7 @@
 # CHI work project
 
 name: deploy
-root: ~/code/docker-stacks/
+root: ~/work/docker-stacks/
 
 windows:
   - DANGER!:

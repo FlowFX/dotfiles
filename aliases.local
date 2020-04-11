@@ -30,6 +30,7 @@ alias hbp="hub browse -- pulls"
 alias be="bundle exec"
 alias bi="bundle install"
 alias bis="bundle install --standalone --path .bundle"
+alias yi="yarn install"
 
 # Rails
 alias rc="bundle exec pry -r ./config/environment"
