@@ -17,23 +17,23 @@ path = "~/.local/share/calendars/"
 type = "caldav"
 url = "https://dav.mailbox.org/caldav/"
 
-username = "flowfx@mailbox.org"
+username = "hallo@flowfx.de"
 password.fetch = ["command", "pass", "Email/imap.mailbox.org"]
 
-[pair my_contacts]
-a = "mailbox_contacts_local"
-b = "mailbox_contacts_remote"
-collections = ["from a", "from b"]
-conflict_resolution = "a wins"
-
-[storage mailbox_contacts_local]
-type = "filesystem"
-fileext = ".vcf"
-path = "~/.local/share/contacts/"
-
-[storage mailbox_contacts_remote]
-type = "carddav"
-url = "https://dav.mailbox.org/carddav/"
-
-username = "flowfx@mailbox.org"
-password.fetch = ["command", "pass", "Email/imap.mailbox.org"]
+;[pair my_contacts]
+;a = "mailbox_contacts_local"
+;b = "mailbox_contacts_remote"
+;collections = ["from a", "from b"]
+;conflict_resolution = "b wins"
+;
+;[storage mailbox_contacts_local]
+;type = "filesystem"
+;fileext = ".vcf"
+;path = "~/.local/share/contacts/"
+;
+;[storage mailbox_contacts_remote]
+;type = "carddav"
+;url = "https://dav.mailbox.org/carddav/"
+;
+;username = "hallo@flowfx.de"
+;password.fetch = ["command", "pass", "Email/imap.mailbox.org"]

@@ -37,6 +37,9 @@ nnoremap <leader>s :smile<CR>
 " Folding
 nnoremap <leader>a za
 
+" Execute run current file in a Tmux pane
+nnoremap <localleader>r :execute 'Tmux clear &&' expand('%')<CR>
+
 "  _                _
 " | |    ___   ___ | | __
 " | |   / _ \ / _ \| |/ /

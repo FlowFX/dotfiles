@@ -4,5 +4,5 @@ root: ~
 startup_window: triebwerk
 
 windows:
-  - triebwerk: cd code/triebwerk
+  - triebwerk: cd work/triebwerk
   - boxjumps: cd code/boxjumps

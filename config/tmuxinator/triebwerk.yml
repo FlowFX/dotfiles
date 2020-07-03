@@ -15,3 +15,5 @@ windows:
         -
   - shell:
   - logs: tail -f log/development.log
+  - db: docker-compose -f ../docker/postgres11.yml up
+
