@@ -5,7 +5,7 @@ status_path = "~/.vdirsyncer/status/"
 a = "mailbox_local"
 b = "mailbox_remote"
 collections = ["from a", "from b"]
-conflict_resolution = "b wins"
+conflict_resolution = "a wins"
 metadata = ["displayname"]
 
 [storage mailbox_local]
@@ -24,6 +24,7 @@ password.fetch = ["command", "pass", "Email/imap.mailbox.org"]
 a = "mailbox_contacts_local"
 b = "mailbox_contacts_remote"
 collections = ["from a", "from b"]
+conflict_resolution = "a wins"
 
 [storage mailbox_contacts_local]
 type = "filesystem"
