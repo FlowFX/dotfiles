@@ -162,6 +162,9 @@ nnoremap <silent> <CR>         :TestNearest<CR>
 nnoremap <silent> <leader><CR> :TestFile<CR>
 nnoremap <silent> <leader>l    :TestLast<CR>
 
+""" TSlime
+vmap <localleader>r <Plug>SendSelectionToTmux
+
 """ VIM-SIGNIFY
 let g:signify_vcs_list = [ 'git' ]
 set signcolumn=yes
