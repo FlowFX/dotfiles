@@ -5,7 +5,7 @@ status_path = "~/.vdirsyncer/status/"
 a = "mailbox_local"
 b = "mailbox_remote"
 collections = ["from a", "from b"]
-conflict_resolution = "b wins"
+conflict_resolution = "a wins"
 metadata = ["displayname"]
 
 [storage mailbox_local]
