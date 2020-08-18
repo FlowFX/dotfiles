@@ -1,0 +1,17 @@
+name: boxjumps
+root: ~/code/boxjumps/
+
+startup_window: editor
+
+windows:
+  - editor:
+      layout: even-horizontal
+      panes:
+        - vim
+        -
+  - server:
+      layout: even-vertical
+      panes:
+        - bundle exec rails server
+        -
+  - logs: tail -f log/development.log
