@@ -5,13 +5,13 @@ startup_window: editor
 
 windows:
   - editor:
-      layout: even-horizontal
+      layout: main-horizontal
       panes:
         - vim
         -
   - server:
-      layout: even-vertical
+      layout: main-horizontal
       panes:
         - bundle exec rails server
         -
-  - logs: tail -f log/development.log
+  - shell:
