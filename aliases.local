@@ -43,3 +43,6 @@ alias respring="spring stop && spring server &>/dev/null &"
 # `migrate` is defined in ~/.aliases
 alias rdm='migrate'
 alias rdr='rake db:rollback'
+
+# work deploys
+alias dcon='./deploy console -e'
