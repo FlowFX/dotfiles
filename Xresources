@@ -41,7 +41,7 @@ URxvt.secondaryScroll: true
 URxvt.perl-ext-common: mark-urls
 URxvt.urlLauncher: firefox
 
-URxvt.font: xft:InconsolataLGC Nerd Font Mono:pixelsize=20
+URxvt.font: xft:InconsolataLGC Nerd Font Mono:pixelsize=18
 
 ! Mouse Curser ?
 Xcursor.size:32
