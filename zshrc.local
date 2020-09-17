@@ -7,5 +7,7 @@ export PATH="/home/flowfx/.local/bin:$PATH"
 # added by pipx
 export PATH="$PATH:/Users/flowfx/.local/bin"
 
+export PATH="$PATH:/Users/flowfx/bin"
+
 # Use master branch of ruby-build. The releases are always a bit behind.
 export ASDF_RUBY_BUILD_VERSION=master
