@@ -46,5 +46,8 @@ alias rdr='rake db:rollback'
 
 # work deploys
 alias dcon='./deploy console -e'
+alias dstatus='./deploy migrate_status -e'
+alias dmigrate='./deploy migrate -e'
+alias ddeploy='./deploy deploy -e'
 alias uplang='./scripts/upload_locales_to_lokalise.sh'
 alias downlang='./scripts/download_locales_from_lokalise.sh'
