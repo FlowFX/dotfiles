@@ -38,7 +38,9 @@ nnoremap <leader>s :smile<CR>
 nnoremap <leader>a za
 
 " Execute run current file in a Tmux pane
-nnoremap <localleader>r :execute 'Tmux clear &&' expand('%')<CR>
+nnoremap <localleader>t :execute 'Tmux clear &&' expand('%')<CR>
+" Execute current file right here and now
+nnoremap <localleader>r :!%:p<CR>
 
 "  _                _
 " | |    ___   ___ | | __
