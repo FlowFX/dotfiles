@@ -1,3 +1,9 @@
+***
+
+**This repository has been moved to [Codeberg](https://codeberg.org/flowfx/dotfiles).**
+
+***
+
 My dotfiles, based on [thoughtbot's dotfiles](https://github.com/thoughtbot/dotfiles/) and
 [rcm](https://github.com/thoughtbot/rcm).
 
